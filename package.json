@@ -1,12 +1,17 @@
 {
-  "name": "_scaffold",
+  "name": "sum-of-parts",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "Sum of Parts: animated explainers about money, business and the economy",
   "repository": {},
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@remotion/captions": "4.0.533",
     "@remotion/cli": "4.0.533",
+    "@remotion/google-fonts": "4.0.533",
+    "@remotion/install-whisper-cpp": "4.0.533",
+    "@remotion/media": "4.0.533",
+    "@remotion/transitions": "4.0.533",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.533"
@@ -17,12 +22,19 @@
     "@types/web": "0.0.166",
     "eslint": "9.39.5",
     "prettier": "3.8.1",
+    "tsx": "4.23.15",
     "typescript": "5.9.3"
   },
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "transcribe": "tsx scripts/transcribe.ts",
+    "timeline": "tsx scripts/build-timeline.ts",
+    "test": "node --import tsx --test src/lib/finance.test.ts src/videos/100-a-month-40-years/data.test.ts",
+    "mix": "tsx scripts/mix-audio.ts",
+    "render:video01": "npm test && remotion render Video01 out/100-a-month-40-years.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --color-space=bt709 --audio-codec=aac --audio-bitrate=320k",
+    "qa": "tsx scripts/qa/static-checks.ts"
   }
 }

@@ -1,0 +1,224 @@
+{
+  "fps": 30,
+  "totalFrames": 12575,
+  "audioSegments": [
+    {
+      "file": "audio/100-a-month-40-years/voiceover.mp3",
+      "fromSec": 0,
+      "toSec": 22.567,
+      "atFrame": 0,
+      "fromFrame": 0,
+      "toFrame": 677
+    },
+    {
+      "file": "audio/100-a-month-40-years/voiceover.mp3",
+      "fromSec": 22.733,
+      "toSec": 395.994,
+      "atFrame": 768,
+      "fromFrame": 682,
+      "toFrame": 11880
+    }
+  ],
+  "segment2OffsetSec": 2.867,
+  "scenes": [
+    {
+      "id": "s01-hook",
+      "startFrame": 0,
+      "endFrame": 678,
+      "anchorFrame": 2,
+      "cues": {
+        "hundredAppears": 2,
+        "hundredSpoken": 110,
+        "everyMonth": 190,
+        "howMuch": 262,
+        "guessFifty": 342,
+        "realAnswer": 452,
+        "fiveTimes": 511
+      }
+    },
+    {
+      "id": "s02-logo",
+      "startFrame": 678,
+      "endFrame": 768,
+      "anchorFrame": 678,
+      "cues": {}
+    },
+    {
+      "id": "s03-rules",
+      "startFrame": 768,
+      "endFrame": 1460,
+      "anchorFrame": 777,
+      "cues": {
+        "card1": 839,
+        "perDay": 920,
+        "card2": 1029,
+        "noRaises": 1153,
+        "noBonuses": 1191,
+        "noLuckyPicks": 1235,
+        "card3": 1355
+      }
+    },
+    {
+      "id": "s04-mattress",
+      "startFrame": 1460,
+      "endFrame": 2169,
+      "anchorFrame": 1466,
+      "cues": {
+        "barAppears": 1547,
+        "fortyEight": 1738,
+        "keepInMind": 2024
+      }
+    },
+    {
+      "id": "s05-compounding",
+      "startFrame": 2169,
+      "endFrame": 3388,
+      "anchorFrame": 2175,
+      "cues": {
+        "sevenLabel": 2336,
+        "yearOne": 2447,
+        "aboutForty": 2590,
+        "yearTwo": 2764,
+        "lastYearsGrowth": 2889,
+        "growthEarnsGrowth": 2981,
+        "slowAtFirst": 3255,
+        "thenItDoesnt": 3319
+      }
+    },
+    {
+      "id": "s06-why-7",
+      "startFrame": 3388,
+      "endFrame": 4398,
+      "anchorFrame": 3394,
+      "cues": {
+        "lastHundredYears": 3457,
+        "tenPercent": 3646,
+        "afterInflation": 3837,
+        "todaysDollars": 4003,
+        "marketDropped": 4220
+      }
+    },
+    {
+      "id": "s07-curve",
+      "startFrame": 4398,
+      "endFrame": 6004,
+      "anchorFrame": 4404,
+      "cues": {
+        "mattressLine": 4467,
+        "fourPercent": 4645,
+        "sevenPercent": 4841,
+        "tenYears": 5057,
+        "onlyFiveMore": 5189,
+        "quitHere": 5295,
+        "bend": 5445,
+        "twentyYears": 5534,
+        "thirtyYears": 5662,
+        "fortyYears": 5805,
+        "finalNumberEnd": 5985
+      }
+    },
+    {
+      "id": "s08-decades",
+      "startFrame": 6004,
+      "endFrame": 6914,
+      "anchorFrame": 6010,
+      "cues": {
+        "bar1": 6085,
+        "bar2": 6232,
+        "bar3": 6329,
+        "bar4": 6417,
+        "stack": 6548,
+        "onlyTime": 6828
+      }
+    },
+    {
+      "id": "s09-tipping-point",
+      "startFrame": 6914,
+      "endFrame": 7614,
+      "anchorFrame": 6920,
+      "cues": {
+        "yearEleven": 7017,
+        "moreThan": 7263,
+        "fromThatPoint": 7362,
+        "gapWider": 7552
+      }
+    },
+    {
+      "id": "s10-cost-of-waiting",
+      "startFrame": 7614,
+      "endFrame": 9016,
+      "anchorFrame": 7620,
+      "cues": {
+        "sameHundred": 7684,
+        "sameSeven": 7750,
+        "startAt35": 7823,
+        "threeQuarters": 7991,
+        "youDont": 8100,
+        "endUpWith122": 8141,
+        "lessThanHalf": 8240,
+        "catchUp": 8539,
+        "twoFifteen": 8691,
+        "moreThanDouble": 8759,
+        "bestDecade": 8934
+      }
+    },
+    {
+      "id": "s11-where-it-came-from",
+      "startFrame": 9016,
+      "endFrame": 9883,
+      "anchorFrame": 9022,
+      "cues": {
+        "fullCircle": 9022,
+        "howMuchPutIn": 9146,
+        "fortyEight": 9234,
+        "otherTwoFourteen": 9341,
+        "eightyTwo": 9414,
+        "lessThanFifth": 9520,
+        "sumOfParts": 9638
+      }
+    },
+    {
+      "id": "s12-fine-print",
+      "startFrame": 9883,
+      "endFrame": 11037,
+      "anchorFrame": 9889,
+      "cues": {
+        "smoothLine": 9889,
+        "longTermAverage": 9957,
+        "notSmooth": 10108,
+        "theyCrash": 10205,
+        "keptInvesting": 10384,
+        "fees": 10516,
+        "cutResult": 10644,
+        "tensOfThousands": 10690,
+        "notAdvice": 10837
+      }
+    },
+    {
+      "id": "s13-takeaway",
+      "startFrame": 11037,
+      "endFrame": 11975,
+      "anchorFrame": 11043,
+      "cues": {
+        "line1": 11043,
+        "line2": 11137,
+        "line3": 11192,
+        "quarterMillion": 11239,
+        "notBecause": 11359,
+        "perfectInvestment": 11427,
+        "becauseOfTime": 11482,
+        "amount": 11532,
+        "startDate": 11610,
+        "ifYouWant": 11714,
+        "nextVideo": 11863
+      }
+    },
+    {
+      "id": "end-card",
+      "startFrame": 11975,
+      "endFrame": 12575,
+      "anchorFrame": 11975,
+      "cues": {}
+    }
+  ]
+}

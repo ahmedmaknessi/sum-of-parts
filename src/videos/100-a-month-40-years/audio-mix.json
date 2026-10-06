@@ -1,0 +1,20 @@
+{
+  "source": "audio/100-a-month-40-years/voiceover.mp3",
+  "file": "audio/100-a-month-40-years/voiceover-mix.wav",
+  "targetLufs": -16,
+  "ceilingDbtp": -1.5,
+  "original": {
+    "lufs": -17.78,
+    "truePeakDbtp": -2.43,
+    "lra": 3.5
+  },
+  "limiter": {
+    "ceilingDb": -3.78
+  },
+  "voiceGainDb": 1.78,
+  "voiceVolume": 1.2274,
+  "expected": {
+    "lufs": -16,
+    "truePeakDbtp": -1.92
+  }
+}

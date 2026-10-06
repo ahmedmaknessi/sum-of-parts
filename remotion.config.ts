@@ -10,3 +10,5 @@ import { Config } from "@remotion/cli/config";
 Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
+// Tagged, limited-range BT.709 output (otherwise JPEG frames give full-range yuvj420p).
+Config.setColorSpace("bt709");
