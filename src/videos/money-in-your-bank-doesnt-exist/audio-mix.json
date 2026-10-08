@@ -1,0 +1,20 @@
+{
+  "source": "audio/money-in-your-bank-doesnt-exist/voiceover.mp3",
+  "file": "audio/money-in-your-bank-doesnt-exist/voiceover-mix.wav",
+  "targetLufs": -16,
+  "ceilingDbtp": -1.5,
+  "original": {
+    "lufs": -18.36,
+    "truePeakDbtp": -1.52,
+    "lra": 2.7
+  },
+  "limiter": {
+    "ceilingDb": -4.36
+  },
+  "voiceGainDb": 2.36,
+  "voiceVolume": 1.3122,
+  "expected": {
+    "lufs": -16.01,
+    "truePeakDbtp": -1.94
+  }
+}

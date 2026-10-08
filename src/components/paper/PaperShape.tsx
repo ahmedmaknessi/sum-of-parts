@@ -44,6 +44,7 @@ export const PaperShape: React.FC<PaperShapeProps> = ({
   <g style={{ filter: paperShadow(depth, shadowOpacity), ...style }} opacity={opacity}>
     <path d={d} fill={fill} />
     <path d={d} fill={`url(#${GRAIN_ID})`} opacity={PAPER.grain.opacity} />
+    <path d={d} fill="none" stroke={COLORS.primary} strokeOpacity={PAPER.rim.opacity} strokeWidth={PAPER.rim.width} />
     {shade > 0 ? <path d={d} fill={shadeColor} opacity={shade} /> : null}
   </g>
 );

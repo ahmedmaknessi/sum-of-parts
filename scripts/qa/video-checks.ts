@@ -3,7 +3,7 @@
  *
  *   npx tsx scripts/qa/video-checks.ts 100-a-month-40-years out/100-a-month-40-years.mp4
  *
- * - Empty frames: decodes every frame; no run of pure background (navy + grid)
+ * - Empty frames: decodes every frame; no run of pure background (the board: navy or cream, + grid / grain)
  *   longer than 0.5s.
  * - Duration: the file matches timeline.json (audio timeline + end card).
  * - Audio: the voiceover ends before the end card; integrated loudness and
@@ -99,9 +99,18 @@ decode.stdout.on("data", (chunk: Buffer) => {
   buffer = Buffer.concat([buffer, chunk]);
   while (buffer.length >= frameBytes) {
     const px = buffer.subarray(0, frameBytes);
+    // The board is the frame's median colour (navy or cream, any style): content is what differs from it.
+    const hist = [new Uint32Array(256), new Uint32Array(256), new Uint32Array(256)];
+    for (let i = 0; i < frameBytes; i += 3) for (let c = 0; c < 3; c++) hist[c][px[i + c]]++;
+    const board = hist.map((h) => {
+      let acc = 0;
+      for (let v = 0; v < 256; v++) if ((acc += h[v]) >= W * H / 2) return v;
+      return 0;
+    });
+    void NAVY;
     let content = 0;
     for (let i = 0; i < frameBytes && content < MIN_CONTENT_PIXELS; i += 3) {
-      const d = Math.max(Math.abs(px[i] - NAVY[0]), Math.abs(px[i + 1] - NAVY[1]), Math.abs(px[i + 2] - NAVY[2]));
+      const d = Math.max(Math.abs(px[i] - board[0]), Math.abs(px[i + 1] - board[1]), Math.abs(px[i + 2] - board[2]));
       if (d > CONTENT_THRESHOLD) content++;
     }
     if (content < MIN_CONTENT_PIXELS) {

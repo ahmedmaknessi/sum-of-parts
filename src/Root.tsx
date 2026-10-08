@@ -32,6 +32,23 @@ import { StyleTestPaperDecades, styleTestDuration } from "./videos/100-a-month-4
 import { slotDuration, TIMELINE } from "./videos/100-a-month-40-years/timeline";
 import { Thumbnail01A, Thumbnail01B, Thumbnail01C } from "./videos/100-a-month-40-years/Thumbnail01";
 import { Video01 } from "./videos/100-a-month-40-years/Video01";
+import { S01Hook as V2S01Hook } from "./videos/money-in-your-bank-doesnt-exist/scenes/S01Hook";
+import { S02Logo as V2S02Logo } from "./videos/money-in-your-bank-doesnt-exist/scenes/S02Logo";
+import { S14EndCard as V2S14EndCard } from "./videos/money-in-your-bank-doesnt-exist/scenes/S14EndCard";
+import { S13Takeaway as V2S13Takeaway } from "./videos/money-in-your-bank-doesnt-exist/scenes/S13Takeaway";
+import { S12Insurance as V2S12Insurance } from "./videos/money-in-your-bank-doesnt-exist/scenes/S12Insurance";
+import { S11Trust as V2S11Trust } from "./videos/money-in-your-bank-doesnt-exist/scenes/S11Trust";
+import { S10Infinite as V2S10Infinite } from "./videos/money-in-your-bank-doesnt-exist/scenes/S10Infinite";
+import { S09Iou as V2S09Iou } from "./videos/money-in-your-bank-doesnt-exist/scenes/S09Iou";
+import { S08Cash as V2S08Cash } from "./videos/money-in-your-bank-doesnt-exist/scenes/S08Cash";
+import { S07Destroyed as V2S07Destroyed } from "./videos/money-in-your-bank-doesnt-exist/scenes/S07Destroyed";
+import { S06TwoLayers as V2S06TwoLayers } from "./videos/money-in-your-bank-doesnt-exist/scenes/S06TwoLayers";
+import { S05Watch as V2S05Watch } from "./videos/money-in-your-bank-doesnt-exist/scenes/S05Watch";
+import { S04Twist as V2S04Twist } from "./videos/money-in-your-bank-doesnt-exist/scenes/S04Twist";
+import { S03Textbook as V2S03Textbook } from "./videos/money-in-your-bank-doesnt-exist/scenes/S03Textbook";
+import { slotDuration as v2SlotDuration, TIMELINE as V2_TIMELINE } from "./videos/money-in-your-bank-doesnt-exist/timeline";
+import { Thumbnail02A, Thumbnail02B, Thumbnail02C } from "./videos/money-in-your-bank-doesnt-exist/Thumbnail02";
+import { Video02 } from "./videos/money-in-your-bank-doesnt-exist/Video02";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -162,6 +179,134 @@ export const RemotionRoot: React.FC = () => {
           height={VIDEO.height}
           fps={TIMELINE.fps}
           durationInFrames={slotDuration("end-card")}
+        />
+      </Folder>
+      <Composition
+        id="Video02"
+        component={Video02}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        fps={V2_TIMELINE.fps}
+        durationInFrames={V2_TIMELINE.totalFrames}
+        defaultProps={{ muted: false }}
+      />
+      <Folder name="Video02-Thumbnails">
+        <Still id="Thumbnail02A" component={Thumbnail02A} width={1280} height={720} />
+        <Still id="Thumbnail02B" component={Thumbnail02B} width={1280} height={720} />
+        <Still id="Thumbnail02C" component={Thumbnail02C} width={1280} height={720} />
+      </Folder>
+      <Folder name="Video02-Scenes">
+        <Composition
+          id="V2-S01-Hook"
+          component={V2S01Hook}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s01-hook")}
+        />
+        <Composition
+          id="V2-S02-Logo"
+          component={V2S02Logo}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s02-logo")}
+        />
+        <Composition
+          id="V2-S03-Textbook"
+          component={V2S03Textbook}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s03-textbook")}
+        />
+        <Composition
+          id="V2-S04-Twist"
+          component={V2S04Twist}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s04-twist")}
+        />
+        <Composition
+          id="V2-S05-Watch"
+          component={V2S05Watch}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s05-watch")}
+        />
+        <Composition
+          id="V2-S06-TwoLayers"
+          component={V2S06TwoLayers}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s06-two-layers")}
+        />
+        <Composition
+          id="V2-S07-Destroyed"
+          component={V2S07Destroyed}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s07-destroyed")}
+        />
+        <Composition
+          id="V2-S08-Cash"
+          component={V2S08Cash}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s08-cash")}
+        />
+        <Composition
+          id="V2-S09-Iou"
+          component={V2S09Iou}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s09-iou")}
+        />
+        <Composition
+          id="V2-S10-Infinite"
+          component={V2S10Infinite}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s10-infinite")}
+        />
+        <Composition
+          id="V2-S11-Trust"
+          component={V2S11Trust}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s11-trust")}
+        />
+        <Composition
+          id="V2-S12-Insurance"
+          component={V2S12Insurance}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s12-insurance")}
+        />
+        <Composition
+          id="V2-S13-Takeaway"
+          component={V2S13Takeaway}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("s13-takeaway")}
+        />
+        <Composition
+          id="V2-S14-EndCard"
+          component={V2S14EndCard}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={v2SlotDuration("end-card")}
         />
       </Folder>
       <Folder name="Style-Tests">

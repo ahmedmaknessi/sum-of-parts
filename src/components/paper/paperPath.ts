@@ -6,7 +6,7 @@
 import { PAPER } from "../../brand/tokens";
 
 /** Deterministic noise in [-1, 1] for a seed and an index. */
-const jitter = (seed: number, i: number) => {
+export const jitter = (seed: number, i: number) => {
   let h = (seed * 2654435761 + i * 2246822519) >>> 0;
   h = Math.imul(h ^ (h >>> 15), 2246822507) >>> 0;
   h = Math.imul(h ^ (h >>> 13), 3266489909) >>> 0;
@@ -16,9 +16,9 @@ const jitter = (seed: number, i: number) => {
 type Pt = readonly [number, number];
 
 /** Points along a straight edge from a to b, nudged sideways by the cut wobble. */
-const cutEdge = (a: Pt, b: Pt, seed: number, wobble: number): Pt[] => {
+const cutEdge = (a: Pt, b: Pt, seed: number, wobble: number, step: number = PAPER.edge.step): Pt[] => {
   const len = Math.hypot(b[0] - a[0], b[1] - a[1]);
-  const n = Math.max(1, Math.round(len / PAPER.edge.step));
+  const n = Math.max(1, Math.round(len / step));
   // Unit normal to the edge.
   const nx = -(b[1] - a[1]) / (len || 1);
   const ny = (b[0] - a[0]) / (len || 1);
@@ -37,7 +37,12 @@ type RectOptions = {
   readonly wobble?: number;
   /** Keep the top edge perfectly straight (a bar's value is read from it). */
   readonly straightTop?: boolean;
+  /** Torn instead of cut: "ends" tears the left and right edges (a ripped strip), "all" every edge. */
+  readonly torn?: "ends" | "all";
 };
+
+/** Torn paper: many small, deep nicks. */
+const TORN = { step: 7, wobble: 6 } as const;
 
 /** A cut-paper rectangle. */
 export const paperRect = (
@@ -45,17 +50,19 @@ export const paperRect = (
   y: number,
   w: number,
   h: number,
-  { seed = 1, wobble = PAPER.edge.wobble, straightTop = false }: RectOptions = {},
+  { seed = 1, wobble = PAPER.edge.wobble, straightTop = false, torn }: RectOptions = {},
 ): string => {
   const tl: Pt = [x, y];
   const tr: Pt = [x + w, y];
   const br: Pt = [x + w, y + h];
   const bl: Pt = [x, y + h];
+  const side = (isEnd: boolean, s: number, a: Pt, b: Pt, base: number) =>
+    torn === "all" || (torn === "ends" && isEnd) ? cutEdge(a, b, s, TORN.wobble, TORN.step) : cutEdge(a, b, s, base);
   return toPath([
-    ...cutEdge(tl, tr, seed, straightTop ? 0 : wobble),
-    ...cutEdge(tr, br, seed + 1, wobble),
-    ...cutEdge(br, bl, seed + 2, wobble),
-    ...cutEdge(bl, tl, seed + 3, wobble),
+    ...side(false, seed, tl, tr, straightTop ? 0 : wobble),
+    ...side(true, seed + 1, tr, br, wobble),
+    ...side(false, seed + 2, br, bl, wobble),
+    ...side(true, seed + 3, bl, tl, wobble),
   ]);
 };
 
@@ -90,7 +97,7 @@ export const paperCircle = (
   cx: number,
   cy: number,
   r: number,
-  { seed = 1, wobble = PAPER.edge.wobble } = {},
+  { seed = 1, wobble = PAPER.edge.wobble as number }: { seed?: number; wobble?: number } = {},
 ): string => {
   const n = Math.max(12, Math.round((2 * Math.PI * r) / PAPER.edge.step));
   const pts: Pt[] = Array.from({ length: n }, (_, i) => {
@@ -110,4 +117,49 @@ export const paperCloud = (x: number, y: number, width: number, { seed = 1 } = {
     paperCircle(x + r * 3, y - r * 0.05, r * 0.85, { seed: seed + 2 }),
     paperRect(x + r * 0.6, y - r * 0.1, r * 2.8, r * 0.75, { seed: seed + 3 }),
   ].join(" ");
+};
+
+/** A cut-paper polygon through the given corners (triangles, roofs, arrows). */
+export const paperPolygon = (corners: readonly (readonly [number, number])[], { seed = 1, wobble = PAPER.edge.wobble as number }: { seed?: number; wobble?: number } = {}): string =>
+  toPath(corners.flatMap((a, i) => cutEdge(a, corners[(i + 1) % corners.length], seed + i, wobble)));
+
+/** A cut-paper ellipse. */
+export const paperEllipse = (cx: number, cy: number, rx: number, ry: number, { seed = 1, wobble = PAPER.edge.wobble as number }: { seed?: number; wobble?: number } = {}): string => {
+  const n = Math.max(14, Math.round((Math.PI * (rx + ry)) / PAPER.edge.step));
+  return toPath(
+    Array.from({ length: n }, (_, i) => {
+      const a = (i / n) * Math.PI * 2;
+      const w = jitter(seed, i) * wobble;
+      return [cx + Math.cos(a) * (rx + w), cy + Math.sin(a) * (ry + w)] as const;
+    }),
+  );
+};
+
+/** A cut-paper card with rounded corners (phones, cards, tags). */
+export const paperRoundRect = (
+  x: number,
+  y: number,
+  w: number,
+  h: number,
+  r: number,
+  { seed = 1, wobble = PAPER.edge.wobble as number }: { seed?: number; wobble?: number } = {},
+): string => {
+  const rr = Math.min(r, w / 2, h / 2);
+  const pts: Pt[] = [];
+  const corner = (cx: number, cy: number, a0: number) => {
+    for (let k = 0; k <= 4; k++) {
+      const a = a0 + (k / 4) * (Math.PI / 2);
+      pts.push([cx + Math.cos(a) * rr, cy + Math.sin(a) * rr]);
+    }
+  };
+  const edge = (a: Pt, b: Pt, s: number) => pts.push(...cutEdge(a, b, s, wobble).slice(1));
+  corner(x + w - rr, y + rr, -Math.PI / 2);
+  edge([x + w, y + rr], [x + w, y + h - rr], seed);
+  corner(x + w - rr, y + h - rr, 0);
+  edge([x + w - rr, y + h], [x + rr, y + h], seed + 1);
+  corner(x + rr, y + h - rr, Math.PI / 2);
+  edge([x, y + h - rr], [x, y + rr], seed + 2);
+  corner(x + rr, y + rr, Math.PI);
+  edge([x + rr, y], [x + w - rr, y], seed + 3);
+  return toPath(pts);
 };

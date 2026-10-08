@@ -1,0 +1,233 @@
+{
+  "fps": 30,
+  "totalFrames": 10543,
+  "audioSegments": [
+    {
+      "file": "audio/money-in-your-bank-doesnt-exist/voiceover.mp3",
+      "fromSec": 0,
+      "toSec": 20.767,
+      "atFrame": 0,
+      "fromFrame": 0,
+      "toFrame": 623
+    },
+    {
+      "file": "audio/money-in-your-bank-doesnt-exist/voiceover.mp3",
+      "fromSec": 20.767,
+      "toSec": 328.046,
+      "atFrame": 713,
+      "fromFrame": 623,
+      "toFrame": 9842
+    }
+  ],
+  "segment2OffsetSec": 3,
+  "scenes": [
+    {
+      "id": "s01-hook",
+      "startFrame": 0,
+      "endFrame": 623,
+      "anchorFrame": 2,
+      "cues": {
+        "balance": 83,
+        "whereIs": 136,
+        "notInVault": 236,
+        "nameOnIt": 261,
+        "stranger": 306,
+        "holding": 415,
+        "promise": 490,
+        "mostMoney": 532
+      }
+    },
+    {
+      "id": "s02-logo",
+      "startFrame": 623,
+      "endFrame": 713,
+      "anchorFrame": 623,
+      "cues": {}
+    },
+    {
+      "id": "s03-textbook",
+      "startFrame": 713,
+      "endFrame": 1305,
+      "anchorFrame": 716,
+      "cues": {
+        "deposit": 818,
+        "vault": 888,
+        "lends": 947,
+        "savingsLoan": 1012,
+        "anotherBank": 1114,
+        "multiplier": 1258
+      }
+    },
+    {
+      "id": "s04-twist",
+      "startFrame": 1305,
+      "endFrame": 1961,
+      "anchorFrame": 1311,
+      "cues": {
+        "notHow": 1420,
+        "boe2014": 1453,
+        "published": 1547,
+        "quote": 1633,
+        "actOfLending": 1739,
+        "plainWords": 1840,
+        "newMoney": 1924
+      }
+    },
+    {
+      "id": "s05-watch",
+      "startFrame": 1961,
+      "endFrame": 2975,
+      "anchorFrame": 1967,
+      "cues": {
+        "sarahWalks": 2010,
+        "carLoan": 2103,
+        "approves": 2167,
+        "notTake": 2212,
+        "twoEntries": 2327,
+        "sarahOwes": 2385,
+        "accountShows": 2569,
+        "didntExist": 2750,
+        "nobodyPrinted": 2848,
+        "typed": 2923
+      }
+    },
+    {
+      "id": "s06-two-layers",
+      "startFrame": 2975,
+      "endFrame": 4037,
+      "anchorFrame": 2981,
+      "cues": {
+        "toDealer": 3003,
+        "doesntVanish": 3091,
+        "differentBank": 3225,
+        "sendReal": 3339,
+        "secondKind": 3427,
+        "reserves": 3623,
+        "neverTouch": 3671,
+        "twoLayers": 3730,
+        "centralCreates": 3773,
+        "commercialBanks": 3887
+      }
+    },
+    {
+      "id": "s07-destroyed",
+      "startFrame": 4037,
+      "endFrame": 4807,
+      "anchorFrame": 4043,
+      "cues": {
+        "paysBack": 4115,
+        "destroys": 4297,
+        "notFixed": 4391,
+        "createdEvery": 4468,
+        "everyMortgage": 4633,
+        "everyRepayment": 4731
+      }
+    },
+    {
+      "id": "s08-cash",
+      "startFrame": 4807,
+      "endFrame": 5401,
+      "anchorFrame": 4813,
+      "cues": {
+        "unitedStates": 4921,
+        "broadMoney": 4957,
+        "cash": 5120,
+        "nineInTen": 5211,
+        "uk": 5312,
+        "ninetySeven": 5381
+      }
+    },
+    {
+      "id": "s09-iou",
+      "startFrame": 5401,
+      "endFrame": 6055,
+      "anchorFrame": 5407,
+      "cues": {
+        "iou": 5522,
+        "whenDeposit": 5562,
+        "books": 5687,
+        "owes": 5791,
+        "keepAside": 5850,
+        "sinceMarch": 5956,
+        "zeroPercent": 6041
+      }
+    },
+    {
+      "id": "s10-infinite",
+      "startFrame": 6055,
+      "endFrame": 7118,
+      "anchorFrame": 6061,
+      "cues": {
+        "infinite": 6176,
+        "threeThings": 6247,
+        "makesSense": 6320,
+        "borrowers": 6451,
+        "capital": 6560,
+        "rates": 6672,
+        "lastOne": 6797,
+        "ratesUp": 6861,
+        "fightInflation": 7080
+      }
+    },
+    {
+      "id": "s11-trust",
+      "startFrame": 7118,
+      "endFrame": 8404,
+      "anchorFrame": 7124,
+      "cues": {
+        "fallApart": 7265,
+        "depression": 7313,
+        "march9": 7507,
+        "svbCustomers": 7571,
+        "fortyTwo": 7681,
+        "quarter": 7772,
+        "hundredBillion": 7892,
+        "shutDown": 8036,
+        "onHand": 8105,
+        "bonds": 8209,
+        "notEveryone": 8335
+      }
+    },
+    {
+      "id": "s12-insurance",
+      "startFrame": 8404,
+      "endFrame": 9131,
+      "anchorFrame": 8410,
+      "cues": {
+        "twoFifty": 8566,
+        "since1933": 8718,
+        "atSvb": 8828,
+        "ninetyFour": 8874,
+        "notInsured": 8979,
+        "coveredEveryone": 9096
+      }
+    },
+    {
+      "id": "s13-takeaway",
+      "startFrame": 9131,
+      "endFrame": 9943,
+      "anchorFrame": 9137,
+      "cues": {
+        "notCash": 9230,
+        "notVault": 9265,
+        "promise": 9319,
+        "rules": 9377,
+        "insurance": 9412,
+        "trust": 9445,
+        "notPanic": 9520,
+        "education": 9633,
+        "ifBanks": 9726,
+        "printWhy": 9778,
+        "nextVideo": 9864,
+        "seeYou": 9909
+      }
+    },
+    {
+      "id": "end-card",
+      "startFrame": 9943,
+      "endFrame": 10543,
+      "anchorFrame": 9943,
+      "cues": {}
+    }
+  ]
+}

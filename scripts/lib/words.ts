@@ -26,13 +26,19 @@ const SMALL: Record<string, number> = {
   eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13,
   fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18,
   nineteen: 19,
+  // Ordinals ("March ninth" vs Whisper's "March 9"). "first", "second" and
+  // "third" are left as words: they are mostly not dates in our scripts.
+  fourth: 4, fifth: 5, sixth: 6, seventh: 7, eighth: 8, ninth: 9, tenth: 10,
+  eleventh: 11, twelfth: 12, thirteenth: 13, fourteenth: 14, fifteenth: 15,
+  sixteenth: 16, seventeenth: 17, eighteenth: 18, nineteenth: 19, twentieth: 20,
+  thirtieth: 30,
 };
 const TENS: Record<string, number> = {
   twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70,
   eighty: 80, ninety: 90,
 };
 const SCALES: Record<string, number> = {
-  thousand: 1_000, million: 1_000_000, billion: 1_000_000_000,
+  thousand: 1_000, million: 1_000_000, billion: 1_000_000_000, trillion: 1_000_000_000_000,
 };
 
 type RawToken = { text: string; word: number };
@@ -119,11 +125,20 @@ const collapseNumbers = (raw: RawToken[]): Token[] => {
       current = Number(text);
     } else if (k === "small" || k === "tens") {
       const v = k === "small" ? SMALL[text] : TENS[text];
+      // A spoken year: "twenty fourteen", "nineteen thirty-three", "twenty twenty-three".
+      const year =
+        (lastKind === "small" || lastKind === "tens") && total === 0 && (current === 19 || current === 20) && v >= 10;
+      if (year) {
+        current = current * 100 + v;
+        last = word;
+        lastKind = "yearTens";
+        continue;
+      }
       const continues =
         lastKind === "hundred" ||
         lastKind === "scale" ||
         lastKind === "and" ||
-        (lastKind === "tens" && k === "small" && v < 10);
+        ((lastKind === "tens" || lastKind === "yearTens") && k === "small" && v < 10);
       if (!continues) start();
       current += v;
     } else if (k === "hundred") {
@@ -133,6 +148,18 @@ const collapseNumbers = (raw: RawToken[]): Token[] => {
       if (lastKind === null) first = word;
       total += (current || 1) * SCALES[text];
       current = 0;
+    } else if (
+      // "two and a half trillion"
+      text === "and" &&
+      (lastKind === "small" || lastKind === "tens" || lastKind === "digits") &&
+      raw[i + 1]?.text === "a" &&
+      raw[i + 2]?.text === "half"
+    ) {
+      current += 0.5;
+      last = raw[i + 2].word;
+      lastKind = "small";
+      i += 2;
+      continue;
     } else if (
       text === "and" &&
       (lastKind === "hundred" || lastKind === "scale") &&
@@ -154,9 +181,23 @@ const collapseNumbers = (raw: RawToken[]): Token[] => {
   return tokens;
 };
 
+/**
+ * "$42 billion" splits as "42 dollars billion": move "dollars" after the
+ * scale so it reads "42 billion dollars", like the spoken script.
+ */
+const scaleBeforeDollars = (raw: RawToken[]): RawToken[] => {
+  const out = [...raw];
+  for (let i = 0; i + 2 < out.length; i++) {
+    if (kind(out[i].text) === "digits" && out[i + 1].text === "dollars" && kind(out[i + 2].text) === "scale") {
+      [out[i + 1], out[i + 2]] = [out[i + 2], out[i + 1]];
+    }
+  }
+  return out;
+};
+
 /** Normalizes a list of words into comparable tokens, keeping word indices. */
 export const tokenize = (words: readonly string[]): Token[] =>
-  collapseNumbers(words.flatMap((w, i) => splitWord(w, i)));
+  collapseNumbers(scaleBeforeDollars(words.flatMap((w, i) => splitWord(w, i))));
 
 /** Finds `pattern` in `tokens` starting at `from` (before `to`). Returns the token index or -1. */
 export const findTokens = (

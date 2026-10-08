@@ -1,0 +1,83 @@
+Open your banking app. Let's say it shows four thousand, two hundred and eighty dollars.
+
+Now, where is that money? Not in a vault with your name on it.
+
+The truth is stranger. The money in your bank account isn't money the bank is holding for you. It's a promise. And most of the money in the world exists only like that.
+
+Here's the story most of us were taught.
+
+You deposit one thousand dollars. The bank keeps a little in the vault, and lends the rest to someone else. Your savings become their loan.
+
+Then that loan lands in another bank, which lends most of it again. Textbooks call it the money multiplier.
+
+It makes sense. And according to the Bank of England, it's not how it works.
+
+In twenty fourteen, the Bank of England published a paper with a surprising line: "rather than banks lending out deposits that are placed with them, the act of lending creates deposits."
+
+In plain words: when a bank makes a loan, it creates new money.
+
+Let's watch it happen.
+
+Sarah walks into a bank and asks for a twenty thousand dollar car loan. The bank approves it.
+
+The bank does not take twenty thousand dollars from anyone's account. It makes two entries.
+
+On one side: Sarah owes the bank twenty thousand dollars. That's the loan.
+
+On the other side: Sarah's account now shows twenty thousand dollars. That's a deposit.
+
+A second ago, that money didn't exist. Now it does. Nobody printed it. Nobody saved it. The bank typed it.
+
+Sarah buys the car. The money moves to the dealer's account. It doesn't vanish. It just changes hands.
+
+But wait. What if the dealer uses a different bank? Now Sarah's bank has to send real money to the dealer's bank.
+
+This is where a second kind of money comes in. Banks settle with each other using money held at the central bank, called reserves. You and I never touch it.
+
+So there are two layers. The central bank creates cash and reserves. And commercial banks create the money you actually use every day: the numbers in your account.
+
+And here's the other half. When Sarah pays the loan back, that money disappears. The Bank of England says it directly: repaying loans destroys money.
+
+So money isn't a fixed pile. It's created every time someone borrows, and erased every time someone repays.
+
+Every mortgage and every car loan adds money. Every repayment takes some away.
+
+How much of the money around us is actually cash?
+
+In the United States, the broad money supply is about twenty-three trillion dollars. Physical cash is about two and a half trillion of it.
+
+That means roughly nine out of every ten dollars have never been printed. In the UK, the Bank of England put it at ninety-seven percent.
+
+So what is your balance, really?
+
+It's an IOU. When you deposit money, the bank now owes it to you. On the bank's books, your savings aren't something it has. They're something it owes.
+
+And how much does a US bank legally have to keep aside? Since March twenty twenty, the reserve requirement has been zero percent.
+
+So if banks can create money by typing, why don't they create infinite amounts?
+
+Three things stop them. First, a loan only makes sense if someone can pay it back, so banks need real borrowers. Second, regulators require banks to hold capital to absorb losses. And third, the central bank sets interest rates, which control how much people want to borrow.
+
+That last one matters most. When rates go up, people borrow less, and less new money gets created. That's how central banks slow down the money machine to fight inflation.
+
+So most of the time, the promise holds. But when people stop trusting it, things fall apart fast.
+
+During the Great Depression, thousands of American banks failed as people rushed to pull their money out.
+
+On March ninth, twenty twenty-three, customers of Silicon Valley Bank asked to withdraw about forty-two billion dollars in a single day. That was a quarter of all its deposits.
+
+The next morning, another one hundred billion dollars in withdrawals were waiting. The bank couldn't pay. It was shut down that same day.
+
+The bank didn't have that much on hand. Much of its money was tied up in bonds that had lost value. The promise only works if not everyone asks at once.
+
+That's why deposit insurance exists. In the US, the FDIC covers up to two hundred and fifty thousand dollars per depositor, per bank. It was created in nineteen thirty-three, as a direct answer to those bank runs. At Silicon Valley Bank, over ninety-four percent of deposits were above that limit, so they weren't insured at all. In the end, regulators stepped in and covered everyone.
+
+So, does the money in your bank account exist?
+
+Not as cash. Not as a pile in a vault. It exists as a promise, backed by rules, by insurance, and by the trust of millions of people.
+
+That's not a reason to panic. It's a reason to understand it.
+
+This is education, not financial advice.
+
+And if banks can create money, why can't countries just print as much as they want? That's the next video. See you there.

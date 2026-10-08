@@ -37,20 +37,10 @@ const { fps } = timeline;
 // Chapters
 // ---------------------------------------------------------------------------
 
-const CHAPTERS: [sceneId: string, title: string][] = [
-  ["s01-hook", "The question"],
-  ["s03-rules", "The rules"],
-  ["s04-mattress", "The mattress"],
-  ["s05-compounding", "How compounding works"],
-  ["s06-why-7", "Why 7%"],
-  ["s07-curve", "The curve"],
-  ["s08-decades", "Decade by decade"],
-  ["s09-tipping-point", "The tipping point"],
-  ["s10-cost-of-waiting", "The cost of waiting"],
-  ["s11-where-it-came-from", "Where the money comes from"],
-  ["s12-fine-print", "The fine print"],
-  ["s13-takeaway", "The takeaway"],
-];
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const { CHAPTERS } = require(path.join(videoDir, "chapters.ts")) as {
+  CHAPTERS: readonly (readonly [sceneId: string, title: string])[];
+};
 
 const chapterTime = (frame: number) => {
   const s = Math.floor(frame / fps);
@@ -132,8 +122,22 @@ const toOutput = (sec: number) => (sec < seg1.toFrame / fps ? sec : sec + offset
 // Display text: numbers as digits
 // ---------------------------------------------------------------------------
 
-const SCALE_ONLY = /^(hundred|thousand|million|billion)$/i;
+const SCALE_ONLY = /^(hundred|thousand|million|billion|trillion)$/i;
 const fmt = (n: number) => n.toLocaleString("en-US");
+/** Millions and up stay words, as spoken: "$42 billion", "2.5 trillion". */
+const BIG = [
+  [1e12, "trillion"],
+  [1e9, "billion"],
+  [1e6, "million"],
+] as const;
+const big = (n: number) => {
+  const step = BIG.find(([size]) => n >= size);
+  // Non-breaking space: "$42 billion" never splits across two subtitle lines.
+  return step ? `${Math.round((n / step[0]) * 10) / 10} ${step[1]}` : null;
+};
+/** "twenty fourteen", "nineteen thirty-three": a spoken year, written without a comma. */
+const isYear = (n: number, words: readonly string[]) =>
+  Number.isInteger(n) && n >= 1900 && n <= 2099 && !words.some((w) => /thousand|hundred/i.test(w));
 const trailing = (word: string) => word.match(/[.,:;?!]+["”)]*$/)?.[0] ?? "";
 
 type Unit = { text: string; start: number; end: number };
@@ -155,14 +159,17 @@ for (let w = 0; w < scriptWords.length; w++) {
     const scaleOnly = spanWords.every((sw) => SCALE_ONLY.test(sw.replace(/[^a-z]/gi, "")));
     let text: string | null = null;
     let lastWord = token.lastWord;
-    if (!scaleOnly && unitWord === "dollars") {
-      text = `$${fmt(n)}`;
+    const asWords = big(n) ?? fmt(n);
+    if (!scaleOnly && (unitWord === "dollars" || unitWord === "dollar")) {
+      text = `$${asWords}`;
       lastWord = next.lastWord;
     } else if (!scaleOnly && unitWord === "percent") {
       text = `${fmt(n)}%`;
       lastWord = next.lastWord;
+    } else if (!scaleOnly && isYear(n, spanWords)) {
+      text = String(n);
     } else if (!scaleOnly && n >= 10) {
-      text = fmt(n);
+      text = asWords;
     }
     if (text !== null) {
       for (let k = token.firstWord; k <= lastWord; k++) used.add(k);

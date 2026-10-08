@@ -119,7 +119,9 @@ All three are kept and built from the same paper components; the user picks one 
 **Decisions**
 
 - [ ] **Style:** dark paper, light paper or mixed (show the three reference clips if useful).
-- [ ] **Motion:** smooth (default) or stop-motion.
+- [ ] **Motion:** smooth (default) or stop-motion ("on twos"), and whether slight overshoot / settle wobble is allowed.
+- [ ] **Text treatment:** paper titles with crisp data numbers (default), or everything as cut paper (only source lines flat).
+- [ ] **Exceptions to the brand** the script asks for (e.g. paper figures, new colours): approved for this video only, or as a permanent rule.
 - [ ] **Working title** and the one money question the video answers.
 - [ ] **Pillar:** math of money, how companies make money, or how the economy works.
 
@@ -143,7 +145,7 @@ All three are kept and built from the same paper components; the user picks one 
 - [ ] **Shorts:** how many and which moments (can be decided after the main cut).
 - [ ] **Thumbnail direction** (optional): any text or angle the user wants tested.
 
-Only when every required box is ticked: create `src/videos/<slug>/`, run the voiceover pipeline below, and build.
+Only when every required box is ticked: create `src/videos/<slug>/`, write the decisions into `src/videos/<slug>/BUILD_NOTES.md` (they override the script where they differ), run the voiceover pipeline below, and build. Licensed music packs go in `public/music/<slug>/` (git-ignored).
 
 ## Video format
 
@@ -166,7 +168,8 @@ Per video, in `src/videos/<slug>/`: `voiceover.txt` (exact wording), `timeline-s
 3. `npm test`: finance and label tests. Must pass before anything renders.
 4. `npm run mix -- <slug>`: measures loudness (as delivered, mono voice on both stereo channels) and writes `audio-mix.json` (gain for `<Audio volume>`, plus a peak-limited copy when needed). Target -16 LUFS, peaks under -1.5 dBTP. The source mp3 is never modified.
 5. QA: `npx tsx scripts/qa/static-checks.ts <slug>` (hardcoded numbers, font sizes, colors, every cue firing within 3 frames), `npx tsx scripts/qa/frame-checks.ts <slug>` (renders scene starts and cues; safe margin, visible change at each cue), `npx tsx scripts/qa/video-checks.ts <slug> <mp4>` (empty frames, duration, loudness).
-6. Render with the video's `render:<video>` npm script (tests first; H.264 CRF 18, yuv420p, BT.709, AAC 320k), then `npx tsx scripts/export-extras.ts <slug>` for YouTube chapters and the SRT.
+6. Sound and music (papercut videos): `src/videos/<slug>/sfx.ts` (cue sheet, sounds under `public/sfx/`) and `music.ts` (arrangement per scene: full / thin stems / sparse / open), mixed by `npm run audio -- <slug>` into `public/audio/<slug>/music-bed.wav` and `sfx-track.wav` (ducked under the voice, peak-safe on voice + music + sfx).
+7. Render with the video's `render:<video>` npm script (tests first; H.264 CRF 18, yuv420p, BT.709, AAC 320k), then `npx tsx scripts/export-extras.ts <slug>` for YouTube chapters (from `src/videos/<slug>/chapters.ts`), the SRT and `captions.json`.
 
 ## Project structure
 
@@ -232,6 +235,7 @@ All components are built with `Interactive.withSchema({wrapInSequence: true})`, 
 - `npm test` runs the finance and data tests.
 - `npm run transcribe -- <slug>`, `npm run timeline -- <slug>`, `npm run mix -- <slug>`: the voiceover pipeline above.
 - `npm run render:video01` renders video 01 (tests first) to `out/`; `npm run render:video01-shorts` renders its Shorts to `out/shorts/`.
-- `npm run sfx` regenerates the sound kit and video 01's sound-effects track.
+- `npm run sfx` regenerates the sound kit and video 01's sound-effects track; `npm run audio -- <slug>` regenerates both kits and a papercut video's music bed + sfx track.
+- `npm run render:video02` renders video 02 (tests and audio first) to `out/`.
 - `npm run render:video01-thumbnails` renders the three A/B-test thumbnails to `out/thumbnails/`.
 - `npm run lint` runs ESLint and the TypeScript check.

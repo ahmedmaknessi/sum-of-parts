@@ -143,16 +143,22 @@ export const GRID = {
  */
 export const PAPER = {
   shadow: {
-    /** Offset and blur per depth step, in px. */
-    x: 3,
-    y: 5,
-    blur: 8,
+    /**
+     * Offset and blur per depth step, in px. Depth 1 (a piece lying on the
+     * board) casts a 6px / 12px-blur shadow; depth 2 to 2.3 (lifted, top
+     * layers) reaches 12 to 14px / 24 to 28px blur.
+     */
+    x: 3.5,
+    y: 6,
+    blur: 12,
     /** Shadows are the one non-palette tone: black at this opacity, darker than the navy board. */
     color: "#000000",
-    opacity: 0.42,
-    /** Softer on a light (cream) board, where black reads much stronger. */
-    opacityOnLight: 0.2,
+    opacity: 0.35,
+    /** On a light (cream) board, where black reads stronger. */
+    opacityOnLight: 0.28,
   },
+  /** Paper thickness: a thin lighter rim along every cut edge (cream, low opacity). */
+  rim: { width: 1, opacity: 0.15 },
   /** Paper grain tile (public/paper/grain.png, made by scripts/make-paper-texture.ts). */
   grain: { file: "paper/grain.png", tile: 512, opacity: 0.5, boardOpacity: 0.35 },
   /** Cut edges: points every `step` px, nudged up to `wobble` px. Fixed per shape, never animated. */
@@ -234,6 +240,11 @@ export const EASE = {
   inOut: Easing.bezier(0.65, 0, 0.35, 1),
   in: Easing.bezier(0.7, 0, 0.84, 0),
   spring: Easing.spring({ damping: 200 }),
+  /**
+   * Papercut "placed by hand": lands about 4% past the target, then settles.
+   * Only for videos whose intake allows overshoot (see BUILD_NOTES.md).
+   */
+  settle: Easing.bezier(0.25, 1.3, 0.45, 1),
 } as const;
 
 /** Standard animation lengths in seconds. Multiply by fps at the call site. */

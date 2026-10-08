@@ -80,6 +80,8 @@ export type USDFormat = {
   readonly decimals?: number;
   /** Prefix positive values with "+" (e.g. "+$39"). */
   readonly signed?: boolean;
+  /** Decimals for compact millions and up: 1 gives "$2.5T" (default), 0 gives "$42B". */
+  readonly compactDecimals?: number;
 };
 
 /** Hyphen-minus is used for negatives ("-$63,332") to match the spec's labels. */
@@ -90,7 +92,10 @@ const sign = (value: number, signed: boolean) => (value < 0 ? "-" : signed && va
  * Compact: under $1,000 stays whole dollars ("$39"), thousands round to whole K
  * ("$17K", "$140K"), millions and up keep one decimal ("$1.2M", "$3.4B").
  */
-export const formatUSD = (value: number, { compact = false, decimals = 0, signed = false }: USDFormat = {}): string => {
+export const formatUSD = (
+  value: number,
+  { compact = false, decimals = 0, signed = false, compactDecimals = 1 }: USDFormat = {},
+): string => {
   const abs = Math.abs(value);
   const s = sign(Number(abs.toFixed(decimals)) === 0 ? 0 : value, signed);
 
@@ -105,7 +110,7 @@ export const formatUSD = (value: number, { compact = false, decimals = 0, signed
       { size: 1e6, suffix: "M" },
     ];
     const step = steps.find((x) => abs >= x.size * 0.99995) ?? steps[2];
-    return `${s}$${(abs / step.size).toFixed(1)}${step.suffix}`;
+    return `${s}$${(abs / step.size).toFixed(compactDecimals)}${step.suffix}`;
   }
 
   const body = abs.toLocaleString("en-US", {

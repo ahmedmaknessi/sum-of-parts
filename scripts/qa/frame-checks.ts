@@ -26,7 +26,6 @@ const CONTENT_THRESHOLD = 40;
 /** A pixel counts as changed between two frames above this difference. */
 const CHANGE_THRESHOLD = 16;
 const MIN_CHANGED_PIXELS = 150;
-const NAVY = [0x10, 0x16, 0x2b];
 
 type SceneJson = { id: string; startFrame: number; cues: Record<string, number> };
 const timeline = JSON.parse(
@@ -65,7 +64,8 @@ const render = spawnSync(
 );
 if (render.status !== 0) throw new Error("Render failed");
 
-const digits = String(timeline.totalFrames - 1).length;
+// Remotion pads file names to the highest frame it rendered.
+const digits = String(Math.max(...list)).length;
 const fileFor = (f: number) => path.join(outDir, `element-${String(f).padStart(digits, "0")}.png`);
 const pixels = new Map<number, Buffer>();
 const rgb = (f: number) => {
@@ -84,13 +84,21 @@ let marginFails = 0;
 console.log(`\nSafe margin (${MARGIN}px) on ${list.length} frames`);
 for (const f of list) {
   const px = rgb(f);
+  // The board is the frame's median colour (navy or cream): content is what differs from it.
+  const hist = [new Uint32Array(256), new Uint32Array(256), new Uint32Array(256)];
+  for (let i = 0; i < W * H * 3; i += 3) for (let c = 0; c < 3; c++) hist[c][px[i + c]]++;
+  const board = hist.map((h) => {
+    let acc = 0;
+    for (let v = 0; v < 256; v++) if ((acc += h[v]) >= (W * H) / 2) return v;
+    return 0;
+  });
   let hits = 0;
   let example = "";
   for (let y = 0; y < H; y++) {
     for (let x = 0; x < W; x++) {
       if (x >= MARGIN && x < W - MARGIN && y >= MARGIN && y < H - MARGIN) continue;
       const i = (y * W + x) * 3;
-      const d = Math.max(Math.abs(px[i] - NAVY[0]), Math.abs(px[i + 1] - NAVY[1]), Math.abs(px[i + 2] - NAVY[2]));
+      const d = Math.max(Math.abs(px[i] - board[0]), Math.abs(px[i + 1] - board[1]), Math.abs(px[i + 2] - board[2]));
       if (d > CONTENT_THRESHOLD) {
         if (hits === 0) example = `(${x}, ${y})`;
         hits++;
