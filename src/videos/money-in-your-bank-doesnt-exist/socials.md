@@ -36,14 +36,71 @@ Settings for every Short:
 - Not made for kids, Category Education, language English. No caption file. Altered content: No.
 - Leave "Allow remixing" on.
 
-| # | Title (max 100 characters) |
-|---|---|
-| 1 | Where Is Your Money, Really? #shorts |
-| 2 | Banks Create Money by Typing #shorts |
-| 3 | 9 in 10 Dollars Were Never Printed #shorts |
-| 4 | The $42 Billion Bank Run #shorts |
+### Short 1: the hook (1:03)
 
-The descriptions are in `youtube.md` (Shorts section).
+Title:
+```
+Where Is Your Money, Really? #shorts
+```
+Description:
+```
+Your banking app says $4,280. But that money isn't sitting in a vault with your name on it. It's a promise. And the textbook story, that banks lend out your savings, isn't how it works: the Bank of England says lending creates deposits. (Source: Bank of England, 2014.)
+
+Full explanation: the related video linked above.
+Education only, not financial advice.
+
+#money #banking #economics
+```
+
+### Short 2: the bank typed it (1:00)
+
+Title:
+```
+Banks Create Money by Typing #shorts
+```
+Description:
+```
+When a bank approves a loan, it doesn't take the money from anyone's account. It makes two entries: you owe the bank, and your account goes up. New money, typed into existence. And when the loan is repaid, that money disappears again. (Source: Bank of England, 2014. Sarah's $20,000 car loan is an example.)
+
+Full explanation: the related video linked above.
+Education only, not financial advice.
+
+#money #banking #economics
+```
+
+### Short 3: never printed (0:42)
+
+Title:
+```
+9 in 10 Dollars Were Never Printed #shorts
+```
+Description:
+```
+US money (M2) is about $23.2 trillion. Physical cash is about $2.5 trillion of it. Roughly 9 in 10 dollars exist only as numbers in bank accounts. In the UK, the Bank of England put it at 97%. Your balance is an IOU from your bank, and since March 2020 US banks have been required to keep 0% in reserve.
+Sources: Federal Reserve H.6 (July 2026), Bank of England (2014), Regulation D (2020).
+
+Full explanation: the related video linked above.
+Education only, not financial advice.
+
+#money #banking #economics
+```
+
+### Short 4: the bank run (1:07)
+
+Title:
+```
+The $42 Billion Bank Run #shorts
+```
+Description:
+```
+On March 9, 2023, Silicon Valley Bank's customers asked for $42 billion in a single day, a quarter of its deposits. $100 billion more was waiting the next morning. The bank was shut down that same day. Over 94% of its deposits were above the FDIC's $250,000 limit, and in the end regulators covered everyone.
+Sources: Federal Reserve OIG, Material Loss Review of SVB (2023); FDIC; Treasury/Fed/FDIC joint statement (12 March 2023).
+
+Full explanation: the related video linked above.
+Education only, not financial advice.
+
+#money #banking #svb
+```
 
 ---
 

@@ -170,6 +170,9 @@ Per video, in `src/videos/<slug>/`: `voiceover.txt` (exact wording), `timeline-s
 5. QA: `npx tsx scripts/qa/static-checks.ts <slug>` (hardcoded numbers, font sizes, colors, every cue firing within 3 frames), `npx tsx scripts/qa/frame-checks.ts <slug>` (renders scene starts and cues; safe margin, visible change at each cue), `npx tsx scripts/qa/video-checks.ts <slug> <mp4>` (empty frames, duration, loudness).
 6. Sound and music (papercut videos): `src/videos/<slug>/sfx.ts` (cue sheet, sounds under `public/sfx/`) and `music.ts` (arrangement per scene: full / thin stems / sparse / open), mixed by `npm run audio -- <slug>` into `public/audio/<slug>/music-bed.wav` and `sfx-track.wav` (ducked under the voice, peak-safe on voice + music + sfx).
 7. Render with the video's `render:<video>` npm script (tests first; H.264 CRF 18, yuv420p, BT.709, AAC 320k), then `npx tsx scripts/export-extras.ts <slug>` for YouTube chapters (from `src/videos/<slug>/chapters.ts`), the SRT and `captions.json`.
+8. Publishing copy, two files per video:
+   - `src/videos/<slug>/youtube.md`: the main video (title + A/B alternatives, description with chapters and sources, tags, pinned comment, upload settings, end screen, thumbnails, pre-publish checklist).
+   - `src/videos/<slug>/socials.md`: everything for the short-form and social posts, **always including the YouTube Shorts** (title, description, Related video setting for each Short) next to Instagram Reels (caption, hashtags, alt text, cover) and Facebook (Reels and any landscape teaser: caption, first comment, settings), plus the licence notes and a posting schedule. `youtube.md` only points to it for the Shorts.
 
 ## Project structure
 
