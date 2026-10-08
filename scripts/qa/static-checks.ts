@@ -140,9 +140,21 @@ for (const file of sceneFiles) {
     minOffset.set(m[1], prev === undefined ? offset : Math.min(prev, offset));
   }
 
+  // Direct uses outside the `const cue = {...}` alias block (exported timing helpers): T.cue("x") + N
+  const direct = new Map<string, number>();
+  const withoutAliases = src.replace(/const cue = \{[\s\S]*?\n\s*\};/g, "");
+  for (const m of withoutAliases.matchAll(/T\.cue\("(\w+)"\)(\s*([+-])\s*(\d+))?/g)) {
+    const offset = m[2] ? (m[3] === "-" ? -1 : 1) * Number(m[4]) : 0;
+    const prev = direct.get(m[1]);
+    direct.set(m[1], prev === undefined ? offset : Math.min(prev, offset));
+  }
+
   for (const [cueName, frame] of Object.entries(scene.cues)) {
     const alias = [...aliases.entries()].find(([, names]) => names.includes(cueName))?.[0];
-    const offset = alias !== undefined ? minOffset.get(alias) : undefined;
+    const viaAlias = alias !== undefined ? minOffset.get(alias) : undefined;
+    const viaDirect = direct.get(cueName);
+    const offset =
+      viaAlias === undefined ? viaDirect : viaDirect === undefined ? viaAlias : Math.min(viaAlias, viaDirect);
     const actual = offset === undefined ? null : frame + offset;
     rows.push({ scene: sceneId, cue: cueName, expected: frame, actual, diff: actual === null ? null : actual - frame });
   }

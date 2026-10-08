@@ -178,6 +178,17 @@ for (let w = 0; w < scriptWords.length; w++) {
   units.push({ text: scriptWords[w], start: toOutput(wordTimes[w]!.start), end: toOutput(wordTimes[w]!.end) });
 }
 
+// Word-level captions for the Shorts (Remotion's Caption format, times in the final video).
+const captionsPath = path.join(videoDir, "captions.json");
+const captions = units.map((u, i) => ({
+  text: (i === 0 ? "" : " ") + u.text,
+  startMs: Math.round(u.start * 1000),
+  endMs: Math.round(u.end * 1000),
+  timestampMs: Math.round(((u.start + u.end) / 2) * 1000),
+  confidence: null,
+}));
+writeFileSync(captionsPath, JSON.stringify(captions, null, 1) + "\n");
+
 // ---------------------------------------------------------------------------
 // Subtitles: max 2 lines x 42 characters
 // ---------------------------------------------------------------------------
@@ -290,6 +301,7 @@ const srt = cues.map((c, i) => `${i + 1}\n${srtTime(c.start)} --> ${srtTime(c.en
 const srtPath = path.join(outDir, `${slug}.srt`);
 writeFileSync(srtPath, srt);
 
+console.log(`Captions: ${path.relative(root, captionsPath)} (${captions.length} words)`);
 console.log(`Chapters: ${path.relative(root, chaptersPath)}`);
 console.log(chapters.join("\n"));
 console.log(`\nSubtitles: ${path.relative(root, srtPath)} (${cues.length} cues, ${unmatched} unmatched script tokens)`);

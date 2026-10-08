@@ -16,6 +16,18 @@ export const VIDEO = {
   fps: 30,
 } as const;
 
+/**
+ * Vertical Shorts (9:16). `safe` keeps content clear of the Shorts player UI:
+ * the top bar, the title / channel / subscribe block at the bottom, and the
+ * like / comment buttons along the right edge.
+ */
+export const SHORT = {
+  width: 1080,
+  height: 1920,
+  fps: 30,
+  safe: { top: 160, bottom: 480, x: 64 },
+} as const;
+
 // ---------------------------------------------------------------------------
 // Color
 // ---------------------------------------------------------------------------
@@ -70,6 +82,48 @@ export const withAlpha = (hex: string, alpha: number): string => {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
+/** Mixes two brand hex colors: t = 0 gives `a`, t = 1 gives `b`. */
+export const mixHex = (a: string, b: string, t: number): string => {
+  const ch = (hex: string, i: number) => parseInt(hex.replace("#", "").slice(i * 2, i * 2 + 2), 16);
+  const out = [0, 1, 2].map((i) => Math.round(ch(a, i) + (ch(b, i) - ch(a, i)) * t));
+  return `#${out.map((v) => v.toString(16).padStart(2, "0")).join("").toUpperCase()}`;
+};
+
+/**
+ * Paper world palette (papercut style): the colours of objects and
+ * landscapes. Vivid but grown-up. NEVER for data highlights (that is
+ * amber's job) and never for chart series (SERIES_COLORS). Each hue comes in
+ * three tones for layering: `light` (mixed toward cream, far layers), `base`,
+ * and `dark` (mixed toward navy, near layers and shaded sides).
+ */
+const PAPER_BASE = {
+  /** Banknotes, growth, wealth. */
+  green: "#2E9E6B",
+  /** Hills, plants, fresh starts. */
+  leaf: "#8DC85A",
+  /** Sky, water, buildings, banks. */
+  sky: "#4DA3E3",
+  /** Night, luxury, the unknown. */
+  plum: "#7E5BB0",
+  /** Warmth, people's things, soft emphasis in the world (not data). */
+  rose: "#EE8597",
+  /** Cardboard, envelopes, boxes, the desk. */
+  kraft: "#C78B4E",
+} as const;
+
+export type PaperHue = keyof typeof PAPER_BASE;
+
+export const PAPER_COLORS = Object.fromEntries(
+  Object.entries(PAPER_BASE).map(([hue, base]) => [
+    hue,
+    {
+      light: mixHex(base, COLORS.primary, 0.5),
+      base,
+      dark: mixHex(base, COLORS.background, 0.38),
+    },
+  ]),
+) as Record<PaperHue, { readonly light: string; readonly base: string; readonly dark: string }>;
+
 // ---------------------------------------------------------------------------
 // Background texture
 // ---------------------------------------------------------------------------
@@ -80,6 +134,37 @@ export const GRID = {
   color: COLORS.primary,
   opacity: 0.045,
 } as const;
+
+/**
+ * Papercut style (video 02 on). One light, top left: every card casts one
+ * soft shadow down and to the right, longer the higher it sits (depth 1 =
+ * lying on the board, 3 = lifted). Only the paper world uses these; numbers
+ * and chart marks stay crisp.
+ */
+export const PAPER = {
+  shadow: {
+    /** Offset and blur per depth step, in px. */
+    x: 3,
+    y: 5,
+    blur: 8,
+    /** Shadows are the one non-palette tone: black at this opacity, darker than the navy board. */
+    color: "#000000",
+    opacity: 0.42,
+    /** Softer on a light (cream) board, where black reads much stronger. */
+    opacityOnLight: 0.2,
+  },
+  /** Paper grain tile (public/paper/grain.png, made by scripts/make-paper-texture.ts). */
+  grain: { file: "paper/grain.png", tile: 512, opacity: 0.5, boardOpacity: 0.35 },
+  /** Cut edges: points every `step` px, nudged up to `wobble` px. Fixed per shape, never animated. */
+  edge: { step: 26, wobble: 1.8 },
+} as const;
+
+/** CSS drop-shadow for a paper card at a (possibly fractional) depth. */
+export const paperShadow = (depth: number, opacity: number = PAPER.shadow.opacity): string => {
+  const s = PAPER.shadow;
+  if (depth <= 0) return "none";
+  return `drop-shadow(${s.x * depth}px ${s.y * depth}px ${s.blur * depth}px ${withAlpha(s.color, opacity)})`;
+};
 
 // ---------------------------------------------------------------------------
 // Typography

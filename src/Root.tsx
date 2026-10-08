@@ -1,5 +1,5 @@
 import { Composition, Folder, Still } from "remotion";
-import { VIDEO } from "./brand/tokens";
+import { SHORT, VIDEO } from "./brand/tokens";
 import { getTotalFrames, toFrames } from "./lib/timeline";
 import { BrandShowcase } from "./videos/brand-showcase/BrandShowcase";
 import { SCENES, TRANSITION_SECONDS } from "./videos/brand-showcase/scenes";
@@ -24,8 +24,13 @@ import { S11WhereItCameFrom } from "./videos/100-a-month-40-years/scenes/S11Wher
 import { S12FinePrint } from "./videos/100-a-month-40-years/scenes/S12FinePrint";
 import { S13Takeaway } from "./videos/100-a-month-40-years/scenes/S13Takeaway";
 import { S14EndCard } from "./videos/100-a-month-40-years/scenes/S14EndCard";
+import { shortDuration } from "./videos/100-a-month-40-years/shorts/ShortFrame";
+import { ShortComposition, SHORTS } from "./videos/100-a-month-40-years/shorts/Shorts";
+import { StyleTestPaperDecadesMixed } from "./videos/100-a-month-40-years/style-test/MixedPaperDecades";
+import { PaperPalette } from "./videos/100-a-month-40-years/style-test/PaperPalette";
+import { StyleTestPaperDecades, styleTestDuration } from "./videos/100-a-month-40-years/style-test/S08DecadesPaper";
 import { slotDuration, TIMELINE } from "./videos/100-a-month-40-years/timeline";
-import { Thumbnail01 } from "./videos/100-a-month-40-years/Thumbnail01";
+import { Thumbnail01A, Thumbnail01B, Thumbnail01C } from "./videos/100-a-month-40-years/Thumbnail01";
 import { Video01 } from "./videos/100-a-month-40-years/Video01";
 
 export const RemotionRoot: React.FC = () => {
@@ -40,7 +45,11 @@ export const RemotionRoot: React.FC = () => {
         durationInFrames={TIMELINE.totalFrames}
         defaultProps={{ muted: false }}
       />
-      <Still id="Thumbnail01" component={Thumbnail01} width={1280} height={720} />
+      <Folder name="Video01-Thumbnails">
+        <Still id="Thumbnail01A" component={Thumbnail01A} width={1280} height={720} />
+        <Still id="Thumbnail01B" component={Thumbnail01B} width={1280} height={720} />
+        <Still id="Thumbnail01C" component={Thumbnail01C} width={1280} height={720} />
+      </Folder>
       <Folder name="Video01-Scenes">
         <Composition
           id="V01-S01-Hook"
@@ -154,6 +163,49 @@ export const RemotionRoot: React.FC = () => {
           fps={TIMELINE.fps}
           durationInFrames={slotDuration("end-card")}
         />
+      </Folder>
+      <Folder name="Style-Tests">
+        <Still id="PaperPalette" component={PaperPalette} width={VIDEO.width} height={VIDEO.height} />
+        <Composition
+          id="StyleTestPaperDecades"
+          component={StyleTestPaperDecades}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={styleTestDuration()}
+          defaultProps={{ theme: "dark" as const }}
+        />
+        <Composition
+          id="StyleTestPaperDecadesLight"
+          component={StyleTestPaperDecades}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={styleTestDuration()}
+          defaultProps={{ theme: "light" as const }}
+        />
+        <Composition
+          id="StyleTestPaperDecadesMixed"
+          component={StyleTestPaperDecadesMixed}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          fps={VIDEO.fps}
+          durationInFrames={styleTestDuration()}
+        />
+      </Folder>
+      <Folder name="Video01-Shorts">
+        {SHORTS.map((short) => (
+          <Composition
+            key={short.id}
+            id={short.id}
+            component={ShortComposition}
+            width={SHORT.width}
+            height={SHORT.height}
+            fps={SHORT.fps}
+            durationInFrames={shortDuration(short.scene)}
+            defaultProps={{ short: short.id }}
+          />
+        ))}
       </Folder>
       <Composition
         id="BrandShowcase"

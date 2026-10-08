@@ -32,6 +32,18 @@ const growthAt = (year: number) => {
   return mix(DATA.series[lo - 1].growthThisYear, DATA.series[hi - 1].growthThisYear, t);
 };
 
+/** Year readout: 1 to 11 on "In year eleven", freeze, then 11 to 40 from "From that point on". */
+export const s09YearAt = (frame: number) => {
+  const eleven = T.cue("yearEleven");
+  const from = T.cue("fromThatPoint");
+  return frame < from
+    ? interpolate(frame, [12, eleven], [1, DATA.tipping.year], { ...clamp, easing: EASE.inOut })
+    : interpolate(frame, [from, from + RUSH_FRAMES], [DATA.tipping.year, ASSUMPTIONS.years], {
+        ...clamp,
+        easing: EASE.inOut,
+      });
+};
+
 /** Value label beside a bar end. */
 const EndValue: React.FC<{ readonly x: number; readonly y: number; readonly color: string; readonly children: string }> = ({
   x,
@@ -62,16 +74,7 @@ export const S09TippingPoint: React.FC = () => {
     from: T.cue("fromThatPoint"),
     gap: T.cue("gapWider"),
   };
-  const tipping = DATA.tipping.year;
-
-  // Year: 1 -> 11 exactly on "In year eleven", freeze, then 11 -> 40 from "From that point on".
-  const year =
-    frame < cue.from
-      ? interpolate(frame, [12, cue.eleven], [1, tipping], { ...clamp, easing: EASE.inOut })
-      : interpolate(frame, [cue.from, cue.from + RUSH_FRAMES], [tipping, ASSUMPTIONS.years], {
-          ...clamp,
-          easing: EASE.inOut,
-        });
+  const year = s09YearAt(frame);
   const shownYear = Math.round(year);
   const rescale = ramp(frame, cue.from, RUSH_FRAMES, EASE.inOut);
   // Auto-fit every frame: the growth bar never runs past MAX_BAR, the deposit bar shrinks instead.

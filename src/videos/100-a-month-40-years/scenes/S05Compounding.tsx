@@ -47,6 +47,18 @@ const blend = (a: Camera, b: Camera, t: number): Camera => ({
 /** The loop arrow: from the tiny sliver on the +$39 cap, around, and back onto it. */
 const LOOP_PATH = "M 0 -10 C -40 -80, 10 -130, 50 -120 C 100 -108, 80 -40, 14 -6";
 
+/** "Year N" readout while the row grows: 3 to 10 slowly, then 11 to 40 in a rush (also drives the sound ticks). */
+export const s05YearAt = (frame: number) => {
+  const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+  const slow = T.cue("slowAtFirst");
+  const then = T.cue("thenItDoesnt");
+  return Math.round(
+    frame < then
+      ? interpolate(frame, [slow + 6, slow + 6 + 7 * 5], [3, 10], clamp)
+      : interpolate(frame, [then + 4, then + 4 + (YEARS - 11)], [11, ASSUMPTIONS.years], clamp),
+  );
+};
+
 export const S05Compounding: React.FC = () => {
   const frame = useCurrentFrame();
   const cue = {
@@ -112,13 +124,7 @@ export const S05Compounding: React.FC = () => {
 
   const columns = Array.from({ length: YEARS }, (_, i) => i + 1);
 
-  // "Year N" readout while the row grows: 3 to 10 slowly, then 11 to 40 in a rush.
-  const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
-  const yearShown = Math.round(
-    frame < cue.then
-      ? interpolate(frame, [cue.slow + 6, cue.slow + 6 + 7 * 5], [3, 10], clamp)
-      : interpolate(frame, [cue.then + 4, cue.then + 4 + (YEARS - 11)], [11, ASSUMPTIONS.years], clamp),
-  );
+  const yearShown = s05YearAt(frame);
 
   return (
     <SceneRoot>

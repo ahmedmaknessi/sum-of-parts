@@ -60,6 +60,12 @@ const MilestoneLabel: React.FC<{ readonly year: number; readonly opacity: number
   </div>
 );
 
+/** Final counter: from the year-30 balance up to $262,481, finishing on "...eighty-one dollars" (also drives the sound ticks). */
+export const s07CounterAt = (frame: number) => {
+  const forty = T.cue("fortyYears");
+  return mix(AT30.balance, DATA.final.invested, ramp(frame, forty, T.cue("finalNumberEnd") - forty, EASE.out));
+};
+
 export const S07Curve: React.FC = () => {
   const frame = useCurrentFrame();
   const cue = {
@@ -73,7 +79,6 @@ export const S07Curve: React.FC = () => {
     twenty: T.cue("twentyYears"),
     thirty: T.cue("thirtyYears"),
     forty: T.cue("fortyYears"),
-    finalEnd: T.cue("finalNumberEnd"),
   };
 
   const axesIn = ramp(frame, 0, 24, EASE.inOut);
@@ -98,8 +103,7 @@ export const S07Curve: React.FC = () => {
   const quitLabel = ramp(frame, cue.quit + 8, ENTER) * (1 - ramp(frame, cue.forty, ENTER, EASE.inOut));
 
   // Final counter: from the year-30 balance up to $262,481, finishing on "...eighty-one dollars".
-  const count = ramp(frame, cue.forty, cue.finalEnd - cue.forty, EASE.out);
-  const counterValue = mix(AT30.balance, DATA.final.invested, count);
+  const counterValue = s07CounterAt(frame);
   const counterIn = ramp(frame, cue.forty, ENTER);
 
   const push = interpolate(frame, [0, T.duration], [1, 1.02], clamp);

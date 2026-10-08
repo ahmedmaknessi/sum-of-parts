@@ -12,6 +12,16 @@ const ENTER = 15;
 /** Each year's segment pops in over this many frames. */
 const SEGMENT_POP = 4;
 
+/**
+ * Frame each year's segment finishes popping in: 40 segments, evenly spaced so
+ * the last one completes exactly on "forty-eight thousand dollars".
+ */
+export const S04_SEGMENT_DONE = (() => {
+  const fillStart = T.cue("barAppears") + ENTER;
+  const step = (T.cue("fortyEight") - fillStart) / MATTRESS_SEGMENTS;
+  return Array.from({ length: MATTRESS_SEGMENTS }, (_, i) => fillStart + (i + 1) * step);
+})();
+
 export const S04Mattress: React.FC = () => {
   const frame = useCurrentFrame();
   const cue = {
@@ -20,13 +30,7 @@ export const S04Mattress: React.FC = () => {
     keep: T.cue("keepInMind"),
   };
 
-  // 40 segments, evenly spaced so the last one completes exactly on "forty-eight thousand dollars".
-  const fillStart = cue.bar + ENTER;
-  const step = (cue.fortyEight - fillStart) / MATTRESS_SEGMENTS;
-  const segments = Array.from({ length: MATTRESS_SEGMENTS }, (_, i) => {
-    const done = fillStart + (i + 1) * step;
-    return ramp(frame, done - SEGMENT_POP, SEGMENT_POP, EASE.out);
-  });
+  const segments = S04_SEGMENT_DONE.map((done) => ramp(frame, done - SEGMENT_POP, SEGMENT_POP, EASE.out));
 
   // "First, the boring version": an empty dashed slot waits where the bar will rise.
   const slotIn = ramp(frame, T.anchor, 20, EASE.out);

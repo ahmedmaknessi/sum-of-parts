@@ -17,8 +17,8 @@ type LogoIntroProps = {
   readonly style?: React.CSSProperties;
 };
 
-/** Timing in seconds. Total is about 3 seconds; hold frames after 2.4s. */
-const T = {
+/** Timing in seconds. Total is about 3 seconds; hold frames after 2.4s. Exported for sound cues. */
+export const LOGO_INTRO_TIMING = {
   sliceStart: 0.1,
   sliceDuration: 0.7,
   sliceStagger: 0.1,
@@ -27,6 +27,7 @@ const T = {
   revealStart: 1.55,
   revealDuration: 0.8,
 } as const;
+const T = LOGO_INTRO_TIMING;
 
 /** Vertical distance the mark travels up to make room for the name. */
 const LIFT = 90;

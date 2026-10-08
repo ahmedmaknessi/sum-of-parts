@@ -27,6 +27,7 @@ import { S12FinePrint } from "./scenes/S12FinePrint";
 import { S13Takeaway } from "./scenes/S13Takeaway";
 import { S14EndCard } from "./scenes/S14EndCard";
 import MIX from "./audio-mix.json";
+import { SFX_TRACK_FILE, SFX_TRACK_VOLUME } from "./sfx";
 import {
   getScene,
   slotDuration,
@@ -129,7 +130,7 @@ const OverlayFade: React.FC<{
 };
 
 type Video01Props = {
-  /** Leave the voiceover out (QA frame renders: sparse image sequences can't mix audio). */
+  /** Leave the voiceover and sound effects out (QA frame renders: sparse image sequences can't mix audio). */
   readonly muted?: boolean;
 };
 
@@ -158,6 +159,8 @@ export const Video01: React.FC<Video01Props> = ({ muted = false }) => {
               durationInFrames={VOICE_2.toFrame - VOICE_2.fromFrame}
               premountFor={fps}
             />
+            {/* Sound effects, mixed from sfx.ts by `npm run sfx`: one track the length of the video. */}
+            <Audio name="Sound effects" src={staticFile(SFX_TRACK_FILE)} volume={SFX_TRACK_VOLUME} />
           </>
         )}
 

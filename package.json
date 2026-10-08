@@ -34,7 +34,10 @@
     "timeline": "tsx scripts/build-timeline.ts",
     "test": "node --import tsx --test src/lib/finance.test.ts src/videos/100-a-month-40-years/data.test.ts",
     "mix": "tsx scripts/mix-audio.ts",
-    "render:video01": "npm test && remotion render Video01 out/100-a-month-40-years.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --color-space=bt709 --audio-codec=aac --audio-bitrate=320k",
+    "sfx": "tsx scripts/make-sfx.ts && tsx scripts/build-sfx-track.ts",
+    "render:video01": "npm test && npm run sfx && remotion render Video01 out/100-a-month-40-years.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --color-space=bt709 --audio-codec=aac --audio-bitrate=320k",
+    "render:video01-shorts": "npm test && npm run sfx && remotion render Short01Hook out/shorts/100-a-month-40-years-short-01-hook.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --color-space=bt709 --audio-codec=aac --audio-bitrate=320k && remotion render Short02YearEleven out/shorts/100-a-month-40-years-short-02-year-eleven.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --color-space=bt709 --audio-codec=aac --audio-bitrate=320k && remotion render Short03LastDecade out/shorts/100-a-month-40-years-short-03-last-decade.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --color-space=bt709 --audio-codec=aac --audio-bitrate=320k",
+    "render:video01-thumbnails": "remotion still Thumbnail01A out/thumbnails/100-a-month-40-years-thumbnail-a.png && remotion still Thumbnail01B out/thumbnails/100-a-month-40-years-thumbnail-b.png && remotion still Thumbnail01C out/thumbnails/100-a-month-40-years-thumbnail-c.png",
     "qa": "tsx scripts/qa/static-checks.ts"
   }
 }

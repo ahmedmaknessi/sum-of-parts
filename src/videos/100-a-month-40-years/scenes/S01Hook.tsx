@@ -18,6 +18,12 @@ const ANSWER_Y = 660;
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
+/** "Month N" readout: 1 on "every month", 480 on "how much would you" (also drives the sound ticks). */
+export const s01MonthAt = (frame: number) =>
+  Math.round(
+    interpolate(frame, [T.cue("everyMonth"), T.cue("howMuch")], [1, DATA.months], { ...clamp, easing: EASE.in }),
+  );
+
 export const S01Hook: React.FC = () => {
   const frame = useCurrentFrame();
   const cue = {
@@ -37,9 +43,7 @@ export const S01Hook: React.FC = () => {
 
   // "every month" -> Month 1 ... Month 480, finishing on "how much would you".
   const counterIn = ramp(frame, cue.everyMonth, 12);
-  const month = Math.round(
-    interpolate(frame, [cue.everyMonth, cue.howMuch], [1, DATA.months], { ...clamp, easing: EASE.in }),
-  );
+  const month = s01MonthAt(frame);
 
   // "how much would you" -> everything moves up, "?" appears.
   const lift = ramp(frame, cue.howMuch, 20, EASE.inOut);
