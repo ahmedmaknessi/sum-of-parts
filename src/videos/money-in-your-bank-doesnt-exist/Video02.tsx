@@ -61,12 +61,12 @@ const SceneSlot: React.FC<{ readonly id: SceneId; readonly children: React.React
 };
 
 /** Frames a paper sheet takes to cross the frame; it fully covers it at the cut. */
-const SHEET_FRAMES = 24;
+export const SHEET_FRAMES = 24;
 const SHEET_W = 2300;
 const SHEET = paperRect(0, -60, SHEET_W, 1200, { seed: 900, torn: "ends" });
 
 /** A large navy paper sheet slides across the frame, covering the cut between two scenes. */
-const SheetWipe: React.FC = () => {
+export const SheetWipe: React.FC = () => {
   const frame = onTwos(useCurrentFrame());
   // Left edge travels from off-frame right to off-frame left; at the midpoint the sheet covers everything.
   const t = ramp(frame, 0, SHEET_FRAMES, EASE.inOut);

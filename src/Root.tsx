@@ -48,6 +48,10 @@ import { S04Twist as V2S04Twist } from "./videos/money-in-your-bank-doesnt-exist
 import { S03Textbook as V2S03Textbook } from "./videos/money-in-your-bank-doesnt-exist/scenes/S03Textbook";
 import { slotDuration as v2SlotDuration, TIMELINE as V2_TIMELINE } from "./videos/money-in-your-bank-doesnt-exist/timeline";
 import { Thumbnail02A, Thumbnail02B, Thumbnail02C } from "./videos/money-in-your-bank-doesnt-exist/Thumbnail02";
+import { shortDuration as v2ShortDuration } from "./videos/money-in-your-bank-doesnt-exist/shorts/ShortFrame";
+import { ShortComposition as V2ShortComposition, SHORTS as V2_SHORTS } from "./videos/money-in-your-bank-doesnt-exist/shorts/Shorts";
+import { V2Cover01, V2Cover02, V2Cover03, V2Cover04 } from "./videos/money-in-your-bank-doesnt-exist/shorts/Covers";
+import { FACEBOOK_TEASER_FRAMES, FacebookTeaser } from "./videos/money-in-your-bank-doesnt-exist/promo/FacebookTeaser";
 import { Video02 } from "./videos/money-in-your-bank-doesnt-exist/Video02";
 
 export const RemotionRoot: React.FC = () => {
@@ -194,6 +198,32 @@ export const RemotionRoot: React.FC = () => {
         <Still id="Thumbnail02A" component={Thumbnail02A} width={1280} height={720} />
         <Still id="Thumbnail02B" component={Thumbnail02B} width={1280} height={720} />
         <Still id="Thumbnail02C" component={Thumbnail02C} width={1280} height={720} />
+      </Folder>
+      <Composition
+        id="V2FacebookTeaser"
+        component={FacebookTeaser}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        fps={VIDEO.fps}
+        durationInFrames={FACEBOOK_TEASER_FRAMES}
+      />
+      <Folder name="Video02-Shorts">
+        <Still id="V2Cover01" component={V2Cover01} width={SHORT.width} height={SHORT.height} />
+        <Still id="V2Cover02" component={V2Cover02} width={SHORT.width} height={SHORT.height} />
+        <Still id="V2Cover03" component={V2Cover03} width={SHORT.width} height={SHORT.height} />
+        <Still id="V2Cover04" component={V2Cover04} width={SHORT.width} height={SHORT.height} />
+        {V2_SHORTS.map((short) => (
+          <Composition
+            key={short.id}
+            id={short.id}
+            component={V2ShortComposition}
+            width={SHORT.width}
+            height={SHORT.height}
+            fps={SHORT.fps}
+            durationInFrames={v2ShortDuration(short.scenes.map((sc) => sc.id))}
+            defaultProps={{ short: short.id }}
+          />
+        ))}
       </Folder>
       <Folder name="Video02-Scenes">
         <Composition
