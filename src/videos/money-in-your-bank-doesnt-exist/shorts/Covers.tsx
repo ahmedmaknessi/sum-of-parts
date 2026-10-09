@@ -33,7 +33,7 @@ type CoverProps = {
   readonly children: React.ReactNode;
 };
 
-const Cover: React.FC<CoverProps> = ({ lines, highlight, backdrop, children }) => (
+export const Cover: React.FC<CoverProps> = ({ lines, highlight, backdrop, children }) => (
   <PaperBackground board={THEME.board} ink={THEME.ink}>
     {/* A coloured paper sheet behind the object, inside the grid band */}
     <Piece x={SHORT.width / 2} y={GRID.top + 930} rotate={-2}>

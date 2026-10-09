@@ -1,0 +1,209 @@
+{
+  "fps": 30,
+  "totalFrames": 9724,
+  "audioSegments": [
+    {
+      "file": "audio/why-cant-countries-print-money/voiceover.mp3",
+      "fromSec": 0,
+      "toSec": 27.167,
+      "atFrame": 0,
+      "fromFrame": 0,
+      "toFrame": 815
+    },
+    {
+      "file": "audio/why-cant-countries-print-money/voiceover.mp3",
+      "fromSec": 27.167,
+      "toSec": 300.669,
+      "atFrame": 912,
+      "fromFrame": 815,
+      "toFrame": 9021
+    }
+  ],
+  "segment2OffsetSec": 3.233,
+  "scenes": [
+    {
+      "id": "s01-hook",
+      "startFrame": 0,
+      "endFrame": 822,
+      "anchorFrame": 2,
+      "cues": {
+        "hundredTrillion": 68,
+        "issued": 134,
+        "january": 199,
+        "cameOut": 254,
+        "fewMonths": 373,
+        "doubling": 480,
+        "canPrint": 580,
+        "whyNot": 650,
+        "everyoneRich": 782
+      }
+    },
+    {
+      "id": "s02-logo",
+      "startFrame": 822,
+      "endFrame": 912,
+      "anchorFrame": 822,
+      "cues": {}
+    },
+    {
+      "id": "s03-island",
+      "startFrame": 912,
+      "endFrame": 2339,
+      "anchorFrame": 914,
+      "cues": {
+        "tiny": 1023,
+        "imagine": 1076,
+        "loaves": 1130,
+        "tenDollars": 1178,
+        "oneDollar": 1265,
+        "decides": 1388,
+        "prints": 1472,
+        "twiceMoney": 1561,
+        "onlyTen": 1649,
+        "bakers": 1760,
+        "towardTwo": 1874,
+        "nobodyRicher": 1961,
+        "doubled": 2006,
+        "halfAsMuch": 2082,
+        "simplest": 2151,
+        "chasing": 2250
+      }
+    },
+    {
+      "id": "s04-wealth",
+      "startFrame": 2339,
+      "endFrame": 2726,
+      "anchorFrame": 2345,
+      "cues": {
+        "breadIs": 2397,
+        "houses": 2445,
+        "claim": 2565,
+        "printingClaims": 2649,
+        "moreBread": 2684
+      }
+    },
+    {
+      "id": "s05-zimbabwe",
+      "startFrame": 2726,
+      "endFrame": 3952,
+      "anchorFrame": 2732,
+      "cues": {
+        "payBills": 2798,
+        "lessAndLess": 2909,
+        "moreFewer": 2954,
+        "peak": 3027,
+        "seventyNine": 3159,
+        "thinkAbout": 3241,
+        "paidMorning": 3313,
+        "evening": 3420,
+        "saving": 3468,
+        "spend": 3563,
+        "faster": 3646,
+        "april": 3719,
+        "stopped": 3786,
+        "switched": 3879
+      }
+    },
+    {
+      "id": "s06-us",
+      "startFrame": 3952,
+      "endFrame": 4935,
+      "anchorFrame": 3958,
+      "cues": {
+        "feb2020": 4074,
+        "twoYears": 4242,
+        "twentyTwo": 4298,
+        "forty": 4384,
+        "whyNot": 4457,
+        "inflationCame": 4556,
+        "june2022": 4607,
+        "biggestJump": 4756,
+        "hurt": 4830,
+        "notHyper": 4864
+      }
+    },
+    {
+      "id": "s07-reasons",
+      "startFrame": 4935,
+      "endFrame": 6527,
+      "anchorFrame": 4941,
+      "cues": {
+        "timing": 5006,
+        "shutDown": 5057,
+        "savingInstead": 5183,
+        "satStill": 5247,
+        "wholeWorld": 5326,
+        "fiftySeven": 5403,
+        "heldByBanks": 5517,
+        "printACurrency": 5595,
+        "spreads": 5697,
+        "ownCurrency": 5804,
+        "manyCountries": 5895,
+        "cantPrintDollars": 6015,
+        "debtsBigger": 6117,
+        "trust": 6144,
+        "independentFed": 6251,
+        "raisedRates": 6379,
+        "believed": 6477
+      }
+    },
+    {
+      "id": "s08-brake",
+      "startFrame": 6527,
+      "endFrame": 7346,
+      "anchorFrame": 6533,
+      "cues": {
+        "createdByBanks": 6580,
+        "higherRates": 6672,
+        "brake": 6746,
+        "alwaysBad": 6789,
+        "littleInflation": 6965,
+        "twoPercent": 7015,
+        "slowly": 7074,
+        "danger": 7194,
+        "faster": 7260
+      }
+    },
+    {
+      "id": "s09-who",
+      "startFrame": 7346,
+      "endFrame": 8220,
+      "anchorFrame": 7352,
+      "cues": {
+        "notPresident": 7486,
+        "independent": 7556,
+        "onPurpose": 7630,
+        "election": 7758,
+        "separated": 7867,
+        "oneVote": 7969,
+        "breaks": 8024,
+        "stories": 8173
+      }
+    },
+    {
+      "id": "s10-takeaway",
+      "startFrame": 8220,
+      "endFrame": 9124,
+      "anchorFrame": 8226,
+      "cues": {
+        "worth": 8350,
+        "buysLess": 8480,
+        "trusting": 8551,
+        "printMoney": 8616,
+        "printBread": 8657,
+        "education": 8711,
+        "newSeries": 8828,
+        "sportsbooks": 8936,
+        "youDo": 9064,
+        "seeYou": 9094
+      }
+    },
+    {
+      "id": "end-card",
+      "startFrame": 9124,
+      "endFrame": 9724,
+      "anchorFrame": 9124,
+      "cues": {}
+    }
+  ]
+}

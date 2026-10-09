@@ -135,9 +135,17 @@ const big = (n: number) => {
   // Non-breaking space: "$42 billion" never splits across two subtitle lines.
   return step ? `${Math.round((n / step[0]) * 10) / 10} ${step[1]}` : null;
 };
-/** "twenty fourteen", "nineteen thirty-three": a spoken year, written without a comma. */
+/**
+ * "twenty fourteen", "nineteen thirty-three", "two thousand nine": a spoken
+ * year, written without a comma. ("Two thousand" alone only counts from 2001,
+ * so a plain "two thousand" amount keeps its comma.)
+ */
 const isYear = (n: number, words: readonly string[]) =>
-  Number.isInteger(n) && n >= 1900 && n <= 2099 && !words.some((w) => /thousand|hundred/i.test(w));
+  Number.isInteger(n) &&
+  n >= 1900 &&
+  n <= 2099 &&
+  !words.some((w) => /hundred/i.test(w)) &&
+  (!words.some((w) => /thousand/i.test(w)) || (n > 2000 && n < 2100));
 const trailing = (word: string) => word.match(/[.,:;?!]+["”)]*$/)?.[0] ?? "";
 
 type Unit = { text: string; start: number; end: number };

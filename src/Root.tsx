@@ -53,6 +53,14 @@ import { ShortComposition as V2ShortComposition, SHORTS as V2_SHORTS } from "./v
 import { V2Cover01, V2Cover02, V2Cover03, V2Cover04 } from "./videos/money-in-your-bank-doesnt-exist/shorts/Covers";
 import { FACEBOOK_TEASER_FRAMES, FacebookTeaser } from "./videos/money-in-your-bank-doesnt-exist/promo/FacebookTeaser";
 import { Video02 } from "./videos/money-in-your-bank-doesnt-exist/Video02";
+import { SCENES as V3_SCENES } from "./videos/why-cant-countries-print-money/scene-list";
+import { slotDuration as v3SlotDuration, TIMELINE as V3_TIMELINE } from "./videos/why-cant-countries-print-money/timeline";
+import { Video03 } from "./videos/why-cant-countries-print-money/Video03";
+import { Thumbnail03A, Thumbnail03B, Thumbnail03C } from "./videos/why-cant-countries-print-money/Thumbnail03";
+import { shortDuration as v3ShortDuration } from "./videos/why-cant-countries-print-money/shorts/ShortFrame";
+import { ShortComposition as V3ShortComposition, SHORTS as V3_SHORTS } from "./videos/why-cant-countries-print-money/shorts/Shorts";
+import { V3Cover01, V3Cover02, V3Cover03, V3Cover04 } from "./videos/why-cant-countries-print-money/shorts/Covers";
+import { FACEBOOK_TEASER_FRAMES as V3_FACEBOOK_TEASER_FRAMES, FacebookTeaser as V3FacebookTeaser } from "./videos/why-cant-countries-print-money/promo/FacebookTeaser";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -184,6 +192,59 @@ export const RemotionRoot: React.FC = () => {
           fps={TIMELINE.fps}
           durationInFrames={slotDuration("end-card")}
         />
+      </Folder>
+      <Composition
+        id="Video03"
+        component={Video03}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        fps={V3_TIMELINE.fps}
+        durationInFrames={V3_TIMELINE.totalFrames}
+        defaultProps={{ muted: false }}
+      />
+      <Folder name="Video03-Thumbnails">
+        <Still id="Thumbnail03A" component={Thumbnail03A} width={1280} height={720} />
+        <Still id="Thumbnail03B" component={Thumbnail03B} width={1280} height={720} />
+        <Still id="Thumbnail03C" component={Thumbnail03C} width={1280} height={720} />
+      </Folder>
+      <Composition
+        id="V3FacebookTeaser"
+        component={V3FacebookTeaser}
+        width={VIDEO.width}
+        height={VIDEO.height}
+        fps={VIDEO.fps}
+        durationInFrames={V3_FACEBOOK_TEASER_FRAMES}
+      />
+      <Folder name="Video03-Shorts">
+        <Still id="V3Cover01" component={V3Cover01} width={SHORT.width} height={SHORT.height} />
+        <Still id="V3Cover02" component={V3Cover02} width={SHORT.width} height={SHORT.height} />
+        <Still id="V3Cover03" component={V3Cover03} width={SHORT.width} height={SHORT.height} />
+        <Still id="V3Cover04" component={V3Cover04} width={SHORT.width} height={SHORT.height} />
+        {V3_SHORTS.map((short) => (
+          <Composition
+            key={short.id}
+            id={short.id}
+            component={V3ShortComposition}
+            width={SHORT.width}
+            height={SHORT.height}
+            fps={SHORT.fps}
+            durationInFrames={v3ShortDuration(short.scenes.map((sc) => sc.id))}
+            defaultProps={{ short: short.id }}
+          />
+        ))}
+      </Folder>
+      <Folder name="Video03-Scenes">
+        {V3_SCENES.map(({ id, name, Component }) => (
+          <Composition
+            key={id}
+            id={name}
+            component={Component}
+            width={VIDEO.width}
+            height={VIDEO.height}
+            fps={VIDEO.fps}
+            durationInFrames={v3SlotDuration(id)}
+          />
+        ))}
       </Folder>
       <Composition
         id="Video02"

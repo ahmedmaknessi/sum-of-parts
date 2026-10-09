@@ -50,6 +50,7 @@ const BREAK = "\u0000";
 const splitWord = (text: string, word: number): RawToken[] => {
   let t = text.toLowerCase();
   t = t.replace(/[’']/g, ""); // let's -> lets
+  t = t.replace(/\bu\.s\.?(?=\s|$)/g, "us"); // Whisper writes "U.S." where scripts write "US"
   t = t.replace(/(\d),(?=\d{3}\b)/g, "$1"); // 262,481 -> 262481
   const isDollar = /\$\s*\d/.test(t);
   // Fractions Whisper writes as digits: 3/4 is spoken "three quarters"
@@ -195,9 +196,23 @@ const scaleBeforeDollars = (raw: RawToken[]): RawToken[] => {
   return out;
 };
 
+/** "U.S." split into sub-word tokens ("u", "s") reads as the script's "us". */
+const joinUS = (raw: RawToken[]): RawToken[] => {
+  const out: RawToken[] = [];
+  for (let i = 0; i < raw.length; i++) {
+    if (raw[i].text === "u" && raw[i + 1]?.text === "s") {
+      out.push({ text: "us", word: raw[i].word });
+      i++;
+    } else {
+      out.push(raw[i]);
+    }
+  }
+  return out;
+};
+
 /** Normalizes a list of words into comparable tokens, keeping word indices. */
 export const tokenize = (words: readonly string[]): Token[] =>
-  collapseNumbers(scaleBeforeDollars(words.flatMap((w, i) => splitWord(w, i))));
+  collapseNumbers(scaleBeforeDollars(joinUS(words.flatMap((w, i) => splitWord(w, i)))));
 
 /** Finds `pattern` in `tokens` starting at `from` (before `to`). Returns the token index or -1. */
 export const findTokens = (

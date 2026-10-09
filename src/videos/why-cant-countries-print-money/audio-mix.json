@@ -1,0 +1,20 @@
+{
+  "source": "audio/why-cant-countries-print-money/voiceover.mp3",
+  "file": "audio/why-cant-countries-print-money/voiceover-mix.wav",
+  "targetLufs": -16,
+  "ceilingDbtp": -1.5,
+  "original": {
+    "lufs": -18.34,
+    "truePeakDbtp": -3.35,
+    "lra": 2.4
+  },
+  "limiter": {
+    "ceilingDb": -4.34
+  },
+  "voiceGainDb": 2.34,
+  "voiceVolume": 1.3092,
+  "expected": {
+    "lufs": -16,
+    "truePeakDbtp": -1.95
+  }
+}

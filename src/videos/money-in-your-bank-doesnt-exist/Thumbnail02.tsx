@@ -18,7 +18,7 @@ const W = 1280;
 const H = 720;
 
 /** A layered paper backdrop: a base sheet and two lighter torn layers sweeping across. */
-const Backdrop: React.FC<{ readonly hue: keyof typeof PAPER_COLORS; readonly seed: number }> = ({ hue, seed }) => (
+export const Backdrop: React.FC<{ readonly hue: keyof typeof PAPER_COLORS; readonly seed: number }> = ({ hue, seed }) => (
   <PaperSvg w={W + 200} h={H + 200}>
     <PaperShape d={paperRect(-W / 2 - 40, -H / 2 - 40, W + 80, H + 80, { seed })} fill={PAPER_COLORS[hue].base} depth={0} />
     <PaperShape d={paperHill(-W / 2 - 60, W / 2 + 60, 130, H / 2 + 80, { seed: seed + 1, amplitude: 60, waves: 1.2 })} fill={PAPER_COLORS[hue].dark} depth={1.2} />
@@ -27,7 +27,7 @@ const Backdrop: React.FC<{ readonly hue: keyof typeof PAPER_COLORS; readonly see
 );
 
 /** Big cut-paper words with a thick-card offset layer under them. */
-const Thick: React.FC<{ readonly text: string; readonly size: number; readonly color: string; readonly under: string }> = ({
+export const Thick: React.FC<{ readonly text: string; readonly size: number; readonly color: string; readonly under: string }> = ({
   text,
   size,
   color,

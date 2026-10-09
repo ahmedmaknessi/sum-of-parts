@@ -240,5 +240,7 @@ All components are built with `Interactive.withSchema({wrapInSequence: true})`, 
 - `npm run render:video01` renders video 01 (tests first) to `out/`; `npm run render:video01-shorts` renders its Shorts to `out/shorts/`.
 - `npm run sfx` regenerates the sound kit and video 01's sound-effects track; `npm run audio -- <slug>` regenerates both kits and a papercut video's music bed + sfx track.
 - `npm run render:video02` renders video 02 (tests and audio first) to `out/`; `npm run render:video02-shorts` renders its four Shorts to `out/shorts/`.
+- `npm run render:video03` renders video 03 (tests and audio first); `npm run render:video03-shorts` renders its four Shorts; `npm run render:video03-extras` renders its Facebook teaser, thumbnails and Instagram covers (`out/covers/`).
 - `npm run render:video01-thumbnails` renders the three A/B-test thumbnails to `out/thumbnails/`.
 - `npm run lint` runs ESLint and the TypeScript check.
+- `npm run gpt:sync` refreshes `gpt/` (the kit for running this same pipeline with GPT / Codex: `gpt/README.md`) after this file or the skills change. New lessons from a session go in `gpt/LESSONS.md`.

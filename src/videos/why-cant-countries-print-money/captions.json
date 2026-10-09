@@ -1,0 +1,5028 @@
+[
+ {
+  "text": "This",
+  "startMs": 59,
+  "endMs": 390,
+  "timestampMs": 224,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 520,
+  "endMs": 580,
+  "timestampMs": 550,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 550,
+  "endMs": 670,
+  "timestampMs": 610,
+  "confidence": null
+ },
+ {
+  "text": " real",
+  "startMs": 820,
+  "endMs": 1060,
+  "timestampMs": 940,
+  "confidence": null
+ },
+ {
+  "text": " banknote.",
+  "startMs": 1210,
+  "endMs": 1813,
+  "timestampMs": 1511,
+  "confidence": null
+ },
+ {
+  "text": " $100 trillion.",
+  "startMs": 2268,
+  "endMs": 4470,
+  "timestampMs": 3369,
+  "confidence": null
+ },
+ {
+  "text": " It",
+  "startMs": 4470,
+  "endMs": 4420,
+  "timestampMs": 4445,
+  "confidence": null
+ },
+ {
+  "text": " was",
+  "startMs": 5106,
+  "endMs": 4850,
+  "timestampMs": 4978,
+  "confidence": null
+ },
+ {
+  "text": " issued",
+  "startMs": 5106,
+  "endMs": 5480,
+  "timestampMs": 5293,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 5570,
+  "endMs": 5690,
+  "timestampMs": 5630,
+  "confidence": null
+ },
+ {
+  "text": " Zimbabwe",
+  "startMs": 5720,
+  "endMs": 6550,
+  "timestampMs": 6135,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 6630,
+  "endMs": 6700,
+  "timestampMs": 6665,
+  "confidence": null
+ },
+ {
+  "text": " January",
+  "startMs": 6700,
+  "endMs": 7210,
+  "timestampMs": 6955,
+  "confidence": null
+ },
+ {
+  "text": " 2009.",
+  "startMs": 7360,
+  "endMs": 8080,
+  "timestampMs": 7720,
+  "confidence": null
+ },
+ {
+  "text": " On",
+  "startMs": 8470,
+  "endMs": 8410,
+  "timestampMs": 8440,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 8470,
+  "endMs": 8700,
+  "timestampMs": 8585,
+  "confidence": null
+ },
+ {
+  "text": " day",
+  "startMs": 8470,
+  "endMs": 8920,
+  "timestampMs": 8695,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 9110,
+  "endMs": 9080,
+  "timestampMs": 9095,
+  "confidence": null
+ },
+ {
+  "text": " came",
+  "startMs": 9110,
+  "endMs": 9390,
+  "timestampMs": 9250,
+  "confidence": null
+ },
+ {
+  "text": " out,",
+  "startMs": 9540,
+  "endMs": 9600,
+  "timestampMs": 9570,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 9650,
+  "endMs": 9910,
+  "timestampMs": 9780,
+  "confidence": null
+ },
+ {
+  "text": " was",
+  "startMs": 10060,
+  "endMs": 10163,
+  "timestampMs": 10111,
+  "confidence": null
+ },
+ {
+  "text": " worth",
+  "startMs": 10321,
+  "endMs": 10540,
+  "timestampMs": 10431,
+  "confidence": null
+ },
+ {
+  "text": " about",
+  "startMs": 10610,
+  "endMs": 10930,
+  "timestampMs": 10770,
+  "confidence": null
+ },
+ {
+  "text": " 30",
+  "startMs": 10830,
+  "endMs": 11400,
+  "timestampMs": 11115,
+  "confidence": null
+ },
+ {
+  "text": " US",
+  "startMs": 11340,
+  "endMs": 11550,
+  "timestampMs": 11445,
+  "confidence": null
+ },
+ {
+  "text": " dollars.",
+  "startMs": 11550,
+  "endMs": 12430,
+  "timestampMs": 11990,
+  "confidence": null
+ },
+ {
+  "text": " A",
+  "startMs": 12430,
+  "endMs": 12549,
+  "timestampMs": 12489,
+  "confidence": null
+ },
+ {
+  "text": " few",
+  "startMs": 12499,
+  "endMs": 12549,
+  "timestampMs": 12524,
+  "confidence": null
+ },
+ {
+  "text": " months",
+  "startMs": 13296,
+  "endMs": 13440,
+  "timestampMs": 13368,
+  "confidence": null
+ },
+ {
+  "text": " earlier,",
+  "startMs": 13400,
+  "endMs": 14150,
+  "timestampMs": 13775,
+  "confidence": null
+ },
+ {
+  "text": " prices",
+  "startMs": 14533,
+  "endMs": 14880,
+  "timestampMs": 14706,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 14810,
+  "endMs": 14960,
+  "timestampMs": 14885,
+  "confidence": null
+ },
+ {
+  "text": " Zimbabwe",
+  "startMs": 14960,
+  "endMs": 15680,
+  "timestampMs": 15320,
+  "confidence": null
+ },
+ {
+  "text": " were",
+  "startMs": 15790,
+  "endMs": 15910,
+  "timestampMs": 15850,
+  "confidence": null
+ },
+ {
+  "text": " doubling",
+  "startMs": 16002,
+  "endMs": 16610,
+  "timestampMs": 16306,
+  "confidence": null
+ },
+ {
+  "text": " roughly",
+  "startMs": 16860,
+  "endMs": 17250,
+  "timestampMs": 17055,
+  "confidence": null
+ },
+ {
+  "text": " every",
+  "startMs": 17330,
+  "endMs": 17660,
+  "timestampMs": 17495,
+  "confidence": null
+ },
+ {
+  "text": " 25",
+  "startMs": 17780,
+  "endMs": 18150,
+  "timestampMs": 17965,
+  "confidence": null
+ },
+ {
+  "text": " hours.",
+  "startMs": 18104,
+  "endMs": 18639,
+  "timestampMs": 18372,
+  "confidence": null
+ },
+ {
+  "text": " So",
+  "startMs": 19334,
+  "endMs": 18970,
+  "timestampMs": 19152,
+  "confidence": null
+ },
+ {
+  "text": " if",
+  "startMs": 19334,
+  "endMs": 19290,
+  "timestampMs": 19312,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 19334,
+  "endMs": 19370,
+  "timestampMs": 19352,
+  "confidence": null
+ },
+ {
+  "text": " government",
+  "startMs": 19334,
+  "endMs": 20200,
+  "timestampMs": 19767,
+  "confidence": null
+ },
+ {
+  "text": " can",
+  "startMs": 20110,
+  "endMs": 20410,
+  "timestampMs": 20260,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 20600,
+  "endMs": 20860,
+  "timestampMs": 20730,
+  "confidence": null
+ },
+ {
+  "text": " money,",
+  "startMs": 20870,
+  "endMs": 21339,
+  "timestampMs": 21105,
+  "confidence": null
+ },
+ {
+  "text": " why",
+  "startMs": 21682,
+  "endMs": 21710,
+  "timestampMs": 21696,
+  "confidence": null
+ },
+ {
+  "text": " doesn't",
+  "startMs": 21682,
+  "endMs": 22100,
+  "timestampMs": 21891,
+  "confidence": null
+ },
+ {
+  "text": " every",
+  "startMs": 22196,
+  "endMs": 22480,
+  "timestampMs": 22338,
+  "confidence": null
+ },
+ {
+  "text": " country",
+  "startMs": 22540,
+  "endMs": 22940,
+  "timestampMs": 22740,
+  "confidence": null
+ },
+ {
+  "text": " just",
+  "startMs": 22800,
+  "endMs": 23140,
+  "timestampMs": 22970,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 23300,
+  "endMs": 23530,
+  "timestampMs": 23415,
+  "confidence": null
+ },
+ {
+  "text": " as",
+  "startMs": 23650,
+  "endMs": 23640,
+  "timestampMs": 23645,
+  "confidence": null
+ },
+ {
+  "text": " much",
+  "startMs": 23830,
+  "endMs": 23920,
+  "timestampMs": 23875,
+  "confidence": null
+ },
+ {
+  "text": " as",
+  "startMs": 24000,
+  "endMs": 24050,
+  "timestampMs": 24025,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 24100,
+  "endMs": 24180,
+  "timestampMs": 24140,
+  "confidence": null
+ },
+ {
+  "text": " wants?",
+  "startMs": 24330,
+  "endMs": 24543,
+  "timestampMs": 24437,
+  "confidence": null
+ },
+ {
+  "text": " Why",
+  "startMs": 25159,
+  "endMs": 24900,
+  "timestampMs": 25029,
+  "confidence": null
+ },
+ {
+  "text": " not",
+  "startMs": 25159,
+  "endMs": 25100,
+  "timestampMs": 25129,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 25159,
+  "endMs": 25430,
+  "timestampMs": 25294,
+  "confidence": null
+ },
+ {
+  "text": " enough",
+  "startMs": 25528,
+  "endMs": 25820,
+  "timestampMs": 25674,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 25770,
+  "endMs": 25950,
+  "timestampMs": 25860,
+  "confidence": null
+ },
+ {
+  "text": " make",
+  "startMs": 26060,
+  "endMs": 26210,
+  "timestampMs": 26135,
+  "confidence": null
+ },
+ {
+  "text": " everyone",
+  "startMs": 26330,
+  "endMs": 26740,
+  "timestampMs": 26535,
+  "confidence": null
+ },
+ {
+  "text": " rich?",
+  "startMs": 26670,
+  "endMs": 26990,
+  "timestampMs": 26830,
+  "confidence": null
+ },
+ {
+  "text": " To",
+  "startMs": 30474,
+  "endMs": 30621,
+  "timestampMs": 30547,
+  "confidence": null
+ },
+ {
+  "text": " answer",
+  "startMs": 31362,
+  "endMs": 31713,
+  "timestampMs": 31538,
+  "confidence": null
+ },
+ {
+  "text": " that,",
+  "startMs": 31663,
+  "endMs": 32102,
+  "timestampMs": 31883,
+  "confidence": null
+ },
+ {
+  "text": " let's",
+  "startMs": 32371,
+  "endMs": 32583,
+  "timestampMs": 32477,
+  "confidence": null
+ },
+ {
+  "text": " shrink",
+  "startMs": 32553,
+  "endMs": 32963,
+  "timestampMs": 32758,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 33063,
+  "endMs": 33163,
+  "timestampMs": 33113,
+  "confidence": null
+ },
+ {
+  "text": " economy",
+  "startMs": 33253,
+  "endMs": 33613,
+  "timestampMs": 33433,
+  "confidence": null
+ },
+ {
+  "text": " down",
+  "startMs": 33673,
+  "endMs": 33873,
+  "timestampMs": 33773,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 33973,
+  "endMs": 33963,
+  "timestampMs": 33968,
+  "confidence": null
+ },
+ {
+  "text": " something",
+  "startMs": 34103,
+  "endMs": 34583,
+  "timestampMs": 34343,
+  "confidence": null
+ },
+ {
+  "text": " tiny.",
+  "startMs": 34706,
+  "endMs": 34833,
+  "timestampMs": 34770,
+  "confidence": null
+ },
+ {
+  "text": " Imagine",
+  "startMs": 35875,
+  "endMs": 36003,
+  "timestampMs": 35939,
+  "confidence": null
+ },
+ {
+  "text": " an",
+  "startMs": 36153,
+  "endMs": 36263,
+  "timestampMs": 36208,
+  "confidence": null
+ },
+ {
+  "text": " island.",
+  "startMs": 36413,
+  "endMs": 37116,
+  "timestampMs": 36765,
+  "confidence": null
+ },
+ {
+  "text": " There",
+  "startMs": 37662,
+  "endMs": 37723,
+  "timestampMs": 37693,
+  "confidence": null
+ },
+ {
+  "text": " are",
+  "startMs": 37662,
+  "endMs": 37873,
+  "timestampMs": 37768,
+  "confidence": null
+ },
+ {
+  "text": " 10",
+  "startMs": 38004,
+  "endMs": 38193,
+  "timestampMs": 38099,
+  "confidence": null
+ },
+ {
+  "text": " loaves",
+  "startMs": 38093,
+  "endMs": 38463,
+  "timestampMs": 38278,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 38533,
+  "endMs": 38593,
+  "timestampMs": 38563,
+  "confidence": null
+ },
+ {
+  "text": " bread,",
+  "startMs": 38723,
+  "endMs": 39045,
+  "timestampMs": 38884,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 39250,
+  "endMs": 39383,
+  "timestampMs": 39317,
+  "confidence": null
+ },
+ {
+  "text": " $10.",
+  "startMs": 39413,
+  "endMs": 40629,
+  "timestampMs": 40021,
+  "confidence": null
+ },
+ {
+  "text": " Nothing",
+  "startMs": 40629,
+  "endMs": 41153,
+  "timestampMs": 40891,
+  "confidence": null
+ },
+ {
+  "text": " else",
+  "startMs": 41193,
+  "endMs": 41577,
+  "timestampMs": 41385,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 41603,
+  "endMs": 41553,
+  "timestampMs": 41578,
+  "confidence": null
+ },
+ {
+  "text": " buy.",
+  "startMs": 41603,
+  "endMs": 41843,
+  "timestampMs": 41723,
+  "confidence": null
+ },
+ {
+  "text": " So",
+  "startMs": 42158,
+  "endMs": 42223,
+  "timestampMs": 42190,
+  "confidence": null
+ },
+ {
+  "text": " each",
+  "startMs": 42158,
+  "endMs": 42485,
+  "timestampMs": 42321,
+  "confidence": null
+ },
+ {
+  "text": " loaf",
+  "startMs": 42687,
+  "endMs": 42993,
+  "timestampMs": 42840,
+  "confidence": null
+ },
+ {
+  "text": " costs",
+  "startMs": 42953,
+  "endMs": 43343,
+  "timestampMs": 43148,
+  "confidence": null
+ },
+ {
+  "text": " $1.",
+  "startMs": 43319,
+  "endMs": 44493,
+  "timestampMs": 43906,
+  "confidence": null
+ },
+ {
+  "text": " Now",
+  "startMs": 44493,
+  "endMs": 44453,
+  "timestampMs": 44473,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 45238,
+  "endMs": 45603,
+  "timestampMs": 45421,
+  "confidence": null
+ },
+ {
+  "text": " island's",
+  "startMs": 45729,
+  "endMs": 46113,
+  "timestampMs": 45921,
+  "confidence": null
+ },
+ {
+  "text": " government",
+  "startMs": 46253,
+  "endMs": 46583,
+  "timestampMs": 46418,
+  "confidence": null
+ },
+ {
+  "text": " decides",
+  "startMs": 46663,
+  "endMs": 47033,
+  "timestampMs": 46848,
+  "confidence": null
+ },
+ {
+  "text": " everyone",
+  "startMs": 47183,
+  "endMs": 47543,
+  "timestampMs": 47363,
+  "confidence": null
+ },
+ {
+  "text": " should",
+  "startMs": 47463,
+  "endMs": 47923,
+  "timestampMs": 47693,
+  "confidence": null
+ },
+ {
+  "text": " be",
+  "startMs": 48013,
+  "endMs": 48043,
+  "timestampMs": 48028,
+  "confidence": null
+ },
+ {
+  "text": " richer.",
+  "startMs": 48183,
+  "endMs": 48538,
+  "timestampMs": 48360,
+  "confidence": null
+ },
+ {
+  "text": " It",
+  "startMs": 49058,
+  "endMs": 48733,
+  "timestampMs": 48896,
+  "confidence": null
+ },
+ {
+  "text": " prints",
+  "startMs": 49058,
+  "endMs": 49113,
+  "timestampMs": 49086,
+  "confidence": null
+ },
+ {
+  "text": " 10",
+  "startMs": 49058,
+  "endMs": 49493,
+  "timestampMs": 49276,
+  "confidence": null
+ },
+ {
+  "text": " more",
+  "startMs": 49633,
+  "endMs": 49693,
+  "timestampMs": 49663,
+  "confidence": null
+ },
+ {
+  "text": " dollars",
+  "startMs": 49693,
+  "endMs": 50153,
+  "timestampMs": 49923,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 50153,
+  "endMs": 50363,
+  "timestampMs": 50258,
+  "confidence": null
+ },
+ {
+  "text": " hands",
+  "startMs": 50523,
+  "endMs": 50683,
+  "timestampMs": 50603,
+  "confidence": null
+ },
+ {
+  "text": " them",
+  "startMs": 50663,
+  "endMs": 50933,
+  "timestampMs": 50798,
+  "confidence": null
+ },
+ {
+  "text": " out.",
+  "startMs": 51093,
+  "endMs": 51133,
+  "timestampMs": 51113,
+  "confidence": null
+ },
+ {
+  "text": " Everyone",
+  "startMs": 52048,
+  "endMs": 52433,
+  "timestampMs": 52240,
+  "confidence": null
+ },
+ {
+  "text": " has",
+  "startMs": 52583,
+  "endMs": 52753,
+  "timestampMs": 52668,
+  "confidence": null
+ },
+ {
+  "text": " twice",
+  "startMs": 52862,
+  "endMs": 53123,
+  "timestampMs": 52993,
+  "confidence": null
+ },
+ {
+  "text": " as",
+  "startMs": 53223,
+  "endMs": 53273,
+  "timestampMs": 53248,
+  "confidence": null
+ },
+ {
+  "text": " much",
+  "startMs": 53353,
+  "endMs": 53543,
+  "timestampMs": 53448,
+  "confidence": null
+ },
+ {
+  "text": " money.",
+  "startMs": 53583,
+  "endMs": 53899,
+  "timestampMs": 53741,
+  "confidence": null
+ },
+ {
+  "text": " But",
+  "startMs": 54669,
+  "endMs": 54383,
+  "timestampMs": 54526,
+  "confidence": null
+ },
+ {
+  "text": " there",
+  "startMs": 54669,
+  "endMs": 54753,
+  "timestampMs": 54711,
+  "confidence": null
+ },
+ {
+  "text": " are",
+  "startMs": 54669,
+  "endMs": 54973,
+  "timestampMs": 54821,
+  "confidence": null
+ },
+ {
+  "text": " still",
+  "startMs": 54953,
+  "endMs": 55333,
+  "timestampMs": 55143,
+  "confidence": null
+ },
+ {
+  "text": " only",
+  "startMs": 55363,
+  "endMs": 55633,
+  "timestampMs": 55498,
+  "confidence": null
+ },
+ {
+  "text": " 10",
+  "startMs": 55730,
+  "endMs": 56043,
+  "timestampMs": 55887,
+  "confidence": null
+ },
+ {
+  "text": " loaves",
+  "startMs": 56129,
+  "endMs": 56533,
+  "timestampMs": 56331,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 56683,
+  "endMs": 56663,
+  "timestampMs": 56673,
+  "confidence": null
+ },
+ {
+  "text": " bread.",
+  "startMs": 56863,
+  "endMs": 57063,
+  "timestampMs": 56963,
+  "confidence": null
+ },
+ {
+  "text": " So",
+  "startMs": 57939,
+  "endMs": 57283,
+  "timestampMs": 57611,
+  "confidence": null
+ },
+ {
+  "text": " what",
+  "startMs": 57939,
+  "endMs": 57883,
+  "timestampMs": 57911,
+  "confidence": null
+ },
+ {
+  "text": " happens?",
+  "startMs": 57939,
+  "endMs": 58413,
+  "timestampMs": 58176,
+  "confidence": null
+ },
+ {
+  "text": " Bakers",
+  "startMs": 58667,
+  "endMs": 60033,
+  "timestampMs": 59350,
+  "confidence": null
+ },
+ {
+  "text": " notice",
+  "startMs": 59933,
+  "endMs": 60433,
+  "timestampMs": 60183,
+  "confidence": null
+ },
+ {
+  "text": " that",
+  "startMs": 60553,
+  "endMs": 60643,
+  "timestampMs": 60598,
+  "confidence": null
+ },
+ {
+  "text": " people",
+  "startMs": 60746,
+  "endMs": 61193,
+  "timestampMs": 60970,
+  "confidence": null
+ },
+ {
+  "text": " can",
+  "startMs": 61289,
+  "endMs": 61423,
+  "timestampMs": 61356,
+  "confidence": null
+ },
+ {
+  "text": " pay",
+  "startMs": 61373,
+  "endMs": 61653,
+  "timestampMs": 61513,
+  "confidence": null
+ },
+ {
+  "text": " more,",
+  "startMs": 61803,
+  "endMs": 61978,
+  "timestampMs": 61891,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 62228,
+  "endMs": 62333,
+  "timestampMs": 62281,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 62461,
+  "endMs": 62563,
+  "timestampMs": 62512,
+  "confidence": null
+ },
+ {
+  "text": " price",
+  "startMs": 62523,
+  "endMs": 62943,
+  "timestampMs": 62733,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 62833,
+  "endMs": 63093,
+  "timestampMs": 62963,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 63223,
+  "endMs": 63133,
+  "timestampMs": 63178,
+  "confidence": null
+ },
+ {
+  "text": " loaf",
+  "startMs": 63403,
+  "endMs": 63463,
+  "timestampMs": 63433,
+  "confidence": null
+ },
+ {
+  "text": " moves",
+  "startMs": 63603,
+  "endMs": 63833,
+  "timestampMs": 63718,
+  "confidence": null
+ },
+ {
+  "text": " toward",
+  "startMs": 63993,
+  "endMs": 64303,
+  "timestampMs": 64148,
+  "confidence": null
+ },
+ {
+  "text": " $2.",
+  "startMs": 64453,
+  "endMs": 65378,
+  "timestampMs": 64916,
+  "confidence": null
+ },
+ {
+  "text": " Nobody",
+  "startMs": 65378,
+  "endMs": 65753,
+  "timestampMs": 65566,
+  "confidence": null
+ },
+ {
+  "text": " got",
+  "startMs": 65613,
+  "endMs": 65973,
+  "timestampMs": 65793,
+  "confidence": null
+ },
+ {
+  "text": " richer.",
+  "startMs": 66003,
+  "endMs": 66444,
+  "timestampMs": 66224,
+  "confidence": null
+ },
+ {
+  "text": " The",
+  "startMs": 66874,
+  "endMs": 66993,
+  "timestampMs": 66934,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 66943,
+  "endMs": 67353,
+  "timestampMs": 67148,
+  "confidence": null
+ },
+ {
+  "text": " doubled,",
+  "startMs": 67413,
+  "endMs": 67774,
+  "timestampMs": 67594,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 68087,
+  "endMs": 68183,
+  "timestampMs": 68135,
+  "confidence": null
+ },
+ {
+  "text": " bread",
+  "startMs": 68087,
+  "endMs": 68533,
+  "timestampMs": 68310,
+  "confidence": null
+ },
+ {
+  "text": " didn't,",
+  "startMs": 68613,
+  "endMs": 69002,
+  "timestampMs": 68808,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 69384,
+  "endMs": 69373,
+  "timestampMs": 69379,
+  "confidence": null
+ },
+ {
+  "text": " each",
+  "startMs": 69384,
+  "endMs": 69663,
+  "timestampMs": 69524,
+  "confidence": null
+ },
+ {
+  "text": " dollar",
+  "startMs": 69663,
+  "endMs": 70253,
+  "timestampMs": 69958,
+  "confidence": null
+ },
+ {
+  "text": " now",
+  "startMs": 70253,
+  "endMs": 70323,
+  "timestampMs": 70288,
+  "confidence": null
+ },
+ {
+  "text": " buys",
+  "startMs": 70473,
+  "endMs": 70613,
+  "timestampMs": 70543,
+  "confidence": null
+ },
+ {
+  "text": " half",
+  "startMs": 70573,
+  "endMs": 70893,
+  "timestampMs": 70733,
+  "confidence": null
+ },
+ {
+  "text": " as",
+  "startMs": 71023,
+  "endMs": 71043,
+  "timestampMs": 71033,
+  "confidence": null
+ },
+ {
+  "text": " much.",
+  "startMs": 71203,
+  "endMs": 71333,
+  "timestampMs": 71268,
+  "confidence": null
+ },
+ {
+  "text": " That's",
+  "startMs": 71685,
+  "endMs": 71811,
+  "timestampMs": 71748,
+  "confidence": null
+ },
+ {
+  "text": " inflation",
+  "startMs": 72496,
+  "endMs": 73363,
+  "timestampMs": 72930,
+  "confidence": null
+ },
+ {
+  "text": " at",
+  "startMs": 73253,
+  "endMs": 73593,
+  "timestampMs": 73423,
+  "confidence": null
+ },
+ {
+  "text": " its",
+  "startMs": 73713,
+  "endMs": 73923,
+  "timestampMs": 73818,
+  "confidence": null
+ },
+ {
+  "text": " simplest:",
+  "startMs": 73963,
+  "endMs": 74604,
+  "timestampMs": 74284,
+  "confidence": null
+ },
+ {
+  "text": " more",
+  "startMs": 75011,
+  "endMs": 75253,
+  "timestampMs": 75132,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 75403,
+  "endMs": 75653,
+  "timestampMs": 75528,
+  "confidence": null
+ },
+ {
+  "text": " chasing",
+  "startMs": 75732,
+  "endMs": 76293,
+  "timestampMs": 76013,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 76243,
+  "endMs": 76553,
+  "timestampMs": 76398,
+  "confidence": null
+ },
+ {
+  "text": " same",
+  "startMs": 76703,
+  "endMs": 76853,
+  "timestampMs": 76778,
+  "confidence": null
+ },
+ {
+  "text": " amount",
+  "startMs": 76893,
+  "endMs": 77470,
+  "timestampMs": 77182,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 77473,
+  "endMs": 77473,
+  "timestampMs": 77473,
+  "confidence": null
+ },
+ {
+  "text": " stuff.",
+  "startMs": 77473,
+  "endMs": 78013,
+  "timestampMs": 77743,
+  "confidence": null
+ },
+ {
+  "text": " Money",
+  "startMs": 78175,
+  "endMs": 78713,
+  "timestampMs": 78444,
+  "confidence": null
+ },
+ {
+  "text": " isn't",
+  "startMs": 78704,
+  "endMs": 79143,
+  "timestampMs": 78924,
+  "confidence": null
+ },
+ {
+  "text": " wealth.",
+  "startMs": 79023,
+  "endMs": 79509,
+  "timestampMs": 79266,
+  "confidence": null
+ },
+ {
+  "text": " Bread",
+  "startMs": 79908,
+  "endMs": 80303,
+  "timestampMs": 80105,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 80469,
+  "endMs": 80523,
+  "timestampMs": 80496,
+  "confidence": null
+ },
+ {
+  "text": " wealth.",
+  "startMs": 80469,
+  "endMs": 81042,
+  "timestampMs": 80756,
+  "confidence": null
+ },
+ {
+  "text": " Houses,",
+  "startMs": 81489,
+  "endMs": 81863,
+  "timestampMs": 81676,
+  "confidence": null
+ },
+ {
+  "text": " phones,",
+  "startMs": 82163,
+  "endMs": 82483,
+  "timestampMs": 82323,
+  "confidence": null
+ },
+ {
+  "text": " doctors'",
+  "startMs": 82783,
+  "endMs": 83253,
+  "timestampMs": 83018,
+  "confidence": null
+ },
+ {
+  "text": " time,",
+  "startMs": 83250,
+  "endMs": 83563,
+  "timestampMs": 83407,
+  "confidence": null
+ },
+ {
+  "text": " that's",
+  "startMs": 84040,
+  "endMs": 84173,
+  "timestampMs": 84106,
+  "confidence": null
+ },
+ {
+  "text": " wealth.",
+  "startMs": 84323,
+  "endMs": 84643,
+  "timestampMs": 84483,
+  "confidence": null
+ },
+ {
+  "text": " Money",
+  "startMs": 85510,
+  "endMs": 84923,
+  "timestampMs": 85217,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 85510,
+  "endMs": 85413,
+  "timestampMs": 85462,
+  "confidence": null
+ },
+ {
+  "text": " just",
+  "startMs": 85510,
+  "endMs": 85723,
+  "timestampMs": 85617,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 85763,
+  "endMs": 85793,
+  "timestampMs": 85778,
+  "confidence": null
+ },
+ {
+  "text": " claim",
+  "startMs": 85943,
+  "endMs": 86143,
+  "timestampMs": 86043,
+  "confidence": null
+ },
+ {
+  "text": " on",
+  "startMs": 86183,
+  "endMs": 86333,
+  "timestampMs": 86258,
+  "confidence": null
+ },
+ {
+  "text": " those",
+  "startMs": 86483,
+  "endMs": 86723,
+  "timestampMs": 86603,
+  "confidence": null
+ },
+ {
+  "text": " things.",
+  "startMs": 86663,
+  "endMs": 87183,
+  "timestampMs": 86923,
+  "confidence": null
+ },
+ {
+  "text": " Printing",
+  "startMs": 88307,
+  "endMs": 88693,
+  "timestampMs": 88500,
+  "confidence": null
+ },
+ {
+  "text": " more",
+  "startMs": 88843,
+  "endMs": 88923,
+  "timestampMs": 88883,
+  "confidence": null
+ },
+ {
+  "text": " claims",
+  "startMs": 88990,
+  "endMs": 89303,
+  "timestampMs": 89147,
+  "confidence": null
+ },
+ {
+  "text": " doesn't",
+  "startMs": 89453,
+  "endMs": 89743,
+  "timestampMs": 89598,
+  "confidence": null
+ },
+ {
+  "text": " create",
+  "startMs": 89893,
+  "endMs": 90113,
+  "timestampMs": 90003,
+  "confidence": null
+ },
+ {
+  "text": " more",
+  "startMs": 90013,
+  "endMs": 90283,
+  "timestampMs": 90148,
+  "confidence": null
+ },
+ {
+  "text": " bread.",
+  "startMs": 90370,
+  "endMs": 90643,
+  "timestampMs": 90507,
+  "confidence": null
+ },
+ {
+  "text": " In",
+  "startMs": 91063,
+  "endMs": 91013,
+  "timestampMs": 91038,
+  "confidence": null
+ },
+ {
+  "text": " Zimbabwe,",
+  "startMs": 91770,
+  "endMs": 91793,
+  "timestampMs": 91782,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 91770,
+  "endMs": 92223,
+  "timestampMs": 91997,
+  "confidence": null
+ },
+ {
+  "text": " government",
+  "startMs": 92313,
+  "endMs": 93153,
+  "timestampMs": 92733,
+  "confidence": null
+ },
+ {
+  "text": " printed",
+  "startMs": 93253,
+  "endMs": 93633,
+  "timestampMs": 93443,
+  "confidence": null
+ },
+ {
+  "text": " more",
+  "startMs": 93503,
+  "endMs": 93953,
+  "timestampMs": 93728,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 94073,
+  "endMs": 94113,
+  "timestampMs": 94093,
+  "confidence": null
+ },
+ {
+  "text": " more",
+  "startMs": 94263,
+  "endMs": 94433,
+  "timestampMs": 94348,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 94583,
+  "endMs": 94743,
+  "timestampMs": 94663,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 94853,
+  "endMs": 94833,
+  "timestampMs": 94843,
+  "confidence": null
+ },
+ {
+  "text": " pay",
+  "startMs": 95023,
+  "endMs": 95073,
+  "timestampMs": 95048,
+  "confidence": null
+ },
+ {
+  "text": " its",
+  "startMs": 95223,
+  "endMs": 95263,
+  "timestampMs": 95243,
+  "confidence": null
+ },
+ {
+  "text": " bills,",
+  "startMs": 95427,
+  "endMs": 95583,
+  "timestampMs": 95505,
+  "confidence": null
+ },
+ {
+  "text": " while",
+  "startMs": 95863,
+  "endMs": 95813,
+  "timestampMs": 95838,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 96077,
+  "endMs": 96223,
+  "timestampMs": 96150,
+  "confidence": null
+ },
+ {
+  "text": " economy",
+  "startMs": 96243,
+  "endMs": 96673,
+  "timestampMs": 96458,
+  "confidence": null
+ },
+ {
+  "text": " was",
+  "startMs": 96823,
+  "endMs": 96863,
+  "timestampMs": 96843,
+  "confidence": null
+ },
+ {
+  "text": " producing",
+  "startMs": 96953,
+  "endMs": 97443,
+  "timestampMs": 97198,
+  "confidence": null
+ },
+ {
+  "text": " less",
+  "startMs": 97443,
+  "endMs": 97693,
+  "timestampMs": 97568,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 97753,
+  "endMs": 97893,
+  "timestampMs": 97823,
+  "confidence": null
+ },
+ {
+  "text": " less.",
+  "startMs": 98043,
+  "endMs": 98153,
+  "timestampMs": 98098,
+  "confidence": null
+ },
+ {
+  "text": " More",
+  "startMs": 98453,
+  "endMs": 98626,
+  "timestampMs": 98540,
+  "confidence": null
+ },
+ {
+  "text": " money,",
+  "startMs": 99173,
+  "endMs": 99788,
+  "timestampMs": 99480,
+  "confidence": null
+ },
+ {
+  "text": " fewer",
+  "startMs": 100063,
+  "endMs": 100253,
+  "timestampMs": 100158,
+  "confidence": null
+ },
+ {
+  "text": " goods.",
+  "startMs": 100163,
+  "endMs": 100553,
+  "timestampMs": 100358,
+  "confidence": null
+ },
+ {
+  "text": " At",
+  "startMs": 100903,
+  "endMs": 100873,
+  "timestampMs": 100888,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 100903,
+  "endMs": 101183,
+  "timestampMs": 101043,
+  "confidence": null
+ },
+ {
+  "text": " peak,",
+  "startMs": 101573,
+  "endMs": 101533,
+  "timestampMs": 101553,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 101573,
+  "endMs": 101863,
+  "timestampMs": 101718,
+  "confidence": null
+ },
+ {
+  "text": " November",
+  "startMs": 101853,
+  "endMs": 102583,
+  "timestampMs": 102218,
+  "confidence": null
+ },
+ {
+  "text": " 2008,",
+  "startMs": 102703,
+  "endMs": 103643,
+  "timestampMs": 103173,
+  "confidence": null
+ },
+ {
+  "text": " prices",
+  "startMs": 104201,
+  "endMs": 104343,
+  "timestampMs": 104272,
+  "confidence": null
+ },
+ {
+  "text": " were",
+  "startMs": 104263,
+  "endMs": 104693,
+  "timestampMs": 104478,
+  "confidence": null
+ },
+ {
+  "text": " rising",
+  "startMs": 104653,
+  "endMs": 105223,
+  "timestampMs": 104938,
+  "confidence": null
+ },
+ {
+  "text": " 79,000,000,000%",
+  "startMs": 105283,
+  "endMs": 106973,
+  "timestampMs": 106128,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 106903,
+  "endMs": 107073,
+  "timestampMs": 106988,
+  "confidence": null
+ },
+ {
+  "text": " month.",
+  "startMs": 107143,
+  "endMs": 107513,
+  "timestampMs": 107328,
+  "confidence": null
+ },
+ {
+  "text": " Think",
+  "startMs": 108023,
+  "endMs": 108673,
+  "timestampMs": 108348,
+  "confidence": null
+ },
+ {
+  "text": " about",
+  "startMs": 108588,
+  "endMs": 108913,
+  "timestampMs": 108751,
+  "confidence": null
+ },
+ {
+  "text": " what",
+  "startMs": 109033,
+  "endMs": 109073,
+  "timestampMs": 109053,
+  "confidence": null
+ },
+ {
+  "text": " that",
+  "startMs": 109206,
+  "endMs": 109313,
+  "timestampMs": 109260,
+  "confidence": null
+ },
+ {
+  "text": " means.",
+  "startMs": 109383,
+  "endMs": 109633,
+  "timestampMs": 109508,
+  "confidence": null
+ },
+ {
+  "text": " If",
+  "startMs": 110429,
+  "endMs": 109873,
+  "timestampMs": 110151,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 110429,
+  "endMs": 110213,
+  "timestampMs": 110321,
+  "confidence": null
+ },
+ {
+  "text": " got",
+  "startMs": 110429,
+  "endMs": 110423,
+  "timestampMs": 110426,
+  "confidence": null
+ },
+ {
+  "text": " paid",
+  "startMs": 110429,
+  "endMs": 110673,
+  "timestampMs": 110551,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 110693,
+  "endMs": 110843,
+  "timestampMs": 110768,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 110929,
+  "endMs": 111053,
+  "timestampMs": 110991,
+  "confidence": null
+ },
+ {
+  "text": " morning,",
+  "startMs": 110993,
+  "endMs": 111543,
+  "timestampMs": 111268,
+  "confidence": null
+ },
+ {
+  "text": " your",
+  "startMs": 112011,
+  "endMs": 111773,
+  "timestampMs": 111892,
+  "confidence": null
+ },
+ {
+  "text": " salary",
+  "startMs": 112011,
+  "endMs": 112373,
+  "timestampMs": 112192,
+  "confidence": null
+ },
+ {
+  "text": " was",
+  "startMs": 112313,
+  "endMs": 112573,
+  "timestampMs": 112443,
+  "confidence": null
+ },
+ {
+  "text": " worth",
+  "startMs": 112723,
+  "endMs": 112933,
+  "timestampMs": 112828,
+  "confidence": null
+ },
+ {
+  "text": " noticeably",
+  "startMs": 112913,
+  "endMs": 113633,
+  "timestampMs": 113273,
+  "confidence": null
+ },
+ {
+  "text": " less",
+  "startMs": 113713,
+  "endMs": 113913,
+  "timestampMs": 113813,
+  "confidence": null
+ },
+ {
+  "text": " by",
+  "startMs": 114013,
+  "endMs": 114053,
+  "timestampMs": 114033,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 114183,
+  "endMs": 114263,
+  "timestampMs": 114223,
+  "confidence": null
+ },
+ {
+  "text": " evening.",
+  "startMs": 114351,
+  "endMs": 114753,
+  "timestampMs": 114552,
+  "confidence": null
+ },
+ {
+  "text": " Saving",
+  "startMs": 115610,
+  "endMs": 116063,
+  "timestampMs": 115837,
+  "confidence": null
+ },
+ {
+  "text": " was",
+  "startMs": 116213,
+  "endMs": 116273,
+  "timestampMs": 116243,
+  "confidence": null
+ },
+ {
+  "text": " pointless.",
+  "startMs": 116423,
+  "endMs": 117059,
+  "timestampMs": 116741,
+  "confidence": null
+ },
+ {
+  "text": " The",
+  "startMs": 117558,
+  "endMs": 117333,
+  "timestampMs": 117446,
+  "confidence": null
+ },
+ {
+  "text": " only",
+  "startMs": 117558,
+  "endMs": 117613,
+  "timestampMs": 117586,
+  "confidence": null
+ },
+ {
+  "text": " smart",
+  "startMs": 117558,
+  "endMs": 117973,
+  "timestampMs": 117766,
+  "confidence": null
+ },
+ {
+  "text": " move",
+  "startMs": 118123,
+  "endMs": 118253,
+  "timestampMs": 118188,
+  "confidence": null
+ },
+ {
+  "text": " was",
+  "startMs": 118193,
+  "endMs": 118463,
+  "timestampMs": 118328,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 118423,
+  "endMs": 118603,
+  "timestampMs": 118513,
+  "confidence": null
+ },
+ {
+  "text": " spend",
+  "startMs": 118753,
+  "endMs": 118963,
+  "timestampMs": 118858,
+  "confidence": null
+ },
+ {
+  "text": " your",
+  "startMs": 118943,
+  "endMs": 119243,
+  "timestampMs": 119093,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 119237,
+  "endMs": 119603,
+  "timestampMs": 119420,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 119753,
+  "endMs": 119813,
+  "timestampMs": 119783,
+  "confidence": null
+ },
+ {
+  "text": " moment",
+  "startMs": 119883,
+  "endMs": 120243,
+  "timestampMs": 120063,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 120393,
+  "endMs": 120413,
+  "timestampMs": 120403,
+  "confidence": null
+ },
+ {
+  "text": " got",
+  "startMs": 120603,
+  "endMs": 120753,
+  "timestampMs": 120678,
+  "confidence": null
+ },
+ {
+  "text": " it,",
+  "startMs": 120903,
+  "endMs": 120948,
+  "timestampMs": 120926,
+  "confidence": null
+ },
+ {
+  "text": " which",
+  "startMs": 121321,
+  "endMs": 121553,
+  "timestampMs": 121437,
+  "confidence": null
+ },
+ {
+  "text": " pushed",
+  "startMs": 121537,
+  "endMs": 122023,
+  "timestampMs": 121780,
+  "confidence": null
+ },
+ {
+  "text": " prices",
+  "startMs": 122043,
+  "endMs": 122493,
+  "timestampMs": 122268,
+  "confidence": null
+ },
+ {
+  "text": " up",
+  "startMs": 122474,
+  "endMs": 122653,
+  "timestampMs": 122564,
+  "confidence": null
+ },
+ {
+  "text": " even",
+  "startMs": 122803,
+  "endMs": 122973,
+  "timestampMs": 122888,
+  "confidence": null
+ },
+ {
+  "text": " faster.",
+  "startMs": 123113,
+  "endMs": 123281,
+  "timestampMs": 123197,
+  "confidence": null
+ },
+ {
+  "text": " And",
+  "startMs": 123971,
+  "endMs": 123913,
+  "timestampMs": 123942,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 123971,
+  "endMs": 124073,
+  "timestampMs": 124022,
+  "confidence": null
+ },
+ {
+  "text": " April",
+  "startMs": 124223,
+  "endMs": 124383,
+  "timestampMs": 124303,
+  "confidence": null
+ },
+ {
+  "text": " 2009,",
+  "startMs": 124423,
+  "endMs": 125413,
+  "timestampMs": 124918,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 125803,
+  "endMs": 125813,
+  "timestampMs": 125808,
+  "confidence": null
+ },
+ {
+  "text": " country",
+  "startMs": 125803,
+  "endMs": 126233,
+  "timestampMs": 126018,
+  "confidence": null
+ },
+ {
+  "text": " stopped",
+  "startMs": 126183,
+  "endMs": 126653,
+  "timestampMs": 126418,
+  "confidence": null
+ },
+ {
+  "text": " using",
+  "startMs": 126683,
+  "endMs": 126983,
+  "timestampMs": 126833,
+  "confidence": null
+ },
+ {
+  "text": " its",
+  "startMs": 127143,
+  "endMs": 127223,
+  "timestampMs": 127183,
+  "confidence": null
+ },
+ {
+  "text": " own",
+  "startMs": 127311,
+  "endMs": 127473,
+  "timestampMs": 127392,
+  "confidence": null
+ },
+ {
+  "text": " currency",
+  "startMs": 127543,
+  "endMs": 128043,
+  "timestampMs": 127793,
+  "confidence": null
+ },
+ {
+  "text": " altogether.",
+  "startMs": 128156,
+  "endMs": 128798,
+  "timestampMs": 128477,
+  "confidence": null
+ },
+ {
+  "text": " People",
+  "startMs": 129300,
+  "endMs": 129613,
+  "timestampMs": 129457,
+  "confidence": null
+ },
+ {
+  "text": " switched",
+  "startMs": 129713,
+  "endMs": 130243,
+  "timestampMs": 129978,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 130162,
+  "endMs": 130403,
+  "timestampMs": 130283,
+  "confidence": null
+ },
+ {
+  "text": " US",
+  "startMs": 130373,
+  "endMs": 130783,
+  "timestampMs": 130578,
+  "confidence": null
+ },
+ {
+  "text": " dollars.",
+  "startMs": 130783,
+  "endMs": 131947,
+  "timestampMs": 131365,
+  "confidence": null
+ },
+ {
+  "text": " But",
+  "startMs": 131947,
+  "endMs": 132033,
+  "timestampMs": 131990,
+  "confidence": null
+ },
+ {
+  "text": " wait.",
+  "startMs": 131947,
+  "endMs": 132454,
+  "timestampMs": 132200,
+  "confidence": null
+ },
+ {
+  "text": " The",
+  "startMs": 132890,
+  "endMs": 132743,
+  "timestampMs": 132817,
+  "confidence": null
+ },
+ {
+  "text": " United",
+  "startMs": 132890,
+  "endMs": 133223,
+  "timestampMs": 133057,
+  "confidence": null
+ },
+ {
+  "text": " States",
+  "startMs": 133373,
+  "endMs": 133793,
+  "timestampMs": 133583,
+  "confidence": null
+ },
+ {
+  "text": " printed",
+  "startMs": 133920,
+  "endMs": 134143,
+  "timestampMs": 134032,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 134103,
+  "endMs": 134193,
+  "timestampMs": 134148,
+  "confidence": null
+ },
+ {
+  "text": " lot",
+  "startMs": 134193,
+  "endMs": 134353,
+  "timestampMs": 134273,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 134503,
+  "endMs": 134493,
+  "timestampMs": 134498,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 134563,
+  "endMs": 134793,
+  "timestampMs": 134678,
+  "confidence": null
+ },
+ {
+  "text": " too.",
+  "startMs": 134833,
+  "endMs": 135033,
+  "timestampMs": 134933,
+  "confidence": null
+ },
+ {
+  "text": " In",
+  "startMs": 135787,
+  "endMs": 135363,
+  "timestampMs": 135575,
+  "confidence": null
+ },
+ {
+  "text": " February",
+  "startMs": 135787,
+  "endMs": 135913,
+  "timestampMs": 135850,
+  "confidence": null
+ },
+ {
+  "text": " 2020,",
+  "startMs": 135993,
+  "endMs": 136733,
+  "timestampMs": 136363,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 136793,
+  "endMs": 137216,
+  "timestampMs": 137005,
+  "confidence": null
+ },
+ {
+  "text": " US",
+  "startMs": 137406,
+  "endMs": 137403,
+  "timestampMs": 137405,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 137406,
+  "endMs": 137943,
+  "timestampMs": 137675,
+  "confidence": null
+ },
+ {
+  "text": " supply",
+  "startMs": 137883,
+  "endMs": 138353,
+  "timestampMs": 138118,
+  "confidence": null
+ },
+ {
+  "text": " was",
+  "startMs": 138293,
+  "endMs": 138553,
+  "timestampMs": 138423,
+  "confidence": null
+ },
+ {
+  "text": " about",
+  "startMs": 138643,
+  "endMs": 138893,
+  "timestampMs": 138768,
+  "confidence": null
+ },
+ {
+  "text": " $15.5 trillion.",
+  "startMs": 139043,
+  "endMs": 141383,
+  "timestampMs": 140213,
+  "confidence": null
+ },
+ {
+  "text": " Two",
+  "startMs": 141383,
+  "endMs": 141953,
+  "timestampMs": 141668,
+  "confidence": null
+ },
+ {
+  "text": " years",
+  "startMs": 141873,
+  "endMs": 142273,
+  "timestampMs": 142073,
+  "confidence": null
+ },
+ {
+  "text": " later,",
+  "startMs": 142323,
+  "endMs": 142692,
+  "timestampMs": 142508,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 142978,
+  "endMs": 142923,
+  "timestampMs": 142951,
+  "confidence": null
+ },
+ {
+  "text": " was",
+  "startMs": 142978,
+  "endMs": 143143,
+  "timestampMs": 143061,
+  "confidence": null
+ },
+ {
+  "text": " almost",
+  "startMs": 143273,
+  "endMs": 143573,
+  "timestampMs": 143423,
+  "confidence": null
+ },
+ {
+  "text": " 22 trillion.",
+  "startMs": 143673,
+  "endMs": 144563,
+  "timestampMs": 144118,
+  "confidence": null
+ },
+ {
+  "text": " That's",
+  "startMs": 144983,
+  "endMs": 145096,
+  "timestampMs": 145040,
+  "confidence": null
+ },
+ {
+  "text": " an",
+  "startMs": 145046,
+  "endMs": 145096,
+  "timestampMs": 145071,
+  "confidence": null
+ },
+ {
+  "text": " increase",
+  "startMs": 145648,
+  "endMs": 145993,
+  "timestampMs": 145821,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 145963,
+  "endMs": 146123,
+  "timestampMs": 146043,
+  "confidence": null
+ },
+ {
+  "text": " about",
+  "startMs": 146143,
+  "endMs": 146463,
+  "timestampMs": 146303,
+  "confidence": null
+ },
+ {
+  "text": " 40%.",
+  "startMs": 146493,
+  "endMs": 147463,
+  "timestampMs": 146978,
+  "confidence": null
+ },
+ {
+  "text": " So",
+  "startMs": 148575,
+  "endMs": 147883,
+  "timestampMs": 148229,
+  "confidence": null
+ },
+ {
+  "text": " why",
+  "startMs": 148575,
+  "endMs": 149073,
+  "timestampMs": 148824,
+  "confidence": null
+ },
+ {
+  "text": " didn't",
+  "startMs": 148963,
+  "endMs": 149443,
+  "timestampMs": 149203,
+  "confidence": null
+ },
+ {
+  "text": " America",
+  "startMs": 149483,
+  "endMs": 150083,
+  "timestampMs": 149783,
+  "confidence": null
+ },
+ {
+  "text": " become",
+  "startMs": 150233,
+  "endMs": 150623,
+  "timestampMs": 150428,
+  "confidence": null
+ },
+ {
+  "text": " Zimbabwe?",
+  "startMs": 150683,
+  "endMs": 151135,
+  "timestampMs": 150909,
+  "confidence": null
+ },
+ {
+  "text": " Inflation",
+  "startMs": 151857,
+  "endMs": 152383,
+  "timestampMs": 152120,
+  "confidence": null
+ },
+ {
+  "text": " did",
+  "startMs": 152533,
+  "endMs": 152643,
+  "timestampMs": 152588,
+  "confidence": null
+ },
+ {
+  "text": " come.",
+  "startMs": 152789,
+  "endMs": 152983,
+  "timestampMs": 152886,
+  "confidence": null
+ },
+ {
+  "text": " In",
+  "startMs": 153556,
+  "endMs": 153423,
+  "timestampMs": 153489,
+  "confidence": null
+ },
+ {
+  "text": " June",
+  "startMs": 153556,
+  "endMs": 153773,
+  "timestampMs": 153664,
+  "confidence": null
+ },
+ {
+  "text": " 2022,",
+  "startMs": 153793,
+  "endMs": 154833,
+  "timestampMs": 154313,
+  "confidence": null
+ },
+ {
+  "text": " US",
+  "startMs": 155150,
+  "endMs": 155383,
+  "timestampMs": 155267,
+  "confidence": null
+ },
+ {
+  "text": " prices",
+  "startMs": 155576,
+  "endMs": 155953,
+  "timestampMs": 155765,
+  "confidence": null
+ },
+ {
+  "text": " were",
+  "startMs": 156013,
+  "endMs": 156203,
+  "timestampMs": 156108,
+  "confidence": null
+ },
+ {
+  "text": " up",
+  "startMs": 156293,
+  "endMs": 156233,
+  "timestampMs": 156263,
+  "confidence": null
+ },
+ {
+  "text": " nine",
+  "startMs": 156233,
+  "endMs": 157023,
+  "timestampMs": 156628,
+  "confidence": null
+ },
+ {
+  "text": " point",
+  "startMs": 157023,
+  "endMs": 157023,
+  "timestampMs": 157023,
+  "confidence": null
+ },
+ {
+  "text": " 1%",
+  "startMs": 157023,
+  "endMs": 157633,
+  "timestampMs": 157328,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 157693,
+  "endMs": 157793,
+  "timestampMs": 157743,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 157843,
+  "endMs": 157873,
+  "timestampMs": 157858,
+  "confidence": null
+ },
+ {
+  "text": " year,",
+  "startMs": 157993,
+  "endMs": 158270,
+  "timestampMs": 158131,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 158542,
+  "endMs": 158593,
+  "timestampMs": 158568,
+  "confidence": null
+ },
+ {
+  "text": " biggest",
+  "startMs": 158542,
+  "endMs": 159093,
+  "timestampMs": 158818,
+  "confidence": null
+ },
+ {
+  "text": " jump",
+  "startMs": 159123,
+  "endMs": 159413,
+  "timestampMs": 159268,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 159497,
+  "endMs": 159623,
+  "timestampMs": 159560,
+  "confidence": null
+ },
+ {
+  "text": " 40",
+  "startMs": 159833,
+  "endMs": 160103,
+  "timestampMs": 159968,
+  "confidence": null
+ },
+ {
+  "text": " years.",
+  "startMs": 160193,
+  "endMs": 160549,
+  "timestampMs": 160371,
+  "confidence": null
+ },
+ {
+  "text": " That",
+  "startMs": 161014,
+  "endMs": 161073,
+  "timestampMs": 161044,
+  "confidence": null
+ },
+ {
+  "text": " hurt.",
+  "startMs": 161014,
+  "endMs": 161393,
+  "timestampMs": 161204,
+  "confidence": null
+ },
+ {
+  "text": " But",
+  "startMs": 162117,
+  "endMs": 161873,
+  "timestampMs": 161995,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 162117,
+  "endMs": 162033,
+  "timestampMs": 162075,
+  "confidence": null
+ },
+ {
+  "text": " wasn't",
+  "startMs": 162117,
+  "endMs": 162473,
+  "timestampMs": 162295,
+  "confidence": null
+ },
+ {
+  "text": " hyperinflation.",
+  "startMs": 162376,
+  "endMs": 163533,
+  "timestampMs": 162955,
+  "confidence": null
+ },
+ {
+  "text": " There",
+  "startMs": 164702,
+  "endMs": 164013,
+  "timestampMs": 164358,
+  "confidence": null
+ },
+ {
+  "text": " are",
+  "startMs": 164702,
+  "endMs": 164903,
+  "timestampMs": 164803,
+  "confidence": null
+ },
+ {
+  "text": " four",
+  "startMs": 165053,
+  "endMs": 165383,
+  "timestampMs": 165218,
+  "confidence": null
+ },
+ {
+  "text": " big",
+  "startMs": 165512,
+  "endMs": 165633,
+  "timestampMs": 165573,
+  "confidence": null
+ },
+ {
+  "text": " reasons.",
+  "startMs": 165743,
+  "endMs": 166302,
+  "timestampMs": 166022,
+  "confidence": null
+ },
+ {
+  "text": " First,",
+  "startMs": 166855,
+  "endMs": 166843,
+  "timestampMs": 166849,
+  "confidence": null
+ },
+ {
+  "text": " timing.",
+  "startMs": 166855,
+  "endMs": 167291,
+  "timestampMs": 167073,
+  "confidence": null
+ },
+ {
+  "text": " In",
+  "startMs": 167553,
+  "endMs": 167974,
+  "timestampMs": 167763,
+  "confidence": null
+ },
+ {
+  "text": " 2020,",
+  "startMs": 167913,
+  "endMs": 167974,
+  "timestampMs": 167944,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 168562,
+  "endMs": 169263,
+  "timestampMs": 168913,
+  "confidence": null
+ },
+ {
+  "text": " economy",
+  "startMs": 169423,
+  "endMs": 169843,
+  "timestampMs": 169633,
+  "confidence": null
+ },
+ {
+  "text": " was",
+  "startMs": 169783,
+  "endMs": 170083,
+  "timestampMs": 169933,
+  "confidence": null
+ },
+ {
+  "text": " shut",
+  "startMs": 170183,
+  "endMs": 170403,
+  "timestampMs": 170293,
+  "confidence": null
+ },
+ {
+  "text": " down.",
+  "startMs": 170553,
+  "endMs": 170723,
+  "timestampMs": 170638,
+  "confidence": null
+ },
+ {
+  "text": " People",
+  "startMs": 171373,
+  "endMs": 171453,
+  "timestampMs": 171413,
+  "confidence": null
+ },
+ {
+  "text": " were",
+  "startMs": 171373,
+  "endMs": 171773,
+  "timestampMs": 171573,
+  "confidence": null
+ },
+ {
+  "text": " stuck",
+  "startMs": 171713,
+  "endMs": 172173,
+  "timestampMs": 171943,
+  "confidence": null
+ },
+ {
+  "text": " at",
+  "startMs": 172113,
+  "endMs": 172333,
+  "timestampMs": 172223,
+  "confidence": null
+ },
+ {
+  "text": " home,",
+  "startMs": 172483,
+  "endMs": 172600,
+  "timestampMs": 172542,
+  "confidence": null
+ },
+ {
+  "text": " saving",
+  "startMs": 172751,
+  "endMs": 173233,
+  "timestampMs": 172992,
+  "confidence": null
+ },
+ {
+  "text": " instead",
+  "startMs": 173373,
+  "endMs": 173763,
+  "timestampMs": 173568,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 173961,
+  "endMs": 173893,
+  "timestampMs": 173927,
+  "confidence": null
+ },
+ {
+  "text": " spending.",
+  "startMs": 173961,
+  "endMs": 174336,
+  "timestampMs": 174149,
+  "confidence": null
+ },
+ {
+  "text": " A",
+  "startMs": 174890,
+  "endMs": 174863,
+  "timestampMs": 174877,
+  "confidence": null
+ },
+ {
+  "text": " lot",
+  "startMs": 174890,
+  "endMs": 175093,
+  "timestampMs": 174992,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 175213,
+  "endMs": 175243,
+  "timestampMs": 175228,
+  "confidence": null
+ },
+ {
+  "text": " that",
+  "startMs": 175373,
+  "endMs": 175543,
+  "timestampMs": 175458,
+  "confidence": null
+ },
+ {
+  "text": " new",
+  "startMs": 175543,
+  "endMs": 175783,
+  "timestampMs": 175663,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 175933,
+  "endMs": 176133,
+  "timestampMs": 176033,
+  "confidence": null
+ },
+ {
+  "text": " sat",
+  "startMs": 176173,
+  "endMs": 176393,
+  "timestampMs": 176283,
+  "confidence": null
+ },
+ {
+  "text": " still.",
+  "startMs": 176493,
+  "endMs": 176793,
+  "timestampMs": 176643,
+  "confidence": null
+ },
+ {
+  "text": " Second,",
+  "startMs": 177301,
+  "endMs": 177493,
+  "timestampMs": 177397,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 177543,
+  "endMs": 177821,
+  "timestampMs": 177682,
+  "confidence": null
+ },
+ {
+  "text": " whole",
+  "startMs": 178127,
+  "endMs": 178263,
+  "timestampMs": 178195,
+  "confidence": null
+ },
+ {
+  "text": " world",
+  "startMs": 178403,
+  "endMs": 178653,
+  "timestampMs": 178528,
+  "confidence": null
+ },
+ {
+  "text": " wants",
+  "startMs": 178753,
+  "endMs": 179023,
+  "timestampMs": 178888,
+  "confidence": null
+ },
+ {
+  "text": " dollars.",
+  "startMs": 179023,
+  "endMs": 180103,
+  "timestampMs": 179563,
+  "confidence": null
+ },
+ {
+  "text": " About",
+  "startMs": 180103,
+  "endMs": 180106,
+  "timestampMs": 180104,
+  "confidence": null
+ },
+ {
+  "text": " 57%",
+  "startMs": 180659,
+  "endMs": 181443,
+  "timestampMs": 181051,
+  "confidence": null
+ },
+ {
+  "text": " of",
+  "startMs": 181533,
+  "endMs": 181603,
+  "timestampMs": 181568,
+  "confidence": null
+ },
+ {
+  "text": " all",
+  "startMs": 181673,
+  "endMs": 181853,
+  "timestampMs": 181763,
+  "confidence": null
+ },
+ {
+  "text": " foreign",
+  "startMs": 181903,
+  "endMs": 182433,
+  "timestampMs": 182168,
+  "confidence": null
+ },
+ {
+  "text": " currency",
+  "startMs": 182335,
+  "endMs": 183063,
+  "timestampMs": 182699,
+  "confidence": null
+ },
+ {
+  "text": " reserves",
+  "startMs": 183023,
+  "endMs": 183753,
+  "timestampMs": 183388,
+  "confidence": null
+ },
+ {
+  "text": " held",
+  "startMs": 183903,
+  "endMs": 184083,
+  "timestampMs": 183993,
+  "confidence": null
+ },
+ {
+  "text": " by",
+  "startMs": 184053,
+  "endMs": 184233,
+  "timestampMs": 184143,
+  "confidence": null
+ },
+ {
+  "text": " central",
+  "startMs": 184303,
+  "endMs": 184823,
+  "timestampMs": 184563,
+  "confidence": null
+ },
+ {
+  "text": " banks",
+  "startMs": 184873,
+  "endMs": 185313,
+  "timestampMs": 185093,
+  "confidence": null
+ },
+ {
+  "text": " are",
+  "startMs": 185405,
+  "endMs": 185473,
+  "timestampMs": 185439,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 185405,
+  "endMs": 185583,
+  "timestampMs": 185494,
+  "confidence": null
+ },
+ {
+  "text": " US",
+  "startMs": 185733,
+  "endMs": 185843,
+  "timestampMs": 185788,
+  "confidence": null
+ },
+ {
+  "text": " dollars.",
+  "startMs": 185843,
+  "endMs": 186503,
+  "timestampMs": 186173,
+  "confidence": null
+ },
+ {
+  "text": " When",
+  "startMs": 186503,
+  "endMs": 186625,
+  "timestampMs": 186564,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 187234,
+  "endMs": 187433,
+  "timestampMs": 187334,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 187521,
+  "endMs": 187763,
+  "timestampMs": 187642,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 187813,
+  "endMs": 187793,
+  "timestampMs": 187803,
+  "confidence": null
+ },
+ {
+  "text": " currency",
+  "startMs": 187913,
+  "endMs": 188323,
+  "timestampMs": 188118,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 188493,
+  "endMs": 188453,
+  "timestampMs": 188473,
+  "confidence": null
+ },
+ {
+  "text": " whole",
+  "startMs": 188563,
+  "endMs": 188883,
+  "timestampMs": 188723,
+  "confidence": null
+ },
+ {
+  "text": " world",
+  "startMs": 188843,
+  "endMs": 189213,
+  "timestampMs": 189028,
+  "confidence": null
+ },
+ {
+  "text": " uses,",
+  "startMs": 189103,
+  "endMs": 189463,
+  "timestampMs": 189283,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 189893,
+  "endMs": 189653,
+  "timestampMs": 189773,
+  "confidence": null
+ },
+ {
+  "text": " extra",
+  "startMs": 189893,
+  "endMs": 190133,
+  "timestampMs": 190013,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 190163,
+  "endMs": 190463,
+  "timestampMs": 190313,
+  "confidence": null
+ },
+ {
+  "text": " spreads",
+  "startMs": 190323,
+  "endMs": 190883,
+  "timestampMs": 190603,
+  "confidence": null
+ },
+ {
+  "text": " much",
+  "startMs": 190976,
+  "endMs": 191163,
+  "timestampMs": 191070,
+  "confidence": null
+ },
+ {
+  "text": " further.",
+  "startMs": 191263,
+  "endMs": 191643,
+  "timestampMs": 191453,
+  "confidence": null
+ },
+ {
+  "text": " Third,",
+  "startMs": 192103,
+  "endMs": 192923,
+  "timestampMs": 192513,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 193459,
+  "endMs": 193553,
+  "timestampMs": 193506,
+  "confidence": null
+ },
+ {
+  "text": " US",
+  "startMs": 193459,
+  "endMs": 193923,
+  "timestampMs": 193691,
+  "confidence": null
+ },
+ {
+  "text": " borrows",
+  "startMs": 194143,
+  "endMs": 194663,
+  "timestampMs": 194403,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 194693,
+  "endMs": 194863,
+  "timestampMs": 194778,
+  "confidence": null
+ },
+ {
+  "text": " its",
+  "startMs": 195013,
+  "endMs": 195103,
+  "timestampMs": 195058,
+  "confidence": null
+ },
+ {
+  "text": " own",
+  "startMs": 195035,
+  "endMs": 195343,
+  "timestampMs": 195189,
+  "confidence": null
+ },
+ {
+  "text": " currency.",
+  "startMs": 195313,
+  "endMs": 195912,
+  "timestampMs": 195613,
+  "confidence": null
+ },
+ {
+  "text": " Many",
+  "startMs": 196485,
+  "endMs": 196523,
+  "timestampMs": 196504,
+  "confidence": null
+ },
+ {
+  "text": " countries",
+  "startMs": 196485,
+  "endMs": 197233,
+  "timestampMs": 196859,
+  "confidence": null
+ },
+ {
+  "text": " borrow",
+  "startMs": 197373,
+  "endMs": 197693,
+  "timestampMs": 197533,
+  "confidence": null
+ },
+ {
+  "text": " in",
+  "startMs": 197823,
+  "endMs": 197853,
+  "timestampMs": 197838,
+  "confidence": null
+ },
+ {
+  "text": " dollars.",
+  "startMs": 197853,
+  "endMs": 198918,
+  "timestampMs": 198386,
+  "confidence": null
+ },
+ {
+  "text": " They",
+  "startMs": 198918,
+  "endMs": 198913,
+  "timestampMs": 198916,
+  "confidence": null
+ },
+ {
+  "text": " can",
+  "startMs": 198918,
+  "endMs": 199063,
+  "timestampMs": 198991,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 199233,
+  "endMs": 199313,
+  "timestampMs": 199273,
+  "confidence": null
+ },
+ {
+  "text": " their",
+  "startMs": 199463,
+  "endMs": 199643,
+  "timestampMs": 199553,
+  "confidence": null
+ },
+ {
+  "text": " own",
+  "startMs": 199623,
+  "endMs": 199843,
+  "timestampMs": 199733,
+  "confidence": null
+ },
+ {
+  "text": " money,",
+  "startMs": 199993,
+  "endMs": 200217,
+  "timestampMs": 200105,
+  "confidence": null
+ },
+ {
+  "text": " but",
+  "startMs": 200376,
+  "endMs": 200503,
+  "timestampMs": 200440,
+  "confidence": null
+ },
+ {
+  "text": " they",
+  "startMs": 200483,
+  "endMs": 200693,
+  "timestampMs": 200588,
+  "confidence": null
+ },
+ {
+  "text": " can't",
+  "startMs": 200633,
+  "endMs": 201033,
+  "timestampMs": 200833,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 201038,
+  "endMs": 201423,
+  "timestampMs": 201231,
+  "confidence": null
+ },
+ {
+  "text": " dollars.",
+  "startMs": 201423,
+  "endMs": 202350,
+  "timestampMs": 201886,
+  "confidence": null
+ },
+ {
+  "text": " When",
+  "startMs": 202350,
+  "endMs": 202333,
+  "timestampMs": 202341,
+  "confidence": null
+ },
+ {
+  "text": " their",
+  "startMs": 202350,
+  "endMs": 202633,
+  "timestampMs": 202491,
+  "confidence": null
+ },
+ {
+  "text": " currency",
+  "startMs": 202673,
+  "endMs": 203093,
+  "timestampMs": 202883,
+  "confidence": null
+ },
+ {
+  "text": " falls,",
+  "startMs": 203233,
+  "endMs": 203523,
+  "timestampMs": 203378,
+  "confidence": null
+ },
+ {
+  "text": " their",
+  "startMs": 203912,
+  "endMs": 204003,
+  "timestampMs": 203958,
+  "confidence": null
+ },
+ {
+  "text": " debts",
+  "startMs": 203912,
+  "endMs": 204293,
+  "timestampMs": 204103,
+  "confidence": null
+ },
+ {
+  "text": " get",
+  "startMs": 204398,
+  "endMs": 204463,
+  "timestampMs": 204431,
+  "confidence": null
+ },
+ {
+  "text": " bigger.",
+  "startMs": 204398,
+  "endMs": 204803,
+  "timestampMs": 204601,
+  "confidence": null
+ },
+ {
+  "text": " And",
+  "startMs": 204796,
+  "endMs": 205122,
+  "timestampMs": 204959,
+  "confidence": null
+ },
+ {
+  "text": " fourth,",
+  "startMs": 205695,
+  "endMs": 205723,
+  "timestampMs": 205709,
+  "confidence": null
+ },
+ {
+  "text": " trust.",
+  "startMs": 205695,
+  "endMs": 206203,
+  "timestampMs": 205949,
+  "confidence": null
+ },
+ {
+  "text": " The",
+  "startMs": 206769,
+  "endMs": 206773,
+  "timestampMs": 206771,
+  "confidence": null
+ },
+ {
+  "text": " US",
+  "startMs": 206769,
+  "endMs": 207292,
+  "timestampMs": 207031,
+  "confidence": null
+ },
+ {
+  "text": " central",
+  "startMs": 207803,
+  "endMs": 207983,
+  "timestampMs": 207893,
+  "confidence": null
+ },
+ {
+  "text": " bank",
+  "startMs": 207993,
+  "endMs": 208293,
+  "timestampMs": 208143,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 208363,
+  "endMs": 208463,
+  "timestampMs": 208413,
+  "confidence": null
+ },
+ {
+  "text": " independent",
+  "startMs": 208563,
+  "endMs": 209363,
+  "timestampMs": 208963,
+  "confidence": null
+ },
+ {
+  "text": " from",
+  "startMs": 209513,
+  "endMs": 209683,
+  "timestampMs": 209598,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 209603,
+  "endMs": 209883,
+  "timestampMs": 209743,
+  "confidence": null
+ },
+ {
+  "text": " government,",
+  "startMs": 210003,
+  "endMs": 210749,
+  "timestampMs": 210376,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 211038,
+  "endMs": 210993,
+  "timestampMs": 211015,
+  "confidence": null
+ },
+ {
+  "text": " when",
+  "startMs": 211038,
+  "endMs": 211233,
+  "timestampMs": 211135,
+  "confidence": null
+ },
+ {
+  "text": " inflation",
+  "startMs": 211183,
+  "endMs": 211913,
+  "timestampMs": 211548,
+  "confidence": null
+ },
+ {
+  "text": " rose,",
+  "startMs": 212063,
+  "endMs": 212320,
+  "timestampMs": 212192,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 212625,
+  "endMs": 212513,
+  "timestampMs": 212569,
+  "confidence": null
+ },
+ {
+  "text": " raised",
+  "startMs": 212625,
+  "endMs": 212963,
+  "timestampMs": 212794,
+  "confidence": null
+ },
+ {
+  "text": " interest",
+  "startMs": 213103,
+  "endMs": 213513,
+  "timestampMs": 213308,
+  "confidence": null
+ },
+ {
+  "text": " rates",
+  "startMs": 213543,
+  "endMs": 213873,
+  "timestampMs": 213708,
+  "confidence": null
+ },
+ {
+  "text": " hard",
+  "startMs": 214013,
+  "endMs": 214223,
+  "timestampMs": 214118,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 214355,
+  "endMs": 214373,
+  "timestampMs": 214364,
+  "confidence": null
+ },
+ {
+  "text": " pull",
+  "startMs": 214504,
+  "endMs": 214683,
+  "timestampMs": 214594,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 214781,
+  "endMs": 214833,
+  "timestampMs": 214807,
+  "confidence": null
+ },
+ {
+  "text": " back",
+  "startMs": 214781,
+  "endMs": 215133,
+  "timestampMs": 214957,
+  "confidence": null
+ },
+ {
+  "text": " down.",
+  "startMs": 215040,
+  "endMs": 215435,
+  "timestampMs": 215237,
+  "confidence": null
+ },
+ {
+  "text": " People",
+  "startMs": 215893,
+  "endMs": 216173,
+  "timestampMs": 216033,
+  "confidence": null
+ },
+ {
+  "text": " believed",
+  "startMs": 216053,
+  "endMs": 216783,
+  "timestampMs": 216418,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 216763,
+  "endMs": 216933,
+  "timestampMs": 216848,
+  "confidence": null
+ },
+ {
+  "text": " would.",
+  "startMs": 216893,
+  "endMs": 217256,
+  "timestampMs": 217075,
+  "confidence": null
+ },
+ {
+  "text": " Remember",
+  "startMs": 217758,
+  "endMs": 218163,
+  "timestampMs": 217960,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 218093,
+  "endMs": 218383,
+  "timestampMs": 218238,
+  "confidence": null
+ },
+ {
+  "text": " last",
+  "startMs": 218473,
+  "endMs": 218821,
+  "timestampMs": 218647,
+  "confidence": null
+ },
+ {
+  "text": " video?",
+  "startMs": 218843,
+  "endMs": 218813,
+  "timestampMs": 218828,
+  "confidence": null
+ },
+ {
+  "text": " Most",
+  "startMs": 219319,
+  "endMs": 219603,
+  "timestampMs": 219461,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 219623,
+  "endMs": 219983,
+  "timestampMs": 219803,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 220043,
+  "endMs": 220133,
+  "timestampMs": 220088,
+  "confidence": null
+ },
+ {
+  "text": " created",
+  "startMs": 220183,
+  "endMs": 220633,
+  "timestampMs": 220408,
+  "confidence": null
+ },
+ {
+  "text": " by",
+  "startMs": 220673,
+  "endMs": 220813,
+  "timestampMs": 220743,
+  "confidence": null
+ },
+ {
+  "text": " banks",
+  "startMs": 220951,
+  "endMs": 221173,
+  "timestampMs": 221062,
+  "confidence": null
+ },
+ {
+  "text": " when",
+  "startMs": 221343,
+  "endMs": 221493,
+  "timestampMs": 221418,
+  "confidence": null
+ },
+ {
+  "text": " they",
+  "startMs": 221613,
+  "endMs": 221793,
+  "timestampMs": 221703,
+  "confidence": null
+ },
+ {
+  "text": " lend.",
+  "startMs": 221943,
+  "endMs": 222069,
+  "timestampMs": 222006,
+  "confidence": null
+ },
+ {
+  "text": " And",
+  "startMs": 222401,
+  "endMs": 222473,
+  "timestampMs": 222437,
+  "confidence": null
+ },
+ {
+  "text": " higher",
+  "startMs": 222401,
+  "endMs": 222933,
+  "timestampMs": 222667,
+  "confidence": null
+ },
+ {
+  "text": " rates",
+  "startMs": 222963,
+  "endMs": 223343,
+  "timestampMs": 223153,
+  "confidence": null
+ },
+ {
+  "text": " slow",
+  "startMs": 223393,
+  "endMs": 223633,
+  "timestampMs": 223513,
+  "confidence": null
+ },
+ {
+  "text": " that",
+  "startMs": 223773,
+  "endMs": 223923,
+  "timestampMs": 223848,
+  "confidence": null
+ },
+ {
+  "text": " down.",
+  "startMs": 224018,
+  "endMs": 224401,
+  "timestampMs": 224209,
+  "confidence": null
+ },
+ {
+  "text": " That's",
+  "startMs": 224874,
+  "endMs": 225153,
+  "timestampMs": 225014,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 225203,
+  "endMs": 225433,
+  "timestampMs": 225318,
+  "confidence": null
+ },
+ {
+  "text": " brake.",
+  "startMs": 225433,
+  "endMs": 226292,
+  "timestampMs": 225863,
+  "confidence": null
+ },
+ {
+  "text": " So",
+  "startMs": 226292,
+  "endMs": 226343,
+  "timestampMs": 226318,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 226292,
+  "endMs": 226663,
+  "timestampMs": 226478,
+  "confidence": null
+ },
+ {
+  "text": " printing",
+  "startMs": 226794,
+  "endMs": 227433,
+  "timestampMs": 227114,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 227583,
+  "endMs": 227893,
+  "timestampMs": 227738,
+  "confidence": null
+ },
+ {
+  "text": " always",
+  "startMs": 227820,
+  "endMs": 228433,
+  "timestampMs": 228127,
+  "confidence": null
+ },
+ {
+  "text": " bad?",
+  "startMs": 228313,
+  "endMs": 228645,
+  "timestampMs": 228479,
+  "confidence": null
+ },
+ {
+  "text": " Not",
+  "startMs": 229140,
+  "endMs": 229363,
+  "timestampMs": 229252,
+  "confidence": null
+ },
+ {
+  "text": " exactly.",
+  "startMs": 229483,
+  "endMs": 229962,
+  "timestampMs": 229723,
+  "confidence": null
+ },
+ {
+  "text": " Most",
+  "startMs": 230443,
+  "endMs": 230613,
+  "timestampMs": 230528,
+  "confidence": null
+ },
+ {
+  "text": " central",
+  "startMs": 230763,
+  "endMs": 231033,
+  "timestampMs": 230898,
+  "confidence": null
+ },
+ {
+  "text": " banks",
+  "startMs": 231203,
+  "endMs": 231533,
+  "timestampMs": 231368,
+  "confidence": null
+ },
+ {
+  "text": " actually",
+  "startMs": 231763,
+  "endMs": 232093,
+  "timestampMs": 231928,
+  "confidence": null
+ },
+ {
+  "text": " aim",
+  "startMs": 232176,
+  "endMs": 232343,
+  "timestampMs": 232260,
+  "confidence": null
+ },
+ {
+  "text": " for",
+  "startMs": 232493,
+  "endMs": 232493,
+  "timestampMs": 232493,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 232593,
+  "endMs": 232623,
+  "timestampMs": 232608,
+  "confidence": null
+ },
+ {
+  "text": " little",
+  "startMs": 232773,
+  "endMs": 233053,
+  "timestampMs": 232913,
+  "confidence": null
+ },
+ {
+  "text": " inflation,",
+  "startMs": 233203,
+  "endMs": 233650,
+  "timestampMs": 233427,
+  "confidence": null
+ },
+ {
+  "text": " around",
+  "startMs": 233848,
+  "endMs": 234273,
+  "timestampMs": 234061,
+  "confidence": null
+ },
+ {
+  "text": " 2%",
+  "startMs": 234370,
+  "endMs": 234993,
+  "timestampMs": 234682,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 234893,
+  "endMs": 235063,
+  "timestampMs": 234978,
+  "confidence": null
+ },
+ {
+  "text": " year.",
+  "startMs": 235213,
+  "endMs": 235298,
+  "timestampMs": 235256,
+  "confidence": null
+ },
+ {
+  "text": " A",
+  "startMs": 235793,
+  "endMs": 235633,
+  "timestampMs": 235713,
+  "confidence": null
+ },
+ {
+  "text": " slowly",
+  "startMs": 235793,
+  "endMs": 236063,
+  "timestampMs": 235928,
+  "confidence": null
+ },
+ {
+  "text": " growing",
+  "startMs": 236033,
+  "endMs": 236673,
+  "timestampMs": 236353,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 236823,
+  "endMs": 236993,
+  "timestampMs": 236908,
+  "confidence": null
+ },
+ {
+  "text": " supply",
+  "startMs": 237143,
+  "endMs": 237463,
+  "timestampMs": 237303,
+  "confidence": null
+ },
+ {
+  "text": " keeps",
+  "startMs": 237589,
+  "endMs": 237783,
+  "timestampMs": 237686,
+  "confidence": null
+ },
+ {
+  "text": " up",
+  "startMs": 237813,
+  "endMs": 237963,
+  "timestampMs": 237888,
+  "confidence": null
+ },
+ {
+  "text": " with",
+  "startMs": 238113,
+  "endMs": 238243,
+  "timestampMs": 238178,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 238160,
+  "endMs": 238313,
+  "timestampMs": 238237,
+  "confidence": null
+ },
+ {
+  "text": " growing",
+  "startMs": 238453,
+  "endMs": 238803,
+  "timestampMs": 238628,
+  "confidence": null
+ },
+ {
+  "text": " economy.",
+  "startMs": 238833,
+  "endMs": 239297,
+  "timestampMs": 239065,
+  "confidence": null
+ },
+ {
+  "text": " The",
+  "startMs": 239813,
+  "endMs": 239713,
+  "timestampMs": 239763,
+  "confidence": null
+ },
+ {
+  "text": " danger",
+  "startMs": 239813,
+  "endMs": 240133,
+  "timestampMs": 239973,
+  "confidence": null
+ },
+ {
+  "text": " isn't",
+  "startMs": 240193,
+  "endMs": 240483,
+  "timestampMs": 240338,
+  "confidence": null
+ },
+ {
+  "text": " printing.",
+  "startMs": 240406,
+  "endMs": 241043,
+  "timestampMs": 240725,
+  "confidence": null
+ },
+ {
+  "text": " It's",
+  "startMs": 241593,
+  "endMs": 241533,
+  "timestampMs": 241563,
+  "confidence": null
+ },
+ {
+  "text": " printing",
+  "startMs": 241593,
+  "endMs": 242113,
+  "timestampMs": 241853,
+  "confidence": null
+ },
+ {
+  "text": " much",
+  "startMs": 242003,
+  "endMs": 242463,
+  "timestampMs": 242233,
+  "confidence": null
+ },
+ {
+  "text": " faster",
+  "startMs": 242423,
+  "endMs": 242953,
+  "timestampMs": 242688,
+  "confidence": null
+ },
+ {
+  "text": " than",
+  "startMs": 242983,
+  "endMs": 243153,
+  "timestampMs": 243068,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 243193,
+  "endMs": 243313,
+  "timestampMs": 243253,
+  "confidence": null
+ },
+ {
+  "text": " economy",
+  "startMs": 243463,
+  "endMs": 243863,
+  "timestampMs": 243663,
+  "confidence": null
+ },
+ {
+  "text": " can",
+  "startMs": 243953,
+  "endMs": 244113,
+  "timestampMs": 244033,
+  "confidence": null
+ },
+ {
+  "text": " grow.",
+  "startMs": 244163,
+  "endMs": 244537,
+  "timestampMs": 244350,
+  "confidence": null
+ },
+ {
+  "text": " So",
+  "startMs": 245058,
+  "endMs": 244833,
+  "timestampMs": 244946,
+  "confidence": null
+ },
+ {
+  "text": " who",
+  "startMs": 245058,
+  "endMs": 245233,
+  "timestampMs": 245146,
+  "confidence": null
+ },
+ {
+  "text": " decides",
+  "startMs": 245173,
+  "endMs": 245793,
+  "timestampMs": 245483,
+  "confidence": null
+ },
+ {
+  "text": " how",
+  "startMs": 245663,
+  "endMs": 246013,
+  "timestampMs": 245838,
+  "confidence": null
+ },
+ {
+  "text": " much",
+  "startMs": 246033,
+  "endMs": 246343,
+  "timestampMs": 246188,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 246463,
+  "endMs": 246753,
+  "timestampMs": 246608,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 246873,
+  "endMs": 246913,
+  "timestampMs": 246893,
+  "confidence": null
+ },
+ {
+  "text": " print?",
+  "startMs": 247063,
+  "endMs": 247283,
+  "timestampMs": 247173,
+  "confidence": null
+ },
+ {
+  "text": " In",
+  "startMs": 248115,
+  "endMs": 247603,
+  "timestampMs": 247859,
+  "confidence": null
+ },
+ {
+  "text": " most",
+  "startMs": 248115,
+  "endMs": 248033,
+  "timestampMs": 248074,
+  "confidence": null
+ },
+ {
+  "text": " countries",
+  "startMs": 248115,
+  "endMs": 248723,
+  "timestampMs": 248419,
+  "confidence": null
+ },
+ {
+  "text": " today,",
+  "startMs": 248913,
+  "endMs": 249153,
+  "timestampMs": 249033,
+  "confidence": null
+ },
+ {
+  "text": " it's",
+  "startMs": 249528,
+  "endMs": 249603,
+  "timestampMs": 249566,
+  "confidence": null
+ },
+ {
+  "text": " not",
+  "startMs": 249528,
+  "endMs": 249793,
+  "timestampMs": 249661,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 249943,
+  "endMs": 249953,
+  "timestampMs": 249948,
+  "confidence": null
+ },
+ {
+  "text": " president",
+  "startMs": 250063,
+  "endMs": 250603,
+  "timestampMs": 250333,
+  "confidence": null
+ },
+ {
+  "text": " or",
+  "startMs": 250703,
+  "endMs": 250753,
+  "timestampMs": 250728,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 250903,
+  "endMs": 250963,
+  "timestampMs": 250933,
+  "confidence": null
+ },
+ {
+  "text": " parliament.",
+  "startMs": 251003,
+  "endMs": 251533,
+  "timestampMs": 251268,
+  "confidence": null
+ },
+ {
+  "text": " It's",
+  "startMs": 251882,
+  "endMs": 252123,
+  "timestampMs": 252003,
+  "confidence": null
+ },
+ {
+  "text": " an",
+  "startMs": 252234,
+  "endMs": 252343,
+  "timestampMs": 252289,
+  "confidence": null
+ },
+ {
+  "text": " independent",
+  "startMs": 252493,
+  "endMs": 253143,
+  "timestampMs": 252818,
+  "confidence": null
+ },
+ {
+  "text": " central",
+  "startMs": 253293,
+  "endMs": 253643,
+  "timestampMs": 253468,
+  "confidence": null
+ },
+ {
+  "text": " bank.",
+  "startMs": 253713,
+  "endMs": 253816,
+  "timestampMs": 253765,
+  "confidence": null
+ },
+ {
+  "text": " That's",
+  "startMs": 254321,
+  "endMs": 254593,
+  "timestampMs": 254457,
+  "confidence": null
+ },
+ {
+  "text": " on",
+  "startMs": 254693,
+  "endMs": 254663,
+  "timestampMs": 254678,
+  "confidence": null
+ },
+ {
+  "text": " purpose.",
+  "startMs": 254903,
+  "endMs": 255192,
+  "timestampMs": 255048,
+  "confidence": null
+ },
+ {
+  "text": " Politicians",
+  "startMs": 255638,
+  "endMs": 256303,
+  "timestampMs": 255970,
+  "confidence": null
+ },
+ {
+  "text": " always",
+  "startMs": 256475,
+  "endMs": 256833,
+  "timestampMs": 256654,
+  "confidence": null
+ },
+ {
+  "text": " have",
+  "startMs": 256943,
+  "endMs": 257143,
+  "timestampMs": 257043,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 257053,
+  "endMs": 257233,
+  "timestampMs": 257143,
+  "confidence": null
+ },
+ {
+  "text": " reason",
+  "startMs": 257383,
+  "endMs": 257713,
+  "timestampMs": 257548,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 257650,
+  "endMs": 257863,
+  "timestampMs": 257757,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 257893,
+  "endMs": 258272,
+  "timestampMs": 258083,
+  "confidence": null
+ },
+ {
+  "text": " more:",
+  "startMs": 258222,
+  "endMs": 258272,
+  "timestampMs": 258247,
+  "confidence": null
+ },
+ {
+  "text": " an",
+  "startMs": 258592,
+  "endMs": 258993,
+  "timestampMs": 258793,
+  "confidence": null
+ },
+ {
+  "text": " election,",
+  "startMs": 258923,
+  "endMs": 259623,
+  "timestampMs": 259273,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 259673,
+  "endMs": 259873,
+  "timestampMs": 259773,
+  "confidence": null
+ },
+ {
+  "text": " war,",
+  "startMs": 260246,
+  "endMs": 260053,
+  "timestampMs": 260150,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 260246,
+  "endMs": 260313,
+  "timestampMs": 260280,
+  "confidence": null
+ },
+ {
+  "text": " crisis.",
+  "startMs": 260246,
+  "endMs": 260941,
+  "timestampMs": 260594,
+  "confidence": null
+ },
+ {
+  "text": " Central",
+  "startMs": 261445,
+  "endMs": 261633,
+  "timestampMs": 261539,
+  "confidence": null
+ },
+ {
+  "text": " banks",
+  "startMs": 261743,
+  "endMs": 262093,
+  "timestampMs": 261918,
+  "confidence": null
+ },
+ {
+  "text": " were",
+  "startMs": 262233,
+  "endMs": 262353,
+  "timestampMs": 262293,
+  "confidence": null
+ },
+ {
+  "text": " separated",
+  "startMs": 262493,
+  "endMs": 262913,
+  "timestampMs": 262703,
+  "confidence": null
+ },
+ {
+  "text": " from",
+  "startMs": 263063,
+  "endMs": 263183,
+  "timestampMs": 263123,
+  "confidence": null
+ },
+ {
+  "text": " them",
+  "startMs": 263303,
+  "endMs": 263413,
+  "timestampMs": 263358,
+  "confidence": null
+ },
+ {
+  "text": " precisely",
+  "startMs": 263492,
+  "endMs": 264113,
+  "timestampMs": 263803,
+  "confidence": null
+ },
+ {
+  "text": " so",
+  "startMs": 264233,
+  "endMs": 264233,
+  "timestampMs": 264233,
+  "confidence": null
+ },
+ {
+  "text": " that",
+  "startMs": 264363,
+  "endMs": 264533,
+  "timestampMs": 264448,
+  "confidence": null
+ },
+ {
+  "text": " the",
+  "startMs": 264683,
+  "endMs": 264653,
+  "timestampMs": 264668,
+  "confidence": null
+ },
+ {
+  "text": " printing",
+  "startMs": 264750,
+  "endMs": 265313,
+  "timestampMs": 265032,
+  "confidence": null
+ },
+ {
+  "text": " press",
+  "startMs": 265203,
+  "endMs": 265663,
+  "timestampMs": 265433,
+  "confidence": null
+ },
+ {
+  "text": " isn't",
+  "startMs": 265627,
+  "endMs": 266003,
+  "timestampMs": 265815,
+  "confidence": null
+ },
+ {
+  "text": " one",
+  "startMs": 265992,
+  "endMs": 266223,
+  "timestampMs": 266107,
+  "confidence": null
+ },
+ {
+  "text": " vote",
+  "startMs": 266333,
+  "endMs": 266503,
+  "timestampMs": 266418,
+  "confidence": null
+ },
+ {
+  "text": " away.",
+  "startMs": 266493,
+  "endMs": 266783,
+  "timestampMs": 266638,
+  "confidence": null
+ },
+ {
+  "text": " When",
+  "startMs": 267459,
+  "endMs": 267273,
+  "timestampMs": 267366,
+  "confidence": null
+ },
+ {
+  "text": " that",
+  "startMs": 267459,
+  "endMs": 267553,
+  "timestampMs": 267506,
+  "confidence": null
+ },
+ {
+  "text": " separation",
+  "startMs": 267459,
+  "endMs": 268353,
+  "timestampMs": 267906,
+  "confidence": null
+ },
+ {
+  "text": " breaks,",
+  "startMs": 268453,
+  "endMs": 268913,
+  "timestampMs": 268683,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 269063,
+  "endMs": 268973,
+  "timestampMs": 269018,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 269117,
+  "endMs": 269173,
+  "timestampMs": 269145,
+  "confidence": null
+ },
+ {
+  "text": " government",
+  "startMs": 269117,
+  "endMs": 269853,
+  "timestampMs": 269485,
+  "confidence": null
+ },
+ {
+  "text": " uses",
+  "startMs": 269773,
+  "endMs": 270113,
+  "timestampMs": 269943,
+  "confidence": null
+ },
+ {
+  "text": " its",
+  "startMs": 270263,
+  "endMs": 270323,
+  "timestampMs": 270293,
+  "confidence": null
+ },
+ {
+  "text": " central",
+  "startMs": 270296,
+  "endMs": 270793,
+  "timestampMs": 270545,
+  "confidence": null
+ },
+ {
+  "text": " bank",
+  "startMs": 270753,
+  "endMs": 270953,
+  "timestampMs": 270853,
+  "confidence": null
+ },
+ {
+  "text": " to",
+  "startMs": 271173,
+  "endMs": 271193,
+  "timestampMs": 271183,
+  "confidence": null
+ },
+ {
+  "text": " pay",
+  "startMs": 271243,
+  "endMs": 271393,
+  "timestampMs": 271318,
+  "confidence": null
+ },
+ {
+  "text": " its",
+  "startMs": 271543,
+  "endMs": 271503,
+  "timestampMs": 271523,
+  "confidence": null
+ },
+ {
+  "text": " bills,",
+  "startMs": 271601,
+  "endMs": 272009,
+  "timestampMs": 271805,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 272447,
+  "endMs": 272263,
+  "timestampMs": 272355,
+  "confidence": null
+ },
+ {
+  "text": " get",
+  "startMs": 272447,
+  "endMs": 272463,
+  "timestampMs": 272455,
+  "confidence": null
+ },
+ {
+  "text": " stories",
+  "startMs": 272447,
+  "endMs": 272933,
+  "timestampMs": 272690,
+  "confidence": null
+ },
+ {
+  "text": " like",
+  "startMs": 272843,
+  "endMs": 273183,
+  "timestampMs": 273013,
+  "confidence": null
+ },
+ {
+  "text": " Zimbabwe.",
+  "startMs": 273293,
+  "endMs": 273743,
+  "timestampMs": 273518,
+  "confidence": null
+ },
+ {
+  "text": " So,",
+  "startMs": 274183,
+  "endMs": 274193,
+  "timestampMs": 274188,
+  "confidence": null
+ },
+ {
+  "text": " why",
+  "startMs": 274742,
+  "endMs": 275363,
+  "timestampMs": 275052,
+  "confidence": null
+ },
+ {
+  "text": " can't",
+  "startMs": 275270,
+  "endMs": 275713,
+  "timestampMs": 275492,
+  "confidence": null
+ },
+ {
+  "text": " countries",
+  "startMs": 275793,
+  "endMs": 276353,
+  "timestampMs": 276073,
+  "confidence": null
+ },
+ {
+  "text": " just",
+  "startMs": 276503,
+  "endMs": 276623,
+  "timestampMs": 276563,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 276600,
+  "endMs": 276973,
+  "timestampMs": 276787,
+  "confidence": null
+ },
+ {
+  "text": " as",
+  "startMs": 276993,
+  "endMs": 277123,
+  "timestampMs": 277058,
+  "confidence": null
+ },
+ {
+  "text": " much",
+  "startMs": 277163,
+  "endMs": 277403,
+  "timestampMs": 277283,
+  "confidence": null
+ },
+ {
+  "text": " as",
+  "startMs": 277333,
+  "endMs": 277543,
+  "timestampMs": 277438,
+  "confidence": null
+ },
+ {
+  "text": " they",
+  "startMs": 277693,
+  "endMs": 277828,
+  "timestampMs": 277761,
+  "confidence": null
+ },
+ {
+  "text": " want?",
+  "startMs": 277778,
+  "endMs": 277828,
+  "timestampMs": 277803,
+  "confidence": null
+ },
+ {
+  "text": " Because",
+  "startMs": 278349,
+  "endMs": 278813,
+  "timestampMs": 278581,
+  "confidence": null
+ },
+ {
+  "text": " money",
+  "startMs": 278963,
+  "endMs": 279163,
+  "timestampMs": 279063,
+  "confidence": null
+ },
+ {
+  "text": " only",
+  "startMs": 279071,
+  "endMs": 279443,
+  "timestampMs": 279257,
+  "confidence": null
+ },
+ {
+  "text": " works",
+  "startMs": 279523,
+  "endMs": 279873,
+  "timestampMs": 279698,
+  "confidence": null
+ },
+ {
+  "text": " if",
+  "startMs": 280006,
+  "endMs": 280033,
+  "timestampMs": 280019,
+  "confidence": null
+ },
+ {
+  "text": " it's",
+  "startMs": 280006,
+  "endMs": 280243,
+  "timestampMs": 280124,
+  "confidence": null
+ },
+ {
+  "text": " worth",
+  "startMs": 280213,
+  "endMs": 280553,
+  "timestampMs": 280383,
+  "confidence": null
+ },
+ {
+  "text": " something.",
+  "startMs": 280593,
+  "endMs": 281132,
+  "timestampMs": 280863,
+  "confidence": null
+ },
+ {
+  "text": " Print",
+  "startMs": 281636,
+  "endMs": 281833,
+  "timestampMs": 281735,
+  "confidence": null
+ },
+ {
+  "text": " too",
+  "startMs": 281863,
+  "endMs": 282073,
+  "timestampMs": 281968,
+  "confidence": null
+ },
+ {
+  "text": " much,",
+  "startMs": 281953,
+  "endMs": 282313,
+  "timestampMs": 282133,
+  "confidence": null
+ },
+ {
+  "text": " and",
+  "startMs": 282643,
+  "endMs": 282723,
+  "timestampMs": 282683,
+  "confidence": null
+ },
+ {
+  "text": " every",
+  "startMs": 282659,
+  "endMs": 283093,
+  "timestampMs": 282876,
+  "confidence": null
+ },
+ {
+  "text": " dollar",
+  "startMs": 283093,
+  "endMs": 283673,
+  "timestampMs": 283383,
+  "confidence": null
+ },
+ {
+  "text": " buys",
+  "startMs": 283673,
+  "endMs": 283823,
+  "timestampMs": 283748,
+  "confidence": null
+ },
+ {
+  "text": " less,",
+  "startMs": 283973,
+  "endMs": 284113,
+  "timestampMs": 284043,
+  "confidence": null
+ },
+ {
+  "text": " until",
+  "startMs": 284313,
+  "endMs": 284501,
+  "timestampMs": 284407,
+  "confidence": null
+ },
+ {
+  "text": " people",
+  "startMs": 284718,
+  "endMs": 285033,
+  "timestampMs": 284875,
+  "confidence": null
+ },
+ {
+  "text": " stop",
+  "startMs": 285033,
+  "endMs": 285353,
+  "timestampMs": 285193,
+  "confidence": null
+ },
+ {
+  "text": " trusting",
+  "startMs": 285213,
+  "endMs": 285943,
+  "timestampMs": 285578,
+  "confidence": null
+ },
+ {
+  "text": " it",
+  "startMs": 286003,
+  "endMs": 286093,
+  "timestampMs": 286048,
+  "confidence": null
+ },
+ {
+  "text": " at",
+  "startMs": 286243,
+  "endMs": 286343,
+  "timestampMs": 286293,
+  "confidence": null
+ },
+ {
+  "text": " all.",
+  "startMs": 286343,
+  "endMs": 286689,
+  "timestampMs": 286516,
+  "confidence": null
+ },
+ {
+  "text": " You",
+  "startMs": 287206,
+  "endMs": 287233,
+  "timestampMs": 287220,
+  "confidence": null
+ },
+ {
+  "text": " can",
+  "startMs": 287206,
+  "endMs": 287473,
+  "timestampMs": 287340,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 287513,
+  "endMs": 287873,
+  "timestampMs": 287693,
+  "confidence": null
+ },
+ {
+  "text": " money.",
+  "startMs": 288023,
+  "endMs": 288135,
+  "timestampMs": 288079,
+  "confidence": null
+ },
+ {
+  "text": " You",
+  "startMs": 288558,
+  "endMs": 288743,
+  "timestampMs": 288651,
+  "confidence": null
+ },
+ {
+  "text": " can't",
+  "startMs": 288727,
+  "endMs": 289063,
+  "timestampMs": 288895,
+  "confidence": null
+ },
+ {
+  "text": " print",
+  "startMs": 289161,
+  "endMs": 289533,
+  "timestampMs": 289347,
+  "confidence": null
+ },
+ {
+  "text": " bread.",
+  "startMs": 289459,
+  "endMs": 289835,
+  "timestampMs": 289647,
+  "confidence": null
+ },
+ {
+  "text": " This",
+  "startMs": 290363,
+  "endMs": 290483,
+  "timestampMs": 290423,
+  "confidence": null
+ },
+ {
+  "text": " is",
+  "startMs": 290563,
+  "endMs": 290643,
+  "timestampMs": 290603,
+  "confidence": null
+ },
+ {
+  "text": " education,",
+  "startMs": 290743,
+  "endMs": 291434,
+  "timestampMs": 291089,
+  "confidence": null
+ },
+ {
+  "text": " not",
+  "startMs": 291647,
+  "endMs": 291723,
+  "timestampMs": 291685,
+  "confidence": null
+ },
+ {
+  "text": " financial",
+  "startMs": 291647,
+  "endMs": 292223,
+  "timestampMs": 291935,
+  "confidence": null
+ },
+ {
+  "text": " advice.",
+  "startMs": 292283,
+  "endMs": 292573,
+  "timestampMs": 292428,
+  "confidence": null
+ },
+ {
+  "text": " Next,",
+  "startMs": 293616,
+  "endMs": 293843,
+  "timestampMs": 293730,
+  "confidence": null
+ },
+ {
+  "text": " we",
+  "startMs": 294262,
+  "endMs": 294063,
+  "timestampMs": 294163,
+  "confidence": null
+ },
+ {
+  "text": " start",
+  "startMs": 294262,
+  "endMs": 294623,
+  "timestampMs": 294443,
+  "confidence": null
+ },
+ {
+  "text": " a",
+  "startMs": 294533,
+  "endMs": 294693,
+  "timestampMs": 294613,
+  "confidence": null
+ },
+ {
+  "text": " new",
+  "startMs": 294783,
+  "endMs": 294953,
+  "timestampMs": 294868,
+  "confidence": null
+ },
+ {
+  "text": " series:",
+  "startMs": 295103,
+  "endMs": 295443,
+  "timestampMs": 295273,
+  "confidence": null
+ },
+ {
+  "text": " how",
+  "startMs": 295763,
+  "endMs": 295743,
+  "timestampMs": 295753,
+  "confidence": null
+ },
+ {
+  "text": " they",
+  "startMs": 296102,
+  "endMs": 296193,
+  "timestampMs": 296148,
+  "confidence": null
+ },
+ {
+  "text": " take",
+  "startMs": 296102,
+  "endMs": 296513,
+  "timestampMs": 296308,
+  "confidence": null
+ },
+ {
+  "text": " your",
+  "startMs": 296610,
+  "endMs": 296823,
+  "timestampMs": 296717,
+  "confidence": null
+ },
+ {
+  "text": " money.",
+  "startMs": 296853,
+  "endMs": 297253,
+  "timestampMs": 297053,
+  "confidence": null
+ },
+ {
+  "text": " And",
+  "startMs": 297882,
+  "endMs": 297773,
+  "timestampMs": 297828,
+  "confidence": null
+ },
+ {
+  "text": " we",
+  "startMs": 297882,
+  "endMs": 297933,
+  "timestampMs": 297908,
+  "confidence": null
+ },
+ {
+  "text": " begin",
+  "startMs": 297882,
+  "endMs": 298353,
+  "timestampMs": 298118,
+  "confidence": null
+ },
+ {
+  "text": " with",
+  "startMs": 298313,
+  "endMs": 298653,
+  "timestampMs": 298483,
+  "confidence": null
+ },
+ {
+  "text": " sportsbooks.",
+  "startMs": 298653,
+  "endMs": 300161,
+  "timestampMs": 299407,
+  "confidence": null
+ },
+ {
+  "text": " Because",
+  "startMs": 300161,
+  "endMs": 300463,
+  "timestampMs": 300312,
+  "confidence": null
+ },
+ {
+  "text": " sportsbooks",
+  "startMs": 300463,
+  "endMs": 301373,
+  "timestampMs": 300918,
+  "confidence": null
+ },
+ {
+  "text": " don't",
+  "startMs": 301373,
+  "endMs": 301786,
+  "timestampMs": 301580,
+  "confidence": null
+ },
+ {
+  "text": " gamble.",
+  "startMs": 301793,
+  "endMs": 301773,
+  "timestampMs": 301783,
+  "confidence": null
+ },
+ {
+  "text": " You",
+  "startMs": 302136,
+  "endMs": 302413,
+  "timestampMs": 302275,
+  "confidence": null
+ },
+ {
+  "text": " do.",
+  "startMs": 302563,
+  "endMs": 302623,
+  "timestampMs": 302593,
+  "confidence": null
+ },
+ {
+  "text": " See",
+  "startMs": 303131,
+  "endMs": 302973,
+  "timestampMs": 303052,
+  "confidence": null
+ },
+ {
+  "text": " you",
+  "startMs": 303131,
+  "endMs": 303183,
+  "timestampMs": 303157,
+  "confidence": null
+ },
+ {
+  "text": " there.",
+  "startMs": 303131,
+  "endMs": 303533,
+  "timestampMs": 303332,
+  "confidence": null
+ }
+]
