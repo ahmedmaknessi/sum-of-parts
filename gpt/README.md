@@ -16,7 +16,7 @@ The repo-root `AGENTS.md` is a two-line pointer to this folder: Codex auto-loads
 
 ## Setup on a new computer (once)
 
-1. **Access:** the repository is private on GitHub (`ahmedmaknessi/sum-of-parts`). The owner invites you as a collaborator (GitHub > repo > Settings > Collaborators), you accept the invite.
+1. **Access:** the repository is public on GitHub: https://github.com/ahmedmaknessi/sum-of-parts. Anyone can download it; only collaborators can push changes back.
 2. **Tools:** install Git, Node.js 22 and ffmpeg (on the PATH: `ffmpeg -version` must work in a terminal).
 3. **Get the project:**
    ```
