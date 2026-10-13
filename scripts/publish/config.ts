@@ -12,6 +12,17 @@ if (existsSync(envFile)) process.loadEnvFile(envFile);
 
 const SECRETS = path.join(root, ".secrets");
 
+/**
+ * The Google OAuth client as downloaded from Google Cloud ("Download JSON"),
+ * saved as .secrets/google-client.json: fills GOOGLE_CLIENT_ID / _SECRET.
+ */
+const googleClient = path.join(SECRETS, "google-client.json");
+if (existsSync(googleClient)) {
+  const c = JSON.parse(readFileSync(googleClient, "utf8")) as { installed?: { client_id: string; client_secret: string } };
+  process.env.GOOGLE_CLIENT_ID ??= c.installed?.client_id;
+  process.env.GOOGLE_CLIENT_SECRET ??= c.installed?.client_secret;
+}
+
 export const need = (name: string): string => {
   const v = process.env[name];
   if (!v) throw new Error(`Missing ${name} in .env (see docs/publishing.md)`);

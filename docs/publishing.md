@@ -37,11 +37,7 @@ every day      ──> if the pull request has waited 2+ days, it pings you agai
 1. console.cloud.google.com > create a project (e.g. "Sum of Parts publishing").
 2. APIs & Services > Library > enable **YouTube Data API v3**.
 3. OAuth consent screen: External; add yourself as a test user; then **Publish app** ("In production"). In testing mode Google expires the sign-in after 7 days. The "unverified app" warning when you sign in is expected for your own app: Advanced > continue.
-4. Credentials > Create credentials > OAuth client ID > **Desktop app**. Create `.env` at the repo root (it is git-ignored) with:
-   ```
-   GOOGLE_CLIENT_ID=...
-   GOOGLE_CLIENT_SECRET=...
-   ```
+4. Clients > Create client > **Desktop app**. In the dialog that follows, **Download JSON** (the secret is shown only once) and save it as `.secrets/google-client.json` (git-ignored). The scripts read the client ID and secret from it. (Or put `GOOGLE_CLIENT_ID=` and `GOOGLE_CLIENT_SECRET=` in `.env`.)
 5. `npm run publish:auth -- youtube`, open the link, sign in with the channel's account, allow.
 
 ### 2. Facebook Page and Instagram (Meta)
