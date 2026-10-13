@@ -29,7 +29,10 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T21:23:34.724Z proposed for approval"
+      ]
     },
     {
       "id": "ig-reel-02",
@@ -42,7 +45,10 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a bank ledger with \"Bank owns\" and \"Bank owes\" pages; a typewriter types \"Loan to Sarah: $20,000\" and \"Sarah's deposit: $20,000\", then a \"New money\" banner unrolls. Payment slips go into a shredder until the banner reads +$0, then a paper town where new loans pop up and repayments fold away."
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T21:23:34.726Z proposed for approval"
+      ]
     },
     {
       "id": "fb-clip-02",
@@ -52,7 +58,10 @@
       "publishAt": "2026-10-14T19:30:00-04:00",
       "text": "Banks don't lend out your savings. When they approve a loan, they type brand new money into existence, and when the loan is repaid, that money disappears.\n\nSource: Bank of England, 2014 (the $20,000 car loan is an example).\nFull video in the comments. Education, not financial advice.\n\n#money #banking",
       "firstComment": "Full video: The Money in Your Bank Account Doesn't Exist 👉 {{youtube:yt-main}}",
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T21:23:34.726Z proposed for approval"
+      ]
     },
     {
       "id": "yt-short-03",
@@ -65,7 +74,10 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T21:23:34.726Z proposed for approval"
+      ]
     },
     {
       "id": "ig-reel-03",
@@ -78,7 +90,10 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a grid of 100 squares; 11 turn into banknotes and the rest turn amber, with the label \"9 in 10 never printed\", then a smaller UK grid labelled 97%. A balance card flips over to read \"IOU\", and an empty box labelled \"Required reserves\" sits next to a big \"0%\"."
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T21:23:34.726Z proposed for approval"
+      ]
     },
     {
       "id": "yt-short-04",
@@ -91,7 +106,10 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T21:23:34.726Z proposed for approval"
+      ]
     },
     {
       "id": "ig-reel-04",
@@ -104,7 +122,10 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: 1930s banks closing, then a bank labelled SVB; a quarter of its deposit strip is torn away by tiny figures, a long queue forms, and a \"CLOSED: March 10, 2023\" sign is stuck on its doors. Then a shield reading \"$250,000 per depositor, per bank\", and a giant second shield covering everything."
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T21:23:34.726Z proposed for approval"
+      ]
     },
     {
       "id": "fb-clip-04",
@@ -114,7 +135,10 @@
       "publishAt": "2026-10-18T19:30:00-04:00",
       "text": "On March 9, 2023, Silicon Valley Bank's customers asked for $42 billion in one day: a quarter of all its deposits. The next day, the bank was shut down. Over 94% of its deposits were above the FDIC's $250,000 limit.\n\nSources: Federal Reserve OIG (2023), FDIC.\nFull video in the comments. Education, not financial advice.\n\n#banking #svb",
       "firstComment": "Full video: The Money in Your Bank Account Doesn't Exist 👉 {{youtube:yt-main}}",
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T21:23:34.726Z proposed for approval"
+      ]
     }
   ]
 }
