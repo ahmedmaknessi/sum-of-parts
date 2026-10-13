@@ -114,15 +114,18 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a photo of the real Zimbabwe 100 trillion dollar note slides in, its 15-digit number flips into place, and an amber tag reads \"About $30\". A clock spins while a loaf's price tag doubles, a printing press piles up notes, and the number 79,600,000,000% lands on screen. Then government, parliament and a central bank are kept apart by a rope fence until it's cut and notes flood the screen."
       ],
-      "status": "queued",
+      "status": "failed",
       "log": [
         "2026-10-13T11:24:54.954Z proposed for approval",
         "2026-10-13T20:53:11.626Z approved",
         "2026-10-13T20:53:55.277Z queued: the runner publishes it at its time",
-        "2026-10-13T21:18:48.158Z moved from 2026-10-23T12:30:00-04:00 to 2026-10-13T19:15:00-04:00"
+        "2026-10-13T21:18:48.158Z moved from 2026-10-23T12:30:00-04:00 to 2026-10-13T19:15:00-04:00",
+        "2026-10-13T23:33:17.768Z container 18146495914525122",
+        "2026-10-13T23:33:52.094Z failed: POST https://rupload.facebook.com/ig-api-upload/v26.0/18146495914525122 -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
       ],
       "approvedHash": "0295b814df4d4e83",
-      "approvedAt": "2026-10-13T20:53:11.626Z"
+      "approvedAt": "2026-10-13T20:53:11.626Z",
+      "error": "POST https://rupload.facebook.com/ig-api-upload/v26.0/18146495914525122 -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
     },
     {
       "id": "fb-clip-02",
@@ -132,18 +135,21 @@
       "publishAt": "2026-10-13T19:30:00-04:00",
       "text": "Zimbabwe's 100 trillion dollar note (January 2009) was worth about $30 on its first day. At the peak, prices doubled every 24.7 hours.\n\nSources: BBC News (2009); Hanke and Kwok, Cato Journal (2009).\nFull video in the comments. Education, not financial advice.\n\n#money #zimbabwe",
       "firstComment": "Full video: Why Can't Countries Just Print More Money? 👉 {{youtube:yt-main}}",
-      "status": "scheduled",
+      "status": "posted",
       "log": [
         "2026-10-13T11:24:54.954Z proposed for approval",
         "2026-10-13T20:53:11.626Z approved",
         "2026-10-13T20:53:42.706Z scheduled on Facebook: https://www.facebook.com/1392440267288475/videos/1097506002995989",
-        "2026-10-13T21:18:50.503Z moved from 2026-10-23T13:00:00-04:00 to 2026-10-13T19:30:00-04:00"
+        "2026-10-13T21:18:50.503Z moved from 2026-10-23T13:00:00-04:00 to 2026-10-13T19:30:00-04:00",
+        "2026-10-13T23:33:52.646Z live on Facebook",
+        "2026-10-13T23:33:56.823Z first comment posted"
       ],
       "approvedHash": "35afe040184c83e0",
       "approvedAt": "2026-10-13T20:53:11.626Z",
       "remote": {
         "id": "1097506002995989",
-        "url": "https://www.facebook.com/1392440267288475/videos/1097506002995989"
+        "url": "https://www.facebook.com/1392440267288475/videos/1097506002995989",
+        "commentId": "1097506002995989_1100877882868917"
       }
     },
     {
