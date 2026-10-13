@@ -130,28 +130,25 @@ export const facebookIsLive = async (videoId: string) => {
   return r.published === true;
 };
 
-/** Uploads and publishes an Instagram Reel now. Takes a minute or two while Instagram processes the video. */
-export const publishInstagramReel = async (post: Post, root: string, log: (m: string) => void) => {
+/**
+ * Publishes an Instagram Reel now from a public URL of the video (Instagram
+ * fetches it itself; its direct "resumable" upload refuses our Page-token setup
+ * with ProcessingFailedError). Takes a minute or two while Instagram processes it.
+ */
+export const publishInstagramReel = async (post: Post, videoUrl: string, log: (m: string) => void) => {
   const s = secrets();
   if (!s.igUserId) throw new Error("No Instagram professional account is linked to the Facebook Page");
-  const file = path.join(root, post.file);
-  const size = statSync(file).size;
   const params: Record<string, string> = {
     media_type: "REELS",
-    upload_type: "resumable",
+    video_url: videoUrl,
     caption: post.text,
     share_to_feed: "true",
     access_token: s.pageToken,
   };
   if (post.coverUrl) params.cover_url = post.coverUrl;
   else if (post.thumbOffsetMs !== undefined) params.thumb_offset = String(post.thumbOffsetMs);
-  const container = await callJson<{ id: string; uri: string }>(`${GRAPH}/${s.igUserId}/media`, { method: "POST", body: new URLSearchParams(params) });
+  const container = await callJson<{ id: string }>(`${GRAPH}/${s.igUserId}/media`, { method: "POST", body: new URLSearchParams(params) });
   log(`container ${container.id}`);
-  await call(container.uri, {
-    method: "POST",
-    headers: { Authorization: `OAuth ${s.pageToken}`, offset: "0", file_size: String(size) },
-    body: await openAsBlob(file),
-  });
   // Wait for Instagram to process the upload (up to ~10 minutes).
   for (let i = 0; i < 60; i++) {
     const st = await callJson<{ status_code: string; status?: string }>(`${GRAPH}/${container.id}?fields=status_code,status&access_token=${s.pageToken}`);

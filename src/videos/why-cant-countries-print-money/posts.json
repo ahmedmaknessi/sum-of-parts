@@ -114,18 +114,18 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a photo of the real Zimbabwe 100 trillion dollar note slides in, its 15-digit number flips into place, and an amber tag reads \"About $30\". A clock spins while a loaf's price tag doubles, a printing press piles up notes, and the number 79,600,000,000% lands on screen. Then government, parliament and a central bank are kept apart by a rope fence until it's cut and notes flood the screen."
       ],
-      "status": "failed",
+      "status": "queued",
       "log": [
         "2026-10-13T11:24:54.954Z proposed for approval",
         "2026-10-13T20:53:11.626Z approved",
         "2026-10-13T20:53:55.277Z queued: the runner publishes it at its time",
         "2026-10-13T21:18:48.158Z moved from 2026-10-23T12:30:00-04:00 to 2026-10-13T19:15:00-04:00",
         "2026-10-13T23:33:17.768Z container 18146495914525122",
-        "2026-10-13T23:33:52.094Z failed: POST https://rupload.facebook.com/ig-api-upload/v26.0/18146495914525122 -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
+        "2026-10-13T23:33:52.094Z failed: POST https://rupload.facebook.com/ig-api-upload/v26.0/18146495914525122 -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+        "2026-10-13T23:42:23.000Z requeued: the upload method was fixed (Instagram now fetches the video from a public URL)"
       ],
       "approvedHash": "0295b814df4d4e83",
-      "approvedAt": "2026-10-13T20:53:11.626Z",
-      "error": "POST https://rupload.facebook.com/ig-api-upload/v26.0/18146495914525122 -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}"
+      "approvedAt": "2026-10-13T20:53:11.626Z"
     },
     {
       "id": "fb-clip-02",

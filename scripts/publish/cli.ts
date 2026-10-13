@@ -335,8 +335,9 @@ const scheduleAll = async () => {
 // ---------------------------------------------------------------------------
 
 /**
- * Instagram only takes covers as public URLs: upload the cover to the repo's
- * "publish-assets" GitHub release (the repo is public) and return its URL.
+ * Instagram only takes the video and the cover as public URLs: upload the file
+ * to the repo's "publish-assets" GitHub release (the repo is public) and return
+ * its URL. Videos are removed again once the Reel is live.
  */
 const hostCover = (cover: string): string => {
   const gh = (a: string[]) => spawnSync("gh", a, { encoding: "utf8", cwd: root });
@@ -369,14 +370,17 @@ const due = async () => {
             console.log(`${slug}/${p.id}: publishing Instagram Reel${late > 20 ? ` (${late} min late)` : ""}...`);
             filesOf(p).forEach((f) => ensureLocal(slug, f));
             const resolved = { ...p, text: resolveLinks(queue, p.text), coverUrl: p.coverUrl ?? (p.cover ? hostCover(p.cover) : undefined) };
+            const videoUrl = hostCover(p.file);
             let r;
             try {
-              r = await meta.publishInstagramReel(resolved, root, (m) => note(p, m));
+              r = await meta.publishInstagramReel(resolved, videoUrl, (m) => note(p, m));
             } catch (e) {
               if (!resolved.coverUrl || !/cover/i.test((e as Error).message)) throw e;
               note(p, `cover refused (${(e as Error).message}): posting with a video frame as cover`);
-              r = await meta.publishInstagramReel({ ...resolved, coverUrl: undefined }, root, (m) => note(p, m));
+              r = await meta.publishInstagramReel({ ...resolved, coverUrl: undefined }, videoUrl, (m) => note(p, m));
             }
+            // The hosted video was only needed while Instagram fetched it.
+            spawnSync("gh", ["release", "delete-asset", "publish-assets", path.basename(p.file), "--yes"], { cwd: root });
             p.remote = { id: r.id, url: r.url, containerId: r.containerId };
             p.status = "posted";
             note(p, `posted${late > 20 ? ` ${late} min late` : ""}: ${r.url ?? r.id}`);
