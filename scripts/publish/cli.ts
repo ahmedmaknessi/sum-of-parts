@@ -417,6 +417,25 @@ const due = async () => {
   }
 };
 
+/**
+ * Seconds until the next thing the runner must do within `windowMin` minutes
+ * (an Instagram post to publish, a Facebook post to confirm and comment on,
+ * a YouTube post to mark live), or -1 if nothing. Used by the waiting runner
+ * (.github/workflows/publish-wait.yml), which sleeps until then because
+ * GitHub's own schedules start runs late or skip them.
+ */
+const nextDue = (windowMin: number) => {
+  const now = Date.now();
+  const times = readdirSync(path.join(root, "src", "videos"))
+    .filter((s) => existsSync(queuePath(s)))
+    .flatMap((s) => loadQueue(s).posts)
+    .filter((p) => p.status === "queued" || p.status === "scheduled")
+    .map((p) => Date.parse(p.publishAt) + (p.platform === "instagram" ? 0 : 90_000))
+    .filter((t) => t - now <= windowMin * 60_000)
+    .sort((a, b) => a - b);
+  console.log(times.length ? Math.max(0, Math.ceil((times[0] - now) / 1000)) : -1);
+};
+
 // ---------------------------------------------------------------------------
 // Moving and withdrawing posts that are already scheduled (owner's request)
 // ---------------------------------------------------------------------------
@@ -560,6 +579,8 @@ const main = async () => {
       return watch.alerts();
     case "digest":
       return watch.digest();
+    case "next-due":
+      return nextDue(Number(args[0] ?? 330));
     case "retime":
       return retime(slugArg(), args.slice(1));
     case "cancel":

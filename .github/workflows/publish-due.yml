@@ -13,7 +13,8 @@ permissions:
   issues: write
 
 concurrency:
-  group: publish
+  # Shared with publish-wait.yml so two runners never publish the same Reel.
+  group: publish-wait
   cancel-in-progress: false
 
 jobs:

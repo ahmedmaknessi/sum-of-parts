@@ -120,6 +120,8 @@ export const dashboardData = async () => {
             id: p.id,
             platform: p.platform,
             kind: p.kind,
+            file: path.basename(p.file),
+            thumb: p.platform === "youtube" && p.remote?.id ? `https://i.ytimg.com/vi/${p.remote.id}/mqdefault.jpg` : undefined,
             publishAt: p.publishAt,
             status: isLive(p, now) && p.status === "scheduled" ? "live" : p.status === "posted" ? "live" : p.status,
             title: p.title ?? p.text.split("\n")[0],

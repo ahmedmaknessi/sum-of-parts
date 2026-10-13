@@ -31,7 +31,8 @@ every day      ──> if the pull request has waited 2+ days, it pings you agai
 ## Limits to know
 
 - **YouTube audit:** until Google audits your API project, YouTube locks API uploads to private and ignores the publish time. Everything else is set; the pull request comment tells you which videos to open in YouTube Studio and set Visibility > Schedule (same time). Request the audit with Google's "YouTube API Services: Audit and Quota Extension" form (free, days to weeks).
-- **Instagram timing:** GitHub can start scheduled runs late when it is busy, so a Reel can go out up to about 15 minutes after its time. YouTube and Facebook are exact (their own schedulers).
+- **Instagram timing:** GitHub starts scheduled runs late or skips them, so `publish-wait.yml` starts a few hours before the evening slot (twice a day), sleeps until each post's exact time and posts it; the 15-minute runner is only a fallback. YouTube and Facebook use their own schedulers and are exact.
+- **Instagram upload:** Instagram fetches the video from a public URL: the runner hosts it on the repo's public `publish-assets` release while Instagram processes it, then deletes it (Meta's direct upload refused our files).
 - **Facebook:** clips over 90 seconds post as Page videos, not Reels (the Reels API stops at 90 s). Scheduling is limited to 28 days ahead here.
 - **Quota:** YouTube allows about 10,000 units a day by default and an upload uses a large share, so one video's YouTube posts (main + 4 Shorts) per day is the safe maximum.
 - **Idle repos:** GitHub pauses scheduled workflows in a repo with no activity for 60 days. Posting a video every few weeks keeps it active; if it ever pauses, Actions shows a button to turn it back on.

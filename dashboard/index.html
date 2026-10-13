@@ -5,175 +5,371 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sum of Parts · Publishing</title>
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#10162B">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* Brand tokens (src/brand/tokens.ts): navy board, cream text, amber for the one thing that matters. */
+    /* Brand tokens (src/brand/tokens.ts): navy board, cream text, amber only for what matters most. */
     :root {
       --navy: #10162B; --cream: #F3EBDD; --amber: #F2A93B; --teal: #3FB8A0; --blue: #6C8CFF; --coral: #E9684B;
       --muted: #26314F; --muted-strong: #3A4870;
-      --card: #172040; --line: #26314F;
+      --surface: #161E3A; --surface-2: #1C2647; --line: rgba(243, 235, 221, .09); --dim: rgba(243, 235, 221, .62); --faint: rgba(243, 235, 221, .42);
+      --r: 16px;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; background: var(--navy); color: var(--cream); font-family: Outfit, system-ui, sans-serif; font-weight: 500; line-height: 1.45; }
-    a { color: inherit; }
-    main { max-width: 1080px; margin: 0 auto; padding: 28px 16px 64px; }
-    header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 24px; }
-    h1 { font-weight: 700; font-size: 28px; margin: 0; letter-spacing: -0.01em; }
-    h1 span { color: var(--amber); }
-    h2 { font-weight: 700; font-size: 18px; margin: 32px 0 12px; }
-    .muted { opacity: .62; }
-    .small { font-size: 14px; }
-    .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
-    .tile { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
-    .tile .n { font-weight: 700; font-size: 30px; line-height: 1.1; }
-    .tile .l { font-size: 14px; opacity: .7; }
-    .tile.alert .n { color: var(--coral); }
-    .tile.key .n { color: var(--amber); }
-    .panel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px; }
-    .row { display: grid; grid-template-columns: 112px 1fr auto; gap: 6px 14px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line); }
-    .row:first-child { border-top: 0; }
-    .when { font-size: 14px; }
-    .when b { display: block; font-size: 15px; }
-    .what { min-width: 0; }
-    .what .t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .what .sub { font-size: 13px; opacity: .62; }
-    .right { display: flex; align-items: center; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
-    .chip { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
-    .p-youtube { color: var(--coral); } .p-instagram { color: var(--blue); } .p-facebook { color: var(--teal); }
-    .s { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
-    .s-live { background: var(--teal); color: var(--navy); }
-    .s-scheduled, .s-queued { background: var(--muted-strong); color: var(--cream); }
-    .s-approved, .s-proposed, .s-draft { background: var(--muted); color: var(--cream); }
-    .s-failed { background: var(--coral); color: var(--navy); }
-    .stats { font-size: 13px; opacity: .8; white-space: nowrap; }
-    .need { padding: 12px 0; border-top: 1px solid var(--line); }
-    .need:first-child { border-top: 0; }
-    .need b { color: var(--amber); }
-    .need.bad b { color: var(--coral); }
-    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 12px; }
-    .filters button { font: inherit; font-size: 14px; color: var(--cream); background: transparent; border: 1px solid var(--muted-strong); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
-    .filters button[aria-pressed="true"] { background: var(--cream); color: var(--navy); border-color: var(--cream); }
-    details.video { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px; margin-bottom: 12px; }
-    details.video summary { cursor: pointer; padding: 12px 0; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-    details.video summary::-webkit-details-marker { display: none; }
-    .empty { padding: 14px 0; opacity: .6; }
-    footer { margin-top: 40px; font-size: 13px; opacity: .5; }
-    @media (max-width: 560px) {
-      .row { grid-template-columns: 1fr; gap: 6px; }
-      .when { display: flex; flex-wrap: wrap; gap: 0 8px; align-items: baseline; }
-      .when b { display: inline; }
-      .what .t { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-      .right { justify-content: flex-start; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--navy); color: var(--cream); font: 500 15px/1.45 Outfit, system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    button { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; border-radius: 6px; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 20px 16px 72px; }
+
+    /* Header */
+    .top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 22px; }
+    .brand { display: flex; align-items: center; gap: 12px; margin-right: auto; }
+    .brand svg { width: 36px; height: 36px; flex: none; }
+    .brand h1 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -.01em; line-height: 1.1; }
+    .brand .sub { font-size: 13px; color: var(--dim); font-weight: 400; }
+    .seg { display: inline-flex; flex-wrap: wrap; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; }
+    .seg button { border: 0; background: transparent; padding: 6px 12px; border-radius: 999px; font-size: 14px; cursor: pointer; color: var(--dim); display: inline-flex; align-items: center; gap: 6px; }
+    .seg button[aria-pressed="true"] { background: var(--cream); color: var(--navy); }
+    .seg svg { width: 14px; height: 14px; }
+
+    /* Layout */
+    .hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 14px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; min-width: 0; }
+    .card h2, .section-title { margin: 0 0 12px; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); display: flex; align-items: center; gap: 8px; }
+    .section-title { margin: 34px 0 12px; }
+    .count { background: var(--amber); color: var(--navy); border-radius: 999px; font-size: 12px; padding: 1px 8px; letter-spacing: 0; }
+    .count.bad { background: var(--coral); }
+    .count.zero { background: var(--muted-strong); color: var(--cream); }
+
+    /* Next up */
+    .next .when { color: var(--dim); font-size: 14px; }
+    .countdown { font-size: clamp(40px, 7vw, 56px); font-weight: 700; letter-spacing: -.02em; line-height: 1; margin: 8px 0 4px; font-variant-numeric: tabular-nums; }
+    .countdown small { font-size: .42em; color: var(--dim); font-weight: 500; letter-spacing: 0; margin: 0 6px 0 2px; }
+    .next .title { font-size: 19px; font-weight: 700; margin: 12px 0 2px; }
+    .next .video { color: var(--dim); font-size: 14px; }
+    .slots { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .slot { display: flex; align-items: center; gap: 8px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; font-size: 14px; }
+    .slot svg { width: 16px; height: 16px; }
+    .slot b { font-variant-numeric: tabular-nums; }
+
+    /* Needs you */
+    .tasks { display: flex; flex-direction: column; max-height: 340px; overflow: auto; margin: 0 -6px; padding: 0 6px; }
+    .task { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: start; padding: 10px 0; border-top: 1px solid var(--line); }
+    .task:first-child { border-top: 0; padding-top: 0; }
+    .task .tag { font-size: 12px; font-weight: 700; color: var(--amber); }
+    .task.bad .tag { color: var(--coral); }
+    .task .txt { font-size: 14px; }
+    .task .meta { font-size: 13px; color: var(--faint); }
+    .task.done .txt { text-decoration: line-through; color: var(--faint); }
+    .task input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--amber); cursor: pointer; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; margin: 5px 4px; }
+    .btn { display: inline-block; margin-top: 6px; background: var(--amber); color: var(--navy); font-weight: 700; font-size: 13px; padding: 5px 12px; border-radius: 999px; }
+    .btn.ghost { background: transparent; color: var(--cream); border: 1px solid var(--muted-strong); }
+    .btn:hover { text-decoration: none; filter: brightness(1.08); }
+    .linkbtn { border: 0; background: none; color: var(--dim); font-size: 13px; cursor: pointer; padding: 10px 0 0; text-decoration: underline; text-underline-offset: 3px; }
+    .allgood { color: var(--dim); padding: 6px 0; }
+
+    /* Week strip */
+    .week { display: grid; grid-template-columns: repeat(7, minmax(122px, 1fr)); gap: 8px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; }
+    .day { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 10px; min-height: 112px; }
+    .day.today { border-color: rgba(242, 169, 59, .55); }
+    .day .d { font-size: 13px; font-weight: 700; }
+    .day .d span { color: var(--faint); font-weight: 500; margin-left: 4px; }
+    .day .items { margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+    .mini { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--dim); min-width: 0; }
+    .mini svg { width: 13px; height: 13px; flex: none; }
+    .mini span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .mini.live { color: var(--cream); }
+    .mini.failed { color: var(--coral); }
+    .day .none { font-size: 12.5px; color: var(--faint); margin-top: 8px; }
+
+    /* Content matrix: one row per piece, one column per platform */
+    .video { margin-bottom: 14px; padding: 0; overflow: hidden; }
+    .vhead { display: flex; gap: 14px; align-items: center; padding: 16px 18px; flex-wrap: wrap; }
+    .vhead h3 { margin: 0; font-size: 17px; font-weight: 700; }
+    .vhead .vmeta { color: var(--dim); font-size: 13px; }
+    .progress { margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--dim); }
+    .bar { width: 140px; height: 6px; background: var(--muted); border-radius: 99px; overflow: hidden; }
+    .bar i { display: block; height: 100%; background: var(--teal); border-radius: 99px; }
+    .matrix { display: grid; }
+    .matrix .h { font-size: 12px; font-weight: 700; color: var(--faint); text-transform: uppercase; letter-spacing: .08em; padding: 8px 14px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 6px; }
+    .matrix .h svg { width: 14px; height: 14px; }
+    .piece { display: flex; gap: 12px; align-items: center; padding: 12px 14px 12px 18px; border-top: 1px solid var(--line); min-width: 0; }
+    .thumb { width: 64px; aspect-ratio: 16 / 9; border-radius: 8px; background: var(--muted) center / cover no-repeat; flex: none; display: grid; place-items: center; font-size: 11px; color: var(--faint); }
+    .thumb.vertical { width: 36px; aspect-ratio: 9 / 16; }
+    .piece .pt { font-weight: 700; font-size: 14.5px; line-height: 1.3; }
+    .piece .pk { font-size: 12.5px; color: var(--faint); }
+    .cell { padding: 12px 14px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); min-width: 0; }
+    .cell .t { font-size: 13px; color: var(--dim); margin-top: 5px; font-variant-numeric: tabular-nums; }
+    .cell .st { font-size: 13px; margin-top: 3px; font-variant-numeric: tabular-nums; }
+    .cell .err { font-size: 13px; color: var(--coral); margin-top: 3px; }
+    .cell.empty { color: var(--faint); font-size: 13px; }
+    .pill { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+    .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    a.pill:hover { text-decoration: none; filter: brightness(1.15); }
+    .s-live { background: rgba(63, 184, 160, .16); color: var(--teal); }
+    .s-scheduled, .s-queued { background: rgba(108, 140, 255, .14); color: #A9BAFF; }
+    .s-approved, .s-proposed, .s-draft { background: rgba(242, 169, 59, .14); color: var(--amber); }
+    .s-failed { background: rgba(233, 104, 75, .18); color: var(--coral); }
+    .lbl { display: none; }
+
+    /* Performance */
+    .perf { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .pcard .big { font-size: 30px; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+    .pcard .small { color: var(--dim); font-size: 13px; }
+    .pcard .head { display: flex; align-items: center; gap: 8px; font-weight: 700; margin-bottom: 10px; }
+    .pcard .head svg { width: 18px; height: 18px; }
+    .tops { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+    .tops a { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--dim); }
+    .tops a span:first-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .warn { margin-top: 16px; font-size: 13px; color: var(--coral); }
+    footer { margin-top: 44px; font-size: 13px; color: var(--faint); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+    @media (max-width: 860px) {
+      .hero, .perf { grid-template-columns: 1fr; }
+      .matrix { grid-template-columns: 1fr !important; }
+      .matrix .h { display: none; }
+      .piece { padding-left: 14px; }
+      .cell { border-left: 0; display: grid; grid-template-columns: 100px 1fr; align-items: start; gap: 2px 10px; padding: 9px 14px; border-top: 1px dashed var(--line); }
+      .cell > :not(.lbl) { grid-column: 2; }
+      .cell .lbl { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--dim); grid-row: 1 / span 4; padding-top: 2px; }
+      .cell .lbl svg { width: 14px; height: 14px; }
+      .cell .t { margin-top: 2px; }
+      .progress { margin-left: 0; width: 100%; }
+      .bar { flex: 1; }
     }
   </style>
 </head>
 <body>
-<main>
-  <header>
-    <h1>Sum of <span>Parts</span> · Publishing</h1>
-    <div class="small muted" id="updated">Loading…</div>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="-12 -12 24 24" aria-hidden="true">
+        <path d="M0.6,-0.6 L0.6,-9.6 A9,9 0 0 1 9.6,-0.6 Z" fill="#F2A93B" transform="translate(1.1,-1.1)"/>
+        <path d="M0.6,0.6 L9.6,0.6 A9,9 0 0 1 0.6,9.6 Z" fill="#F3EBDD"/>
+        <path d="M-0.6,0.6 L-0.6,9.6 A9,9 0 0 1 -9.6,0.6 Z" fill="#F3EBDD"/>
+        <path d="M-0.6,-0.6 L-9.6,-0.6 A9,9 0 0 1 -0.6,-9.6 Z" fill="#F3EBDD"/>
+      </svg>
+      <div><h1>Sum of Parts</h1><div class="sub" id="updated">Publishing</div></div>
+    </div>
+    <div class="seg" id="filter" role="group" aria-label="Platform"></div>
   </header>
 
-  <section class="tiles" id="tiles"></section>
+  <section class="hero">
+    <div class="card next" id="next"></div>
+    <div class="card" id="needs"></div>
+  </section>
 
-  <h2>Needs you</h2>
-  <div class="panel" id="needs"></div>
+  <div class="section-title">Next 7 days</div>
+  <section class="week" id="week"></section>
 
-  <h2>Coming up</h2>
-  <div class="filters" id="filters"></div>
-  <div class="panel" id="upcoming"></div>
+  <div class="section-title">Every piece, every platform</div>
+  <section id="videos"></section>
 
-  <h2>Videos</h2>
-  <div id="videos"></div>
+  <div class="section-title">Performance</div>
+  <section class="perf" id="perf"></section>
 
-  <footer>Read-only. Approvals happen by merging the "Posts for …" pull request on GitHub. Updated every hour by GitHub Actions.</footer>
-</main>
+  <div class="warn" id="warn"></div>
+  <footer>
+    <span>Read-only. Approve posts by merging the "Posts for…" pull request on GitHub.</span>
+    <span id="foot"></span>
+  </footer>
+</div>
+
 <script>
+const ICON = {
+  youtube: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="#E9684B"/><path d="M10 9v6l5-3z" fill="#10162B"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="#6C8CFF" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#6C8CFF" stroke="none"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#3FB8A0"/><path d="M13.2 19v-6h2l.3-2.3h-2.3V9.3c0-.7.2-1.1 1.2-1.1h1.2V6.2a16 16 0 0 0-1.8-.1c-1.8 0-3 1.1-3 3.1v1.6H8.8V13h2v6z" fill="#10162B"/></svg>',
+};
 const PL = { youtube: "YouTube", instagram: "Instagram", facebook: "Facebook" };
-const KIND = { video: "video", short: "Short", reel: "Reel" };
-let data, platform = "all";
+const ORDER = ["youtube", "instagram", "facebook"];
+const STATUS = { live: "Live", scheduled: "Scheduled", queued: "Queued", approved: "Approved", proposed: "Awaiting you", draft: "Draft", failed: "Failed" };
+let data, filter = "all", done = new Set();
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const fmt = (iso, tz, opts) => new Date(iso).toLocaleString("en-GB", { timeZone: tz, ...opts });
-const day = (iso, tz) => fmt(iso, tz, { weekday: "short", day: "2-digit", month: "short" });
-const time = (iso, tz) => fmt(iso, tz, { hour: "2-digit", minute: "2-digit" });
-const num = (n) => (n == null ? "–" : n >= 10000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "K" : n.toLocaleString("en-US"));
-const statusLabel = { live: "Live", scheduled: "Scheduled", queued: "Queued", approved: "Approved", proposed: "Awaiting you", draft: "Draft", failed: "Failed" };
+const store = { get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
+const tz = () => data.timeZone;
+const part = (iso, zone, o) => new Date(iso).toLocaleString("en-GB", { timeZone: zone, ...o });
+const hm = (iso, zone = tz()) => part(iso, zone, { hour: "2-digit", minute: "2-digit" });
+const dayKey = (t, zone = tz()) => new Date(t).toLocaleDateString("en-CA", { timeZone: zone });
+const dayName = (iso) => {
+  const k = dayKey(iso), n = Date.now();
+  if (k === dayKey(n)) return "Today";
+  if (k === dayKey(n + 864e5)) return "Tomorrow";
+  if (k === dayKey(n - 864e5)) return "Yesterday";
+  return part(iso, tz(), { weekday: "short", day: "numeric", month: "short" });
+};
+const when = (iso) => `${dayName(iso)}, ${hm(iso)}`;
+const ny = (iso) => `${part(iso, "America/New_York", { weekday: "short" })} ${hm(iso, "America/New_York")} in New York`;
+const num = (n) => (n == null ? "–" : n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M" : n >= 1e4 ? (n / 1e3).toFixed(1).replace(/\.0$/, "") + "K" : n.toLocaleString("en-US"));
+const clean = (t) => String(t || "").replace(/\s*#shorts\s*/i, " ").trim();
+const shown = (p) => filter === "all" || p.platform === filter;
+const all = () => data.videos.flatMap((v) => v.posts.map((p) => ({ ...p, video: v.title, slug: v.slug })));
 
-const allPosts = () => data.videos.flatMap((v) => v.posts.map((p) => ({ ...p, video: v.title, slug: v.slug })));
-
-function row(p) {
-  const tz = data.timeZone;
-  const stats = p.status === "live" && p.stats && (p.stats.views != null || p.stats.likes != null)
-    ? `<span class="stats">${p.stats.views != null ? num(p.stats.views) + " views · " : ""}${num(p.stats.likes)} likes · ${num(p.stats.comments)} comments</span>` : "";
-  const nyDay = day(p.publishAt, "America/New_York");
-  const title = p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title);
-  return `<div class="row">
-    <div class="when"><b>${esc(day(p.publishAt, tz))}</b><span class="muted">${esc(time(p.publishAt, tz))} your time · ${nyDay !== day(p.publishAt, tz) ? esc(nyDay) + " " : ""}${esc(time(p.publishAt, "America/New_York"))} NY</span></div>
-    <div class="what"><div class="t">${title}</div><div class="sub">${esc(p.video)} · ${esc(KIND[p.kind] || p.kind)}${p.error ? " · " + esc(p.error.split("\n")[0]) : ""}</div></div>
-    <div class="right">${stats}<span class="chip p-${p.platform}">${PL[p.platform]}</span><span class="s s-${p.status}">${statusLabel[p.status] || p.status}</span></div>
-  </div>`;
+/** A piece = one rendered file (a Short, the main video, a teaser) and its posts on each platform. */
+function pieces(v) {
+  const by = new Map();
+  for (const p of v.posts) {
+    const key = p.file || p.id;
+    if (!by.has(key)) by.set(key, { posts: {}, kind: p.id === "yt-main" ? "Main video" : (p.file || "").includes("teaser") ? "Teaser" : "Short", first: p.publishAt });
+    const g = by.get(key);
+    g.posts[p.platform] = p;
+    if (Date.parse(p.publishAt) < Date.parse(g.first)) g.first = p.publishAt;
+  }
+  return [...by.values()]
+    .map((g) => { const yt = g.posts.youtube, any = yt || g.posts.instagram || g.posts.facebook; return { ...g, title: clean(yt?.title || any.title), thumb: yt?.thumb }; })
+    .sort((a, b) => (a.kind === "Main video") !== (b.kind === "Main video") ? (a.kind === "Main video" ? -1 : 1) : Date.parse(a.first) - Date.parse(b.first));
 }
 
-function render() {
+function renderFilter() {
+  const el = document.getElementById("filter");
+  el.innerHTML = [["all", "All platforms"], ...ORDER.map((k) => [k, PL[k]])].map(([k, l]) => `<button aria-pressed="${k === filter}" data-k="${k}">${k === "all" ? "" : ICON[k]}${l}</button>`).join("");
+  el.onclick = (e) => { const k = e.target.closest("button")?.dataset.k; if (!k) return; filter = k; store.set("sop-filter", k); render(); };
+}
+
+function renderNext() {
   const now = Date.now();
-  const posts = allPosts();
-  const live = posts.filter((p) => p.status === "live");
-  const upcoming = posts.filter((p) => p.status !== "live" && Date.parse(p.publishAt) >= now - 3600e3).sort((a, b) => Date.parse(a.publishAt) - Date.parse(b.publishAt));
-  const views = live.reduce((s, p) => s + (p.stats?.views || 0), 0);
-  const next = upcoming[0];
-  const todos = live.filter((p) => p.manual?.length && now - Date.parse(p.publishAt) < 7 * 864e5);
-  const needCount = data.pending.length + data.problems.length + todos.reduce((s, p) => s + p.manual.length, 0);
+  const up = all().filter((p) => p.status !== "live" && p.status !== "failed" && Date.parse(p.publishAt) > now && shown(p)).sort((a, b) => Date.parse(a.publishAt) - Date.parse(b.publishAt));
+  const el = document.getElementById("next");
+  if (!up.length) { el.innerHTML = `<h2>Next up</h2><div class="allgood">Nothing scheduled. Time to make the next video.</div>`; return; }
+  const n = up[0];
+  const slot = up.filter((p) => p.file === n.file && Math.abs(Date.parse(p.publishAt) - Date.parse(n.publishAt)) < 3 * 3600e3);
+  el.innerHTML = `<h2>Next up</h2>
+    <div class="when">${esc(when(n.publishAt))} your time · ${esc(ny(n.publishAt))}</div>
+    <div class="countdown" id="cd" data-at="${esc(n.publishAt)}"></div>
+    <div class="title">${esc(clean(n.title))}</div>
+    <div class="video">${esc(n.video)}</div>
+    <div class="slots">${slot.map((p) => `<span class="slot">${ICON[p.platform]}<b>${esc(hm(p.publishAt))}</b><span class="pill s-${p.status}">${STATUS[p.status]}</span></span>`).join("")}</div>`;
+  tick();
+}
 
-  document.getElementById("updated").textContent = `Updated ${fmt(data.generatedAt, data.timeZone, { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" })} (your time)`;
-  const until = next ? Math.max(0, Date.parse(next.publishAt) - now) : 0;
-  const h = Math.floor(until / 3600e3), m = Math.round((until % 3600e3) / 60e3);
-  document.getElementById("tiles").innerHTML = [
-    `<div class="tile ${data.problems.length ? "alert" : needCount ? "key" : ""}"><div class="n">${needCount}</div><div class="l">need you</div></div>`,
-    `<div class="tile"><div class="n">${next ? (h ? h + "h " : "") + m + "m" : "–"}</div><div class="l">until the next post${next ? " (" + PL[next.platform] + ")" : ""}</div></div>`,
-    `<div class="tile"><div class="n">${upcoming.length}</div><div class="l">posts coming up</div></div>`,
-    `<div class="tile"><div class="n">${live.length}</div><div class="l">posts live</div></div>`,
-    `<div class="tile"><div class="n">${num(views)}</div><div class="l">YouTube views</div></div>`,
-  ].join("");
+function tick() {
+  const el = document.getElementById("cd");
+  if (!el) return;
+  let s = Math.max(0, Math.round((Date.parse(el.dataset.at) - Date.now()) / 1000));
+  const d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60);
+  s %= 60;
+  const pad = (x) => String(x).padStart(2, "0");
+  el.innerHTML = d ? `${d}<small>d</small>${h}<small>h</small>${pad(m)}<small>m</small>` : `${h}<small>h</small>${pad(m)}<small>m</small>${pad(s)}<small>s</small>`;
+}
 
-  const needs = [
-    ...data.problems.map((x) => `<div class="need bad"><b>Problem:</b> ${esc(x.key)}: ${esc(x.what)}<div class="small muted">${esc(x.fix)}</div></div>`),
-    ...data.pending.map((x) => `<div class="need"><b>Approve:</b> <a href="${esc(x.url)}" target="_blank" rel="noopener">#${x.number} ${esc(x.title)}</a><div class="small muted">Merge it to schedule these posts.</div></div>`),
-    ...todos.flatMap((p) => p.manual.map((m) => `<div class="need"><b>By hand:</b> ${esc(p.video)} · ${PL[p.platform]} ${esc(KIND[p.kind])}: ${esc(m.length > 160 ? m.slice(0, 160) + "…" : m)}${p.edit ? ` · <a href="${esc(p.edit)}" target="_blank" rel="noopener">open</a>` : ""}</div>`)),
-  ];
-  if (data.todoIssue) needs.push(`<div class="need"><b>Checklist:</b> <a href="${esc(data.todoIssue)}" target="_blank" rel="noopener">today's to-do issue on GitHub</a></div>`);
-  document.getElementById("needs").innerHTML = needs.length ? needs.join("") : `<div class="empty">Nothing. Everything is scheduled and on track.</div>`;
+/** Short label for a by-hand step: the part before the colon ("Set Related video…", "Add the alt text…"). */
+const stepLabel = (m) => {
+  const plain = m.replace(/\s*\([^)]*\)/g, ""); // drop "(5:04 to the end)", "(YouTube Studio > …)"
+  const i = plain.indexOf(":");
+  const head = i > 0 && i < 80 ? plain.slice(0, i).trim() : plain;
+  return head.length >= 14 ? head : plain.length > 110 ? plain.slice(0, 110) + "…" : plain;
+};
+const copyable = (m) => /alt text|pin the comment/i.test(m);
+const plural = (n, w) => `${num(n)} ${w}${n === 1 ? "" : "s"}`;
 
-  const shown = upcoming.filter((p) => platform === "all" || p.platform === platform);
-  document.getElementById("upcoming").innerHTML = shown.length ? shown.map(row).join("") : `<div class="empty">Nothing scheduled.</div>`;
+function renderNeeds() {
+  const now = Date.now();
+  const tasks = [];
+  for (const x of data.problems) tasks.push({ id: "p:" + x.key, bad: true, tag: "Problem", txt: `${x.key}: ${x.what}`, meta: x.fix });
+  for (const x of data.pending) tasks.push({ id: "pr:" + x.number, tag: "Approve", txt: x.title.replace(/: approve to schedule$/, ""), meta: `Pull request #${x.number}`, action: `<a class="btn" href="${esc(x.url)}" target="_blank" rel="noopener">Review & merge</a>` });
+  for (const p of all()) {
+    if (p.status !== "live" || now - Date.parse(p.publishAt) > 14 * 864e5) continue;
+    p.manual.forEach((m, i) => tasks.push({
+      id: `m:${p.slug}/${p.id}/${i}`, check: true, tag: `By hand · ${PL[p.platform]}`, txt: stepLabel(m), full: m, meta: `${clean(p.title)}`,
+      action: (p.edit ? `<a class="btn ghost" href="${esc(p.edit)}" target="_blank" rel="noopener">Open in ${PL[p.platform] === "YouTube" ? "Studio" : PL[p.platform]}</a> ` : "") + (copyable(m) ? `<button class="linkbtn" data-copy="${esc(m.replace(/\s*\([^)]*\)/g, "").slice(m.replace(/\s*\([^)]*\)/g, "").indexOf(":") + 1).trim())}">Copy text</button>` : ""),
+    }));
+  }
+  const open = tasks.filter((t) => !done.has(t.id));
+  const doneN = tasks.length - open.length;
+  const showDone = store.get("sop-showdone", false);
+  const list = showDone ? tasks : open;
+  const bad = tasks.some((t) => t.bad);
+  const el = document.getElementById("needs");
+  el.innerHTML = `<h2>Needs you <span class="count ${bad ? "bad" : open.length ? "" : "zero"}">${open.length}</span></h2>
+    ${list.length ? `<div class="tasks">${list.map((t) => `<div class="task ${t.bad ? "bad" : ""} ${done.has(t.id) ? "done" : ""}">
+      ${t.check ? `<input type="checkbox" data-id="${esc(t.id)}" ${done.has(t.id) ? "checked" : ""} aria-label="Mark as done">` : `<span class="dot" style="background:${t.bad ? "var(--coral)" : "var(--amber)"}"></span>`}
+      <div><div class="tag">${esc(t.tag)}</div><div class="txt" title="${esc(t.full || t.txt)}">${esc(t.txt)}</div><div class="meta">${esc(t.meta)}</div>${t.action ? `<div>${t.action}</div>` : ""}</div></div>`).join("")}</div>`
+      : `<div class="allgood">All clear: everything is scheduled and on track.</div>`}
+    ${doneN ? `<button class="linkbtn" id="toggleDone">${showDone ? "Hide" : "Show"} ${doneN} done</button>` : ""}
+    ${data.todoIssue ? ` <a class="linkbtn" href="${esc(data.todoIssue)}" target="_blank" rel="noopener">Today's checklist on GitHub</a>` : ""}`;
+  el.querySelectorAll("input[type=checkbox]").forEach((c) => (c.onchange = () => { c.checked ? done.add(c.dataset.id) : done.delete(c.dataset.id); store.set("sop-done", [...done]); renderNeeds(); }));
+  el.querySelectorAll("[data-copy]").forEach((b) => (b.onclick = () => { navigator.clipboard?.writeText(b.dataset.copy); b.textContent = "Copied"; setTimeout(() => (b.textContent = "Copy text"), 1500); }));
+  const tg = document.getElementById("toggleDone");
+  if (tg) tg.onclick = () => { store.set("sop-showdone", !showDone); renderNeeds(); };
+}
 
-  document.getElementById("videos").innerHTML = data.videos.map((v) => {
-    const ps = v.posts.filter((p) => platform === "all" || p.platform === platform).map((p) => ({ ...p, video: v.title })).sort((a, b) => Date.parse(a.publishAt) - Date.parse(b.publishAt));
-    const liveN = v.posts.filter((p) => p.status === "live").length;
-    return `<details class="video"><summary><span>${esc(v.title)}</span><span class="small muted">${liveN} of ${v.posts.length} live</span></summary>${ps.map(row).join("") || '<div class="empty">No posts.</div>'}</details>`;
+function renderWeek() {
+  const posts = all().filter(shown);
+  const days = [...Array(7)].map((_, i) => dayKey(Date.now() + i * 864e5));
+  document.getElementById("week").innerHTML = days.map((k, i) => {
+    const items = posts.filter((p) => dayKey(p.publishAt) === k).sort((a, b) => Date.parse(a.publishAt) - Date.parse(b.publishAt));
+    const at = new Date(k + "T12:00:00Z");
+    const label = i === 0 ? "Today" : i === 1 ? "Tomorrow" : at.toLocaleDateString("en-GB", { weekday: "short", timeZone: "UTC" });
+    const date = at.toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+    return `<div class="day ${i === 0 ? "today" : ""}"><div class="d">${label}<span>${date}</span></div>
+      ${items.length ? `<div class="items">${items.map((p) => `<a class="mini ${p.status}" ${p.url ? `href="${esc(p.url)}" target="_blank" rel="noopener"` : ""} title="${esc(clean(p.title))} · ${PL[p.platform]} · ${STATUS[p.status]}">${ICON[p.platform]}<span>${esc(hm(p.publishAt))} ${esc(clean(p.title))}</span></a>`).join("")}</div>` : `<div class="none">Nothing planned</div>`}</div>`;
   }).join("");
 }
 
-function filters() {
-  const opts = [["all", "All"], ["youtube", "YouTube"], ["instagram", "Instagram"], ["facebook", "Facebook"]];
-  const el = document.getElementById("filters");
-  el.innerHTML = opts.map(([k, l]) => `<button data-k="${k}" aria-pressed="${k === platform}">${l}</button>`).join("");
-  el.onclick = (e) => {
-    const k = e.target.closest("button")?.dataset.k;
-    if (!k) return;
-    platform = k;
-    try { localStorage.setItem("sop-platform", k); } catch {}
-    filters();
-    render();
-  };
+function cell(p, platform) {
+  const lbl = `<span class="lbl">${ICON[platform]}${PL[platform]}</span>`;
+  if (!p) return `<div class="cell empty">${lbl}<span>Not planned</span></div>`;
+  const pill = p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener" class="pill s-${p.status}" title="Open on ${PL[platform]}">${STATUS[p.status]} ↗</a>` : `<span class="pill s-${p.status}">${STATUS[p.status]}</span>`;
+  const t = `<div class="t">${p.status === "live" ? "Since " : ""}${esc(when(p.publishAt))}</div>`;
+  const stats = p.status === "live" && p.stats ? `<div class="st">${p.stats.views != null ? plural(p.stats.views, "view") + " · " : ""}${plural(p.stats.likes ?? 0, "like")} · ${plural(p.stats.comments ?? 0, "comment")}</div>` : "";
+  const err = p.error ? `<div class="err">${esc(p.error.split("\n")[0].slice(0, 90))}</div>` : "";
+  return `<div class="cell">${lbl}<div>${pill}</div>${t}${stats}${err}</div>`;
 }
 
-try { platform = localStorage.getItem("sop-platform") || "all"; } catch {}
-fetch("data.json", { cache: "no-store" })
-  .then((r) => r.json())
-  .then((d) => { data = d; filters(); render(); setInterval(render, 60e3); })
-  .catch(() => { document.getElementById("updated").textContent = "Could not load data.json"; });
+function renderVideos() {
+  const cols = filter === "all" ? ORDER : [filter];
+  document.getElementById("videos").innerHTML = data.videos.slice().reverse().map((v) => {
+    const ps = pieces(v).filter((g) => cols.some((c) => g.posts[c]));
+    const posts = v.posts.filter(shown);
+    const live = posts.filter((p) => p.status === "live").length;
+    const pct = posts.length ? Math.round((100 * live) / posts.length) : 0;
+    return `<article class="card video">
+      <div class="vhead"><div><h3>${esc(v.title)}</h3><div class="vmeta">${ps.length} pieces · ${posts.length} posts</div></div>
+        <div class="progress"><div class="bar"><i style="width:${pct}%"></i></div>${live} of ${posts.length} live</div></div>
+      <div class="matrix" style="grid-template-columns:minmax(220px,1.4fr) repeat(${cols.length},minmax(150px,1fr))">
+        <div class="h">Piece</div>${cols.map((c) => `<div class="h">${ICON[c]}${PL[c]}</div>`).join("")}
+        ${ps.map((g) => `<div class="piece"><div class="thumb ${g.kind === "Short" ? "vertical" : ""}" ${g.thumb ? `style="background-image:url('${esc(g.thumb)}')"` : ""}>${g.thumb ? "" : g.kind === "Short" ? "9:16" : "16:9"}</div>
+          <div><div class="pt">${esc(g.title)}</div><div class="pk">${esc(g.kind)}</div></div></div>${cols.map((c) => cell(g.posts[c], c)).join("")}`).join("")}
+      </div></article>`;
+  }).join("");
+}
+
+function renderPerf() {
+  const live = all().filter((p) => p.status === "live");
+  document.getElementById("perf").innerHTML = ORDER.map((k) => {
+    const ps = live.filter((p) => p.platform === k);
+    const sum = (f) => ps.reduce((s, p) => s + (p.stats?.[f] || 0), 0);
+    const [metric, total] = k === "youtube" ? ["views", sum("views")] : ["likes", sum("likes")];
+    const top = ps.filter((p) => p.stats).sort((a, b) => (b.stats[metric] || 0) - (a.stats[metric] || 0)).slice(0, 3);
+    return `<div class="card pcard"><div class="head">${ICON[k]}${PL[k]}</div>
+      <div class="big">${num(total)}</div><div class="small">${metric} · ${ps.length} live · ${num(sum("comments"))} comments</div>
+      ${top.length ? `<div class="tops">${top.map((p) => `<a href="${esc(p.url || "#")}" target="_blank" rel="noopener"><span>${esc(clean(p.title))}</span><span>${num(p.stats[metric])}</span></a>`).join("")}</div>` : `<div class="small" style="margin-top:12px">No live posts yet.</div>`}</div>`;
+  }).join("");
+}
+
+function render() {
+  renderFilter(); renderNext(); renderNeeds(); renderWeek(); renderVideos(); renderPerf();
+  const mins = Math.round((Date.now() - Date.parse(data.generatedAt)) / 60000);
+  document.getElementById("updated").textContent = `Publishing · updated ${mins < 1 ? "just now" : mins < 60 ? mins + " min ago" : Math.round(mins / 60) + " h ago"}`;
+  document.getElementById("foot").textContent = `Times in your time zone (${tz().replace("_", " ")}) · refreshed hourly`;
+  document.getElementById("warn").textContent = (data.warnings || []).join(" · ");
+}
+
+filter = store.get("sop-filter", "all");
+done = new Set(store.get("sop-done", []));
+fetch("data.json", { cache: "no-store" }).then((r) => r.json()).then((d) => {
+  data = d;
+  render();
+  setInterval(tick, 1000);
+  setInterval(render, 60000);
+}).catch(() => { document.getElementById("updated").textContent = "Could not load the data."; });
 </script>
 </body>
 </html>

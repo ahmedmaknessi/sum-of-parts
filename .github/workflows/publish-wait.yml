@@ -1,0 +1,60 @@
+# GitHub starts scheduled runs late or skips them, so the 15-minute runner
+# can't be trusted to post Instagram Reels on time. This job starts a few
+# hours before the evening slot (twice, for redundancy), sleeps until each
+# post's exact time, then runs the same "due" step: publishes Instagram,
+# confirms Facebook / YouTube went live, posts the link comments, and pushes
+# the statuses. It stops when nothing else is due within its window.
+name: "Publish: wait for the evening posts"
+
+on:
+  schedule:
+    - cron: "10 19 * * *"
+    - cron: "10 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: publish-wait
+  cancel-in-progress: false
+
+jobs:
+  wait:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      GH_TOKEN: ${{ github.token }}
+      META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+      META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+      TSX: tsx@4.23.15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Wait, post, repeat
+        run: |
+          git config user.name "sum-of-parts-publisher"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          deadline=$(( $(date +%s) + 330 * 60 ))
+          while :; do
+            git pull -q --rebase
+            left=$(( (deadline - $(date +%s)) / 60 ))
+            [ "$left" -le 5 ] && break
+            wait_s=$(npx --yes "$TSX" scripts/publish/cli.ts next-due "$left" | tail -1)
+            [ "$wait_s" = "-1" ] && { echo "nothing else due in the next $left min"; break; }
+            echo "next post in $wait_s s"
+            sleep "$wait_s"
+            git pull -q --rebase
+            npx --yes "$TSX" scripts/publish/cli.ts due || true
+            git add src/videos/*/posts.json
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Publish: due posts (on time)"
+              for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+            fi
+            npx --yes "$TSX" scripts/publish/cli.ts alerts || true
+            sleep 30
+          done
