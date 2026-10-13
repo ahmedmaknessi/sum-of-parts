@@ -12,12 +12,15 @@ const GRAPH = `https://graph.facebook.com/${META_GRAPH_VERSION}`;
 const GRAPH_VIDEO = `https://graph-video.facebook.com/${META_GRAPH_VERSION}`;
 const TOKEN_FILE = "meta.json";
 
-type MetaSecrets = { pageId: string; pageName: string; pageToken: string; igUserId?: string; igUsername?: string };
+export type MetaSecrets = { pageId: string; pageName: string; pageToken: string; igUserId?: string; igUsername?: string };
 
 const secrets = (): MetaSecrets => {
   const s = readSecret<MetaSecrets>(TOKEN_FILE);
-  if (!s) throw new Error("Not connected to Meta: run npm run publish:auth -- meta <user-token>");
-  return s;
+  if (s) return s;
+  // On GitHub Actions the Page token comes from the repository secrets.
+  const { META_PAGE_ID, META_PAGE_TOKEN, META_IG_USER_ID } = process.env;
+  if (META_PAGE_ID && META_PAGE_TOKEN) return { pageId: META_PAGE_ID, pageName: "", pageToken: META_PAGE_TOKEN, igUserId: META_IG_USER_ID || undefined };
+  throw new Error("Not connected to Meta: run npm run publish:auth -- meta <user-token>");
 };
 
 /**

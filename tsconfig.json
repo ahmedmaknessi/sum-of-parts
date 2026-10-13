@@ -16,7 +16,6 @@
     "resolveJsonModule": true
   },
   "exclude": [
-    "remotion.config.ts",
-    "gpt"
+    "remotion.config.ts"
   ]
 }

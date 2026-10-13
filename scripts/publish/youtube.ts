@@ -60,7 +60,9 @@ export const authorize = async () => {
 };
 
 const accessToken = async (): Promise<string> => {
-  const t = readSecret<Tokens>(TOKEN_FILE);
+  // On GitHub Actions the refresh token comes from the repository secrets.
+  const fromEnv: Tokens | null = process.env.YOUTUBE_REFRESH_TOKEN ? { refresh_token: process.env.YOUTUBE_REFRESH_TOKEN } : null;
+  const t = readSecret<Tokens>(TOKEN_FILE) ?? fromEnv;
   if (!t) throw new Error("Not signed in to YouTube: run npm run publish:auth -- youtube");
   if (t.access_token && t.expires_at && t.expires_at > Date.now() + 60_000) return t.access_token;
   const r = await callJson<{ access_token: string; expires_in: number }>("https://oauth2.googleapis.com/token", {

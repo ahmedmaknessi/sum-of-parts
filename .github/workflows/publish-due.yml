@@ -1,0 +1,56 @@
+# Every 15 minutes: publishes Instagram Reels that are due (Instagram's API
+# cannot schedule), posts Facebook first comments once the posts are live, and
+# marks posts done. Does nothing when nothing is due.
+name: "Publish: due posts"
+
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  due:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+      META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Anything to do?
+        id: check
+        run: |
+          # Queued Instagram posts, or scheduled posts still waiting to go live (and get their first comment).
+          if grep -lqE '"status": "(queued|scheduled)"' src/videos/*/posts.json 2>/dev/null; then
+            echo "work=yes" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.check.outputs.work == 'yes'
+        with:
+          node-version: 22
+
+      - name: Publish what is due
+        if: steps.check.outputs.work == 'yes'
+        run: npx --yes tsx@4.23.15 scripts/publish/cli.ts due
+
+      - name: Save the post statuses
+        if: always() && steps.check.outputs.work == 'yes'
+        run: |
+          git config user.name "sum-of-parts-publisher"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/videos/*/posts.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish: due posts"
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+          fi

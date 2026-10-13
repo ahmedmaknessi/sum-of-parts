@@ -174,7 +174,7 @@ Per video, in `src/videos/<slug>/`: `voiceover.txt` (exact wording), `timeline-s
    - `src/videos/<slug>/youtube.md`: the main video (title + A/B alternatives, description with chapters and sources, tags, pinned comment, upload settings, end screen, thumbnails, pre-publish checklist).
    - `src/videos/<slug>/socials.md`: everything for the short-form and social posts, **always including the YouTube Shorts** (title, description, Related video setting for each Short) next to Instagram Reels (caption, hashtags, alt text, cover) and Facebook (Reels and any landscape teaser: caption, first comment, settings), plus the licence notes and a posting schedule. `youtube.md` only points to it for the Shorts.
 
-9. Publishing (`docs/publishing.md`): write the video's posting queue `src/videos/<slug>/posts.json` from `youtube.md` and `socials.md` (drafts only, times from the posting schedule, `{{youtube:yt-main}}` where a caption links to the main video). The owner reviews and approves; **never approve a post yourself**, and schedule only after the owner says so. `npm run publish:review|approve|schedule -- <slug>`; Instagram goes out through `npm run publish:due` (Task Scheduler).
+9. Publishing (`docs/publishing.md`), the last step of every video: write the posting queue `src/videos/<slug>/posts.json` from `youtube.md` and `socials.md` (drafts, times from the posting schedule at least a week out, `{{youtube:yt-main}}` where a caption links to the main video), check it with `npm run publish:review -- <slug>`, then `npm run publish:propose -- <slug>`: it uploads the files to a hidden release and opens the "Posts for <slug>" pull request. **The owner approves by merging it; never approve, merge or self-approve posts yourself.** GitHub Actions then schedules and posts (`.github/workflows/publish-*.yml`).
 
 ## Project structure
 
@@ -245,5 +245,4 @@ All components are built with `Interactive.withSchema({wrapInSequence: true})`, 
 - `npm run render:video03` renders video 03 (tests and audio first); `npm run render:video03-shorts` renders its four Shorts; `npm run render:video03-extras` renders its Facebook teaser, thumbnails and Instagram covers (`out/covers/`).
 - `npm run render:video01-thumbnails` renders the three A/B-test thumbnails to `out/thumbnails/`.
 - `npm run lint` runs ESLint and the TypeScript check.
-- `npm run publish:review -- <slug>`, `publish:approve -- <slug> <ids|all>`, `publish:schedule -- <slug> [--dry-run]`, `publish:due`, `publish:auth -- youtube|meta <token>`, `publish:check`: the posting automation (`docs/publishing.md`).
-- `npm run gpt:sync` refreshes `gpt/` (the kit for running this same pipeline with GPT / Codex: `gpt/README.md`) after this file or the skills change. New lessons from a session go in `gpt/LESSONS.md`.
+- `npm run publish:review -- <slug>`, `publish:propose -- <slug>`, `publish:schedule -- <slug> --dry-run`, `publish:auth -- youtube|meta <token>`, `publish:check`, `publish:secrets`: the posting automation (`docs/publishing.md`).

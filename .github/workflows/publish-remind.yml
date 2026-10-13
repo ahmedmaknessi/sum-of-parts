@@ -1,0 +1,26 @@
+# Daily: if a "posts/<slug>" pull request has waited more than two days, it
+# mentions the owner (a GitHub notification on the phone) with the date of
+# the first post.
+name: "Publish: reminder"
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npx --yes tsx@4.23.15 scripts/publish/cli.ts remind

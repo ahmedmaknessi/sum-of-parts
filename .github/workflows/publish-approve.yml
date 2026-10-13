@@ -1,0 +1,89 @@
+# Merging a "posts/<slug>" pull request is the owner's approval: this approves
+# exactly the merged posts and schedules them (YouTube, Facebook) or queues
+# them (Instagram, published by publish-due.yml). Also runnable by hand to
+# retry scheduling approved posts (e.g. after connecting the accounts).
+name: "Publish: approve and schedule"
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Video slug: schedule its approved posts"
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  schedule:
+    # Only a posts/ pull request merged by the repository owner counts as an approval.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.pull_request.merged == true &&
+       startsWith(github.event.pull_request.head.ref, 'posts/') &&
+       github.event.pull_request.merged_by.login == github.repository_owner)
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+      META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+      HEAD_REF: ${{ github.event.pull_request.head.ref }}
+      INPUT_SLUG: ${{ inputs.slug }}
+      TSX: tsx@4.23.15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Which video
+        run: |
+          SLUG="${INPUT_SLUG:-${HEAD_REF#posts/}}"
+          [[ "$SLUG" =~ ^[a-z0-9-]+$ ]] || { echo "bad slug: $SLUG"; exit 1; }
+          echo "SLUG=$SLUG" >> "$GITHUB_ENV"
+
+      - name: ffmpeg (video lengths)
+        run: command -v ffprobe || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
+
+      - name: Approve the merged posts
+        if: github.event_name == 'pull_request'
+        run: npx --yes "$TSX" scripts/publish/cli.ts approve-merged "$SLUG"
+
+      - name: Schedule
+        run: |
+          cp out/publish-summary.md out/approve-summary.md 2>/dev/null || true
+          npx --yes "$TSX" scripts/publish/cli.ts schedule "$SLUG"
+          cat out/approve-summary.md out/publish-summary.md > out/comment.md 2>/dev/null || cp out/publish-summary.md out/comment.md
+
+      - name: Save the post statuses
+        if: always()
+        run: |
+          git config user.name "sum-of-parts-publisher"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/videos/*/posts.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish: $SLUG statuses"
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+          fi
+
+      - name: Report on the pull request
+        if: always() && github.event_name == 'pull_request'
+        run: |
+          [ -f out/comment.md ] || cp out/publish-summary.md out/comment.md 2>/dev/null || echo "Scheduling did not finish: see the Actions log." > out/comment.md
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file out/comment.md

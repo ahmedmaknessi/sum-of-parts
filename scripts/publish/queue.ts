@@ -1,14 +1,16 @@
 /**
  * The posting queue: one `posts.json` per video (src/videos/<slug>/posts.json).
  *
- * Every post goes draft -> approved -> scheduled / queued -> posted.
- * - draft: written by Claude (or by hand), waiting for the owner.
+ * Every post goes draft -> proposed -> approved -> scheduled / queued -> posted.
+ * - draft: written by Claude (or by hand), not yet sent for approval.
+ * - proposed: in a "posts/<slug>" pull request, waiting for the owner. Merging
+ *   that pull request is the approval (.github/workflows/publish-approve.yml).
  * - approved: the owner validated it. The approval is tied to a fingerprint of
  *   the post's content: if anything that would be published changes, the post
  *   counts as a draft again and nothing schedules it.
  * - scheduled: handed to the platform's own scheduler (YouTube, Facebook).
- * - queued: Instagram has no API scheduling: the local runner
- *   (`npm run publish:due`) publishes it when its time comes.
+ * - queued: Instagram has no API scheduling: the runner (`publish:due`, every
+ *   15 minutes on GitHub Actions) publishes it when its time comes.
  * - posted / failed: done, or stopped with the error kept on the post.
  */
 import { createHash } from "node:crypto";
@@ -18,7 +20,7 @@ import path from "node:path";
 export type Platform = "youtube" | "instagram" | "facebook";
 /** youtube: video | short. instagram: reel. facebook: reel (3 to 90 s) | video (any length). */
 export type Kind = "video" | "short" | "reel";
-export type Status = "draft" | "approved" | "scheduled" | "queued" | "posted" | "failed";
+export type Status = "draft" | "proposed" | "approved" | "scheduled" | "queued" | "posted" | "failed";
 
 export type Post = {
   /** Short, unique within the video: "yt-main", "ig-short-02"... */
@@ -118,8 +120,8 @@ export const note = (post: Post, message: string) => {
 };
 
 export const approve = (post: Post, now = new Date()) => {
-  if (post.status !== "draft" && post.status !== "approved") {
-    throw new Error(`${post.id} is ${post.status}: only drafts can be approved`);
+  if (post.status !== "draft" && post.status !== "proposed" && post.status !== "approved") {
+    throw new Error(`${post.id} is ${post.status}: only drafts and proposed posts can be approved`);
   }
   post.status = "approved";
   post.approvedHash = contentHash(post);
