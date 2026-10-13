@@ -35,10 +35,17 @@ export const authorize = async (userToken: string) => {
   const pages = await callJson<{ data: { id: string; name: string; access_token: string; instagram_business_account?: { id: string; username?: string } }[] }>(
     `${GRAPH}/me/accounts?fields=id,name,access_token,instagram_business_account{id,username}&access_token=${long.access_token}`,
   );
-  const wanted = process.env.META_PAGE_ID;
-  const page = wanted ? pages.data.find((p) => p.id === wanted) : pages.data.length === 1 ? pages.data[0] : undefined;
+  const byId = process.env.META_PAGE_ID;
+  const byName = process.env.META_PAGE_NAME?.trim().toLowerCase();
+  const page = byId
+    ? pages.data.find((p) => p.id === byId)
+    : byName
+      ? pages.data.find((p) => p.name.trim().toLowerCase() === byName)
+      : pages.data.length === 1
+        ? pages.data[0]
+        : undefined;
   if (!page) {
-    throw new Error(`Pick the Page: set META_PAGE_ID in .env to one of: ${pages.data.map((p) => `${p.name} (${p.id})`).join(", ") || "none found"}`);
+    throw new Error(`Pick the Page: set META_PAGE_NAME (or META_PAGE_ID) in .env to one of: ${pages.data.map((p) => `${p.name} (${p.id})`).join(", ") || "none found: did you allow the Page when generating the token?"}`);
   }
   writeSecret(TOKEN_FILE, {
     pageId: page.id,

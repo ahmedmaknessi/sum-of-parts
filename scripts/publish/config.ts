@@ -39,7 +39,7 @@ export const writeSecret = (name: string, value: unknown) => {
   writeFileSync(path.join(SECRETS, name), JSON.stringify(value, null, 2));
 };
 
-export const META_GRAPH_VERSION = process.env.META_GRAPH_VERSION ?? "v24.0";
+export const META_GRAPH_VERSION = process.env.META_GRAPH_VERSION ?? "v25.0";
 
 /** fetch that throws with the response body on any non-2xx, so API errors are readable. */
 export const call = async (url: string, init: RequestInit & { duplex?: "half" } = {}): Promise<Response> => {
