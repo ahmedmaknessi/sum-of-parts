@@ -144,3 +144,34 @@ export const uploadCaptions = async (videoId: string, srt: string) => {
     body: blob,
   });
 };
+
+type VideoStatus = { privacyStatus: string; publishAt?: string; [k: string]: unknown };
+
+const getStatus = async (videoId: string): Promise<VideoStatus> => {
+  const r = await callJson<{ items: { status: VideoStatus }[] }>(`${API}/videos?part=status&id=${videoId}`, { headers: await auth() });
+  if (!r.items?.length) throw new Error(`YouTube video ${videoId} not found`);
+  return r.items[0].status;
+};
+
+const putStatus = async (videoId: string, status: VideoStatus) => {
+  // videos.update replaces the whole status part: send back every writable field.
+  const { privacyStatus, publishAt, embeddable, license, publicStatsViewable, selfDeclaredMadeForKids, containsSyntheticMedia } = status;
+  await call(`${API}/videos?part=status`, {
+    method: "PUT",
+    headers: { ...(await auth()), "Content-Type": "application/json" },
+    body: JSON.stringify({ id: videoId, status: { privacyStatus, publishAt, embeddable, license, publicStatsViewable, selfDeclaredMadeForKids, containsSyntheticMedia } }),
+  });
+};
+
+/** Moves a scheduled (private + publishAt) video to a new publish time. */
+export const reschedule = async (videoId: string, publishAt: string) => {
+  const status = await getStatus(videoId);
+  if (status.privacyStatus !== "private") throw new Error(`${videoId} is already ${status.privacyStatus}: nothing to reschedule`);
+  await putStatus(videoId, { ...status, privacyStatus: "private", publishAt: new Date(publishAt).toISOString() });
+};
+
+/** Removes a video's publish time: it stays private and never goes public on its own. */
+export const unschedule = async (videoId: string) => {
+  const status = await getStatus(videoId);
+  await putStatus(videoId, { ...status, privacyStatus: "private", publishAt: undefined });
+};

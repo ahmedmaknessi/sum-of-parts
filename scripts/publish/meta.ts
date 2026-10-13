@@ -167,3 +167,18 @@ export const publishInstagramReel = async (post: Post, root: string, log: (m: st
   const media = await callJson<{ permalink?: string }>(`${GRAPH}/${published.id}?fields=permalink&access_token=${s.pageToken}`);
   return { id: published.id, url: media.permalink, containerId: container.id };
 };
+
+/** Moves a scheduled (not yet published) Page video or Reel to a new time. */
+export const rescheduleFacebook = async (videoId: string, publishAt: string) => {
+  const s = secrets();
+  await call(`${GRAPH}/${videoId}`, {
+    method: "POST",
+    body: new URLSearchParams({ scheduled_publish_time: String(unix(publishAt)), access_token: s.pageToken }),
+  });
+};
+
+/** Deletes a Page video (used to withdraw a scheduled one). */
+export const deleteFacebookVideo = async (videoId: string) => {
+  const s = secrets();
+  await call(`${GRAPH}/${videoId}?access_token=${s.pageToken}`, { method: "DELETE" });
+};

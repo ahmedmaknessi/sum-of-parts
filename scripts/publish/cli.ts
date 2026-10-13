@@ -412,6 +412,53 @@ const due = async () => {
 };
 
 // ---------------------------------------------------------------------------
+// Moving and withdrawing posts that are already scheduled (owner's request)
+// ---------------------------------------------------------------------------
+
+/**
+ * retime <slug> <id>=<ISO time> ...: moves posts. Scheduled YouTube and
+ * Facebook posts are moved on the platform; queued Instagram posts and
+ * drafts only in the queue. Approved-but-unscheduled posts lose their approval.
+ */
+const retime = async (slug: string, pairs: string[]) => {
+  const queue = loadQueue(slug);
+  for (const pair of pairs) {
+    const [id, iso] = pair.split("=");
+    const p = queue.posts.find((x) => x.id === id);
+    if (!p || !iso || !/([+-]\d\d:\d\d|Z)$/.test(iso) || Number.isNaN(Date.parse(iso))) throw new Error(`Bad argument "${pair}": use <id>=<ISO time with offset>`);
+    if (p.status === "posted" || p.status === "cancelled") throw new Error(`${id} is ${p.status}`);
+    if (p.status === "scheduled" && p.remote?.id) {
+      if (p.platform === "youtube") await youtube.reschedule(p.remote.id, iso);
+      else if (p.platform === "facebook") await meta.rescheduleFacebook(p.remote.id, iso);
+    }
+    const was = p.publishAt;
+    (p as { publishAt: string }).publishAt = iso;
+    // A queued or scheduled post keeps its status (the owner asked for the move); an approval waiting to be scheduled is voided by the change.
+    if (p.status === "approved") p.approvedHash = undefined;
+    note(p, `moved from ${was} to ${iso}`);
+    console.log(`${id}: ${fmtTime(iso, "America/New_York")} New York (${p.status})`);
+  }
+  saveQueue(queue);
+};
+
+/** cancel <slug> <id> ...: withdraws posts (YouTube: stays private; Facebook: deleted; Instagram: not posted). */
+const cancel = async (slug: string, ids: string[]) => {
+  const queue = loadQueue(slug);
+  for (const id of ids) {
+    const p = queue.posts.find((x) => x.id === id);
+    if (!p) throw new Error(`No post ${id}`);
+    if (p.status === "scheduled" && p.remote?.id) {
+      if (p.platform === "youtube") await youtube.unschedule(p.remote.id);
+      else if (p.platform === "facebook") await meta.deleteFacebookVideo(p.remote.id);
+    }
+    p.status = "cancelled";
+    note(p, "cancelled by the owner");
+    console.log(`${id}: cancelled`);
+  }
+  saveQueue(queue);
+};
+
+// ---------------------------------------------------------------------------
 // Reminders and secrets
 // ---------------------------------------------------------------------------
 
@@ -497,6 +544,10 @@ const main = async () => {
       return due();
     case "schedule-all":
       return scheduleAll();
+    case "retime":
+      return retime(slugArg(), args.slice(1));
+    case "cancel":
+      return cancel(slugArg(), args.slice(1));
     case "remind":
       return remind();
     case "auth":

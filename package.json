@@ -34,6 +34,8 @@
     "publish:approve": "tsx scripts/publish/cli.ts approve",
     "publish:schedule": "tsx scripts/publish/cli.ts schedule",
     "publish:due": "tsx scripts/publish/cli.ts due",
+    "publish:retime": "tsx scripts/publish/cli.ts retime",
+    "publish:cancel": "tsx scripts/publish/cli.ts cancel",
     "publish:auth": "tsx scripts/publish/cli.ts auth",
     "publish:check": "tsx scripts/publish/cli.ts check",
     "publish:secrets": "tsx scripts/publish/cli.ts secrets",
