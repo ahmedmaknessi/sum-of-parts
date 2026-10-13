@@ -29,10 +29,18 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:24:02.507Z proposed for approval"
-      ]
+        "2026-10-13T21:24:02.507Z proposed for approval",
+        "2026-10-13T21:27:28.421Z approved",
+        "2026-10-13T21:27:34.914Z scheduled on YouTube: https://youtu.be/b7oAA7AZb84"
+      ],
+      "approvedHash": "5ee96d48675b0543",
+      "approvedAt": "2026-10-13T21:27:28.421Z",
+      "remote": {
+        "id": "b7oAA7AZb84",
+        "url": "https://youtu.be/b7oAA7AZb84"
+      }
     },
     {
       "id": "ig-reel-01",
@@ -45,10 +53,14 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Animation on a dark navy background: \"$100\" appears small while a month counter ticks quickly, then a question mark, then \"$262,481\" lands in large type with an amber underline."
       ],
-      "status": "proposed",
+      "status": "queued",
       "log": [
-        "2026-10-13T21:24:02.509Z proposed for approval"
-      ]
+        "2026-10-13T21:24:02.509Z proposed for approval",
+        "2026-10-13T21:27:28.422Z approved",
+        "2026-10-13T21:28:04.486Z queued: the runner publishes it at its time"
+      ],
+      "approvedHash": "c34ac018c5a0e161",
+      "approvedAt": "2026-10-13T21:27:28.422Z"
     },
     {
       "id": "fb-clip-01",
@@ -58,10 +70,18 @@
       "publishAt": "2026-10-20T19:30:00-04:00",
       "text": "$100 a month for 40 years. Most people guess about $50,000. The real answer is $262,481, invested at 7% a year from 25 to 65.\n\nFull video in the comments. Education, not financial advice.\n\n#investing #money",
       "firstComment": "Full video: $100 a Month for 40 Years: The Math, Visualized 👉 {{youtube:yt-main}}",
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:24:02.509Z proposed for approval"
-      ]
+        "2026-10-13T21:24:02.509Z proposed for approval",
+        "2026-10-13T21:27:28.422Z approved",
+        "2026-10-13T21:27:46.371Z scheduled on Facebook: https://www.facebook.com/reel/955391844306221"
+      ],
+      "approvedHash": "38ade6582dea8b2e",
+      "approvedAt": "2026-10-13T21:27:28.422Z",
+      "remote": {
+        "id": "955391844306221",
+        "url": "https://www.facebook.com/reel/955391844306221"
+      }
     },
     {
       "id": "yt-short-02",
@@ -74,10 +94,18 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:24:02.509Z proposed for approval"
-      ]
+        "2026-10-13T21:24:02.509Z proposed for approval",
+        "2026-10-13T21:27:29.498Z approved",
+        "2026-10-13T21:27:36.300Z scheduled on YouTube: https://youtu.be/HIFnSCXSsE0"
+      ],
+      "approvedHash": "8c7669faf2487957",
+      "approvedAt": "2026-10-13T21:27:29.498Z",
+      "remote": {
+        "id": "HIFnSCXSsE0",
+        "url": "https://youtu.be/HIFnSCXSsE0"
+      }
     },
     {
       "id": "ig-reel-02",
@@ -90,10 +118,14 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Animation: two bars per year scroll by, a cream bar for the $1,200 you deposit and an amber bar for the growth earned. At year 11 the amber bar passes the cream one and a label reads \"Year 11: your money out-earns you\"."
       ],
-      "status": "proposed",
+      "status": "queued",
       "log": [
-        "2026-10-13T21:24:02.509Z proposed for approval"
-      ]
+        "2026-10-13T21:24:02.509Z proposed for approval",
+        "2026-10-13T21:27:29.498Z approved",
+        "2026-10-13T21:28:04.486Z queued: the runner publishes it at its time"
+      ],
+      "approvedHash": "eccd89255384c3dc",
+      "approvedAt": "2026-10-13T21:27:29.498Z"
     },
     {
       "id": "fb-clip-02",
@@ -103,10 +135,18 @@
       "publishAt": "2026-10-21T19:30:00-04:00",
       "text": "Invest $100 a month at 7% a year. In year 11, your investments earn $1,290 on their own, more than the $1,200 you put in. From then on, your money works harder than you do.\n\nFull video in the comments. Education, not financial advice.\n\n#investing #money",
       "firstComment": "Full video: $100 a Month for 40 Years: The Math, Visualized 👉 {{youtube:yt-main}}",
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:24:02.509Z proposed for approval"
-      ]
+        "2026-10-13T21:24:02.509Z proposed for approval",
+        "2026-10-13T21:27:29.498Z approved",
+        "2026-10-13T21:27:55.835Z scheduled on Facebook: https://www.facebook.com/reel/27835812789425852"
+      ],
+      "approvedHash": "738c6043b89a90b8",
+      "approvedAt": "2026-10-13T21:27:29.498Z",
+      "remote": {
+        "id": "27835812789425852",
+        "url": "https://www.facebook.com/reel/27835812789425852"
+      }
     },
     {
       "id": "yt-short-03",
@@ -119,10 +159,15 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "failed",
       "log": [
-        "2026-10-13T21:24:02.509Z proposed for approval"
-      ]
+        "2026-10-13T21:24:02.509Z proposed for approval",
+        "2026-10-13T21:27:30.460Z approved",
+        "2026-10-13T21:27:36.595Z failed: POST https://www.googleapis.com/upload/youtube/v3/videos -> 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"
+      ],
+      "approvedHash": "29bb135c032cc74e",
+      "approvedAt": "2026-10-13T21:27:30.460Z",
+      "error": "POST https://www.googleapis.com/upload/youtube/v3/videos -> 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n"
     },
     {
       "id": "ig-reel-03",
@@ -135,10 +180,14 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Animation: four vertical bars appear one by one, $17K, $35K, $70K and an amber $140K. The first three bars stack on top of each other next to the fourth and are still shorter. Label: \"Last 10 years > first 30 years\"."
       ],
-      "status": "proposed",
+      "status": "queued",
       "log": [
-        "2026-10-13T21:24:02.509Z proposed for approval"
-      ]
+        "2026-10-13T21:24:02.509Z proposed for approval",
+        "2026-10-13T21:27:30.460Z approved",
+        "2026-10-13T21:28:04.487Z queued: the runner publishes it at its time"
+      ],
+      "approvedHash": "871a8a85e79875dd",
+      "approvedAt": "2026-10-13T21:27:30.460Z"
     },
     {
       "id": "fb-clip-03",
@@ -148,10 +197,18 @@
       "publishAt": "2026-10-22T19:30:00-04:00",
       "text": "$100 a month at 7% for 40 years: the account grows by $17K, $35K, $70K, then $140K per decade. The last 10 years add more than the first 30 combined.\n\nFull video in the comments. Education, not financial advice.\n\n#investing #money",
       "firstComment": "Full video: $100 a Month for 40 Years: The Math, Visualized 👉 {{youtube:yt-main}}",
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:24:02.509Z proposed for approval"
-      ]
+        "2026-10-13T21:24:02.509Z proposed for approval",
+        "2026-10-13T21:27:30.461Z approved",
+        "2026-10-13T21:28:04.485Z scheduled on Facebook: https://www.facebook.com/reel/1797568371558591"
+      ],
+      "approvedHash": "837be7dc23d7e85c",
+      "approvedAt": "2026-10-13T21:27:30.461Z",
+      "remote": {
+        "id": "1797568371558591",
+        "url": "https://www.facebook.com/reel/1797568371558591"
+      }
     }
   ]
 }
