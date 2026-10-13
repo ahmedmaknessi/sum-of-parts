@@ -285,14 +285,15 @@ const schedule = async (queue: Queue, dryRun: boolean) => {
       for (const m of p.manual ?? []) report(`  - by hand: ${m}`);
     } catch (e) {
       const message = (e as Error).message;
-      if (p.platform === "youtube" && /quota/i.test(message)) {
-        // YouTube's daily quota resets at midnight Pacific: keep every remaining YouTube post approved and retry then.
-        const reset = nextPacificMidnight();
+      if (p.platform === "youtube" && /quota|uploadLimitExceeded/i.test(message)) {
+        // API quota: resets at midnight Pacific. Channel upload limit (uploadLimitExceeded): a rolling day.
+        // Either way, keep every remaining YouTube post approved and let the runner retry then.
+        const reset = /uploadLimitExceeded/.test(message) ? new Date(Date.now() + 24 * 3_600_000).toISOString() : nextPacificMidnight();
         for (const q of todo.filter((t) => t.platform === "youtube" && t.status === "approved")) {
           q.retryAfter = reset;
           note(q, `YouTube daily upload quota used up: retrying after ${reset}`);
         }
-        report(`- :hourglass: YouTube's daily upload quota is used up: the remaining YouTube posts stay approved and the runner retries after ${fmtTime(reset, OWNER_TZ)} (your time).`);
+        report(`- :hourglass: YouTube's daily upload limit is reached: the remaining YouTube posts stay approved and the runner retries after ${fmtTime(reset, OWNER_TZ)} (your time).`);
         saveQueue(queue);
         continue;
       }
