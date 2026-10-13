@@ -29,10 +29,18 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:23:34.724Z proposed for approval"
-      ]
+        "2026-10-13T21:23:34.724Z proposed for approval",
+        "2026-10-13T21:26:20.948Z approved",
+        "2026-10-13T21:26:29.382Z scheduled on YouTube: https://youtu.be/A57Lswv_wdo"
+      ],
+      "approvedHash": "2ca7e4406ed58a9a",
+      "approvedAt": "2026-10-13T21:26:20.948Z",
+      "remote": {
+        "id": "A57Lswv_wdo",
+        "url": "https://youtu.be/A57Lswv_wdo"
+      }
     },
     {
       "id": "ig-reel-02",
@@ -45,10 +53,14 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a bank ledger with \"Bank owns\" and \"Bank owes\" pages; a typewriter types \"Loan to Sarah: $20,000\" and \"Sarah's deposit: $20,000\", then a \"New money\" banner unrolls. Payment slips go into a shredder until the banner reads +$0, then a paper town where new loans pop up and repayments fold away."
       ],
-      "status": "proposed",
+      "status": "queued",
       "log": [
-        "2026-10-13T21:23:34.726Z proposed for approval"
-      ]
+        "2026-10-13T21:23:34.726Z proposed for approval",
+        "2026-10-13T21:26:21.791Z approved",
+        "2026-10-13T21:26:55.546Z queued: the runner publishes it at its time"
+      ],
+      "approvedHash": "16de7a43765957fd",
+      "approvedAt": "2026-10-13T21:26:21.791Z"
     },
     {
       "id": "fb-clip-02",
@@ -58,10 +70,18 @@
       "publishAt": "2026-10-14T19:30:00-04:00",
       "text": "Banks don't lend out your savings. When they approve a loan, they type brand new money into existence, and when the loan is repaid, that money disappears.\n\nSource: Bank of England, 2014 (the $20,000 car loan is an example).\nFull video in the comments. Education, not financial advice.\n\n#money #banking",
       "firstComment": "Full video: The Money in Your Bank Account Doesn't Exist 👉 {{youtube:yt-main}}",
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:23:34.726Z proposed for approval"
-      ]
+        "2026-10-13T21:23:34.726Z proposed for approval",
+        "2026-10-13T21:26:21.791Z approved",
+        "2026-10-13T21:26:44.763Z scheduled on Facebook: https://www.facebook.com/reel/1763809081562100"
+      ],
+      "approvedHash": "04da0b6a5b48af2a",
+      "approvedAt": "2026-10-13T21:26:21.791Z",
+      "remote": {
+        "id": "1763809081562100",
+        "url": "https://www.facebook.com/reel/1763809081562100"
+      }
     },
     {
       "id": "yt-short-03",
@@ -74,10 +94,18 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:23:34.726Z proposed for approval"
-      ]
+        "2026-10-13T21:23:34.726Z proposed for approval",
+        "2026-10-13T21:26:22.588Z approved",
+        "2026-10-13T21:26:31.300Z scheduled on YouTube: https://youtu.be/qAaKtE1ToDc"
+      ],
+      "approvedHash": "64f5294eb613772f",
+      "approvedAt": "2026-10-13T21:26:22.588Z",
+      "remote": {
+        "id": "qAaKtE1ToDc",
+        "url": "https://youtu.be/qAaKtE1ToDc"
+      }
     },
     {
       "id": "ig-reel-03",
@@ -90,10 +118,14 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a grid of 100 squares; 11 turn into banknotes and the rest turn amber, with the label \"9 in 10 never printed\", then a smaller UK grid labelled 97%. A balance card flips over to read \"IOU\", and an empty box labelled \"Required reserves\" sits next to a big \"0%\"."
       ],
-      "status": "proposed",
+      "status": "queued",
       "log": [
-        "2026-10-13T21:23:34.726Z proposed for approval"
-      ]
+        "2026-10-13T21:23:34.726Z proposed for approval",
+        "2026-10-13T21:26:23.531Z approved",
+        "2026-10-13T21:26:55.546Z queued: the runner publishes it at its time"
+      ],
+      "approvedHash": "10daa5b71777b66f",
+      "approvedAt": "2026-10-13T21:26:23.531Z"
     },
     {
       "id": "yt-short-04",
@@ -106,10 +138,18 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:23:34.726Z proposed for approval"
-      ]
+        "2026-10-13T21:23:34.726Z proposed for approval",
+        "2026-10-13T21:26:24.524Z approved",
+        "2026-10-13T21:26:33.450Z scheduled on YouTube: https://youtu.be/OdHoV74gkYM"
+      ],
+      "approvedHash": "aba0bfe954ca3ee3",
+      "approvedAt": "2026-10-13T21:26:24.524Z",
+      "remote": {
+        "id": "OdHoV74gkYM",
+        "url": "https://youtu.be/OdHoV74gkYM"
+      }
     },
     {
       "id": "ig-reel-04",
@@ -122,10 +162,14 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: 1930s banks closing, then a bank labelled SVB; a quarter of its deposit strip is torn away by tiny figures, a long queue forms, and a \"CLOSED: March 10, 2023\" sign is stuck on its doors. Then a shield reading \"$250,000 per depositor, per bank\", and a giant second shield covering everything."
       ],
-      "status": "proposed",
+      "status": "queued",
       "log": [
-        "2026-10-13T21:23:34.726Z proposed for approval"
-      ]
+        "2026-10-13T21:23:34.726Z proposed for approval",
+        "2026-10-13T21:26:25.214Z approved",
+        "2026-10-13T21:26:55.547Z queued: the runner publishes it at its time"
+      ],
+      "approvedHash": "e30247edfa951844",
+      "approvedAt": "2026-10-13T21:26:25.214Z"
     },
     {
       "id": "fb-clip-04",
@@ -135,10 +179,18 @@
       "publishAt": "2026-10-18T19:30:00-04:00",
       "text": "On March 9, 2023, Silicon Valley Bank's customers asked for $42 billion in one day: a quarter of all its deposits. The next day, the bank was shut down. Over 94% of its deposits were above the FDIC's $250,000 limit.\n\nSources: Federal Reserve OIG (2023), FDIC.\nFull video in the comments. Education, not financial advice.\n\n#banking #svb",
       "firstComment": "Full video: The Money in Your Bank Account Doesn't Exist 👉 {{youtube:yt-main}}",
-      "status": "proposed",
+      "status": "scheduled",
       "log": [
-        "2026-10-13T21:23:34.726Z proposed for approval"
-      ]
+        "2026-10-13T21:23:34.726Z proposed for approval",
+        "2026-10-13T21:26:25.214Z approved",
+        "2026-10-13T21:26:55.545Z scheduled on Facebook: https://www.facebook.com/reel/2115113786031323"
+      ],
+      "approvedHash": "af1a520c21e5d1e6",
+      "approvedAt": "2026-10-13T21:26:25.214Z",
+      "remote": {
+        "id": "2115113786031323",
+        "url": "https://www.facebook.com/reel/2115113786031323"
+      }
     }
   ]
 }
