@@ -36,7 +36,10 @@
         "Post and pin the comment: Quick check of the numbers: US M2 went from $15.5 trillion (Feb 2020) to $21.8 trillion (Mar 2022), up 40.6%. That's the money supply, not prices: prices peaked at 9.1% a year in June 2022. Zimbabwe peaked at 79.6 billion percent a MONTH. /  / Next we start \"How They Take Your Money\". Episode 1: sportsbooks. What should episode 2 be? 👇",
         "Video 02: replace 'coming soon' in its description and end screen with this video"
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.952Z proposed for approval"
+      ]
     },
     {
       "id": "fb-teaser",
@@ -51,7 +54,10 @@
         "Pin the first comment",
         "Optional: set thumbnail A as the video thumbnail"
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "yt-short-02",
@@ -64,7 +70,10 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "ig-reel-02",
@@ -77,7 +86,10 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a photo of the real Zimbabwe 100 trillion dollar note slides in, its 15-digit number flips into place, and an amber tag reads \"About $30\". A clock spins while a loaf's price tag doubles, a printing press piles up notes, and the number 79,600,000,000% lands on screen. Then government, parliament and a central bank are kept apart by a rope fence until it's cut and notes flood the screen."
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "fb-clip-02",
@@ -87,7 +99,10 @@
       "publishAt": "2026-10-23T13:00:00-04:00",
       "text": "Zimbabwe's 100 trillion dollar note (January 2009) was worth about $30 on its first day. At the peak, prices doubled every 24.7 hours.\n\nSources: BBC News (2009); Hanke and Kwok, Cato Journal (2009).\nFull video in the comments. Education, not financial advice.\n\n#money #zimbabwe",
       "firstComment": "Full video: Why Can't Countries Just Print More Money? 👉 {{youtube:yt-main}}",
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "yt-short-01",
@@ -100,7 +115,10 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "ig-reel-01",
@@ -113,7 +131,10 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a globe shrinks to a dot and a paper island rises from the sea with a palm tree and a market table. Ten loaves drop onto the table with $1 tags and ten green notes line up above; a small printing press adds ten amber notes, the tags flip to $2, and the notes chase the loaves around the island. Then a balance scale weighs a banknote against bread, a house, a phone and a doctor."
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "fb-clip-01",
@@ -123,7 +144,10 @@
       "publishAt": "2026-10-26T13:00:00-04:00",
       "text": "Why can't a country just print more money? Picture an island with 10 loaves and 10 dollars. Print 10 more dollars: everyone has twice the money, there are still 10 loaves, and the price heads to $2. Nobody got richer. You can print money. You can't print bread.\n\n(Simplified example.) Full video in the comments. Education, not financial advice.\n\n#money #inflation",
       "firstComment": "Full video: Why Can't Countries Just Print More Money? 👉 {{youtube:yt-main}}",
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "yt-short-03",
@@ -136,7 +160,10 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "ig-reel-03",
@@ -149,7 +176,10 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a map of the US next to a stack of paper money that grows from $15.5T to $21.8T, with an amber \"+40.6%\" tag. A thermometer rises to 9.1% while a second one shoots off the top for Zimbabwe. Four numbered cards flip over: Timing, Dollar demand, Own currency and Trust, each with a small paper scene."
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "fb-clip-03",
@@ -159,7 +189,10 @@
       "publishAt": "2026-10-29T13:00:00-04:00",
       "text": "The US money supply grew 40.6% in two years ($15.5T to $21.8T). Inflation hit 9.1%, the highest in 40 years, but not hyperinflation. Here are the four reasons the US didn't become Zimbabwe.\n\nSources: Federal Reserve H.6 via FRED; BLS; IMF COFER.\nFull video in the comments. Education, not financial advice.\n\n#money #inflation",
       "firstComment": "Full video: Why Can't Countries Just Print More Money? 👉 {{youtube:yt-main}}",
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "yt-short-04",
@@ -172,7 +205,10 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "ig-reel-04",
@@ -185,7 +221,10 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a map of Zimbabwe, a printing press feeding a government building while a factory's crates shrink, then a wallet whose banknote shrinks from morning to evening. A map of the US with a growing money stack, then a paper money machine whose rate dial turns up and a brake pedal presses down. Two strips, Economy and Money, grow together at 2% a year until Money shoots up and tears."
       ],
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     },
     {
       "id": "fb-clip-04",
@@ -195,7 +234,10 @@
       "publishAt": "2026-11-01T13:00:00-05:00",
       "text": "Printing money isn't the danger. Printing it much faster than the economy can grow is. That's why most central banks aim for about 2% inflation a year, and use interest rates as the brake.\n\nSources: Hanke and Kwok (2009); Federal Reserve; BLS.\nFull video in the comments. Education, not financial advice.\n\n#money #economics",
       "firstComment": "Full video: Why Can't Countries Just Print More Money? 👉 {{youtube:yt-main}}",
-      "status": "draft"
+      "status": "proposed",
+      "log": [
+        "2026-10-13T11:24:54.954Z proposed for approval"
+      ]
     }
   ]
 }
