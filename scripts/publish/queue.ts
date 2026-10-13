@@ -12,6 +12,7 @@
  * - queued: Instagram has no API scheduling: the runner (`publish:due`, every
  *   15 minutes on GitHub Actions) publishes it when its time comes.
  * - posted / failed: done, or stopped with the error kept on the post.
+ * - cancelled: withdrawn by the owner (e.g. it was already posted by hand).
  */
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
@@ -20,7 +21,7 @@ import path from "node:path";
 export type Platform = "youtube" | "instagram" | "facebook";
 /** youtube: video | short. instagram: reel. facebook: reel (3 to 90 s) | video (any length). */
 export type Kind = "video" | "short" | "reel";
-export type Status = "draft" | "proposed" | "approved" | "scheduled" | "queued" | "posted" | "failed";
+export type Status = "draft" | "proposed" | "approved" | "scheduled" | "queued" | "posted" | "failed" | "cancelled";
 
 export type Post = {
   /** Short, unique within the video: "yt-main", "ig-short-02"... */
@@ -62,6 +63,8 @@ export type Post = {
   /** What the platform returned: ids and links. */
   remote?: { id?: string; url?: string; containerId?: string; commentId?: string };
   error?: string;
+  /** YouTube's daily upload quota ran out: the runner retries scheduling after this time. */
+  retryAfter?: string;
   log?: string[];
 };
 

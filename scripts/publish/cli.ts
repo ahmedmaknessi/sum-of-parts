@@ -223,7 +223,8 @@ const approveMerged = (slug: string) => {
 const schedule = async (queue: Queue, dryRun: boolean) => {
   // YouTube first: other posts link to its videos.
   const order = { youtube: 0, facebook: 1, instagram: 2 } as const;
-  const todo = queue.posts.filter(isApproved).sort((a, b) => order[a.platform] - order[b.platform]);
+  const waiting = (p: Post) => p.retryAfter !== undefined && Date.parse(p.retryAfter) > Date.now();
+  const todo = queue.posts.filter((p) => isApproved(p) && !waiting(p)).sort((a, b) => order[a.platform] - order[b.platform]);
   report(`### Scheduling: ${queue.slug}`);
   if (todo.length === 0) return report("Nothing approved to schedule.");
 
@@ -283,12 +284,47 @@ const schedule = async (queue: Queue, dryRun: boolean) => {
       report(`- ${p.id}: ${p.status}, ${when(p.publishAt)}${p.remote?.url ? `: ${p.remote.url}` : ""}`);
       for (const m of p.manual ?? []) report(`  - by hand: ${m}`);
     } catch (e) {
+      const message = (e as Error).message;
+      if (p.platform === "youtube" && /quota/i.test(message)) {
+        // YouTube's daily quota resets at midnight Pacific: keep every remaining YouTube post approved and retry then.
+        const reset = nextPacificMidnight();
+        for (const q of todo.filter((t) => t.platform === "youtube" && t.status === "approved")) {
+          q.retryAfter = reset;
+          note(q, `YouTube daily upload quota used up: retrying after ${reset}`);
+        }
+        report(`- :hourglass: YouTube's daily upload quota is used up: the remaining YouTube posts stay approved and the runner retries after ${fmtTime(reset, OWNER_TZ)} (your time).`);
+        saveQueue(queue);
+        continue;
+      }
       p.status = "failed";
-      p.error = (e as Error).message;
+      p.error = message;
       note(p, `failed: ${p.error}`);
       report(`- :x: **${p.id}** failed: ${p.error}`);
     }
     saveQueue(queue);
+  }
+};
+
+/** Next midnight in America/Los_Angeles (when YouTube's quota resets), plus a 10-minute margin. */
+const nextPacificMidnight = (): string => {
+  const now = Date.now();
+  for (let h = 1; h <= 26; h++) {
+    const t = new Date(now + h * 3_600_000);
+    const hour = Number(t.toLocaleString("en-US", { timeZone: "America/Los_Angeles", hour: "2-digit", hour12: false }));
+    if (hour === 0 || hour === 24) {
+      t.setUTCMinutes(10, 0, 0);
+      return t.toISOString();
+    }
+  }
+  return new Date(now + 24 * 3_600_000).toISOString();
+};
+
+/** Every video's approved posts (the runner's retry after a quota stop, or after the accounts were connected). */
+const scheduleAll = async () => {
+  for (const slug of readdirSync(path.join(root, "src", "videos")).filter((s) => existsSync(queuePath(s)))) {
+    const queue = loadQueue(slug);
+    const ready = queue.posts.some((p) => isApproved(p) && !(p.retryAfter && Date.parse(p.retryAfter) > Date.now()));
+    if (ready) await schedule(queue, false);
   }
 };
 
@@ -459,6 +495,8 @@ const main = async () => {
       return schedule(loadQueue(slugArg()), args.includes("--dry-run"));
     case "due":
       return due();
+    case "schedule-all":
+      return scheduleAll();
     case "remind":
       return remind();
     case "auth":

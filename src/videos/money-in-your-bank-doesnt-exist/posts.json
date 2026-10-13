@@ -1,0 +1,120 @@
+{
+  "slug": "money-in-your-bank-doesnt-exist",
+  "posts": [
+    {
+      "id": "yt-main",
+      "platform": "youtube",
+      "kind": "video",
+      "file": "out/money-in-your-bank-doesnt-exist.mp4",
+      "publishAt": "2026-10-08T00:00:00Z",
+      "title": "The Money in Your Bank Account Doesn't Exist",
+      "text": "(posted by hand)",
+      "status": "posted",
+      "remote": {
+        "id": "uGppYuuZICw",
+        "url": "https://youtu.be/uGppYuuZICw"
+      },
+      "log": [
+        "already public since 2026-10-08 (posted by hand)"
+      ]
+    },
+    {
+      "id": "yt-short-02",
+      "platform": "youtube",
+      "kind": "short",
+      "file": "out/shorts/money-in-your-bank-doesnt-exist-short-02-typed.mp4",
+      "publishAt": "2026-10-16T12:00:00-04:00",
+      "title": "Banks Create Money by Typing #shorts",
+      "text": "When a bank approves a loan, it doesn't take the money from anyone's account. It makes two entries: you owe the bank, and your account goes up. New money, typed into existence. And when the loan is repaid, that money disappears again. (Source: Bank of England, 2014. Sarah's $20,000 car loan is an example.)\n\nFull explanation: the related video linked above.\nEducation only, not financial advice.\n\n#money #banking #economics",
+      "manual": [
+        "Set Related video to the main video (YouTube Studio > Short > Related video)"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ig-reel-02",
+      "platform": "instagram",
+      "kind": "reel",
+      "file": "out/shorts/money-in-your-bank-doesnt-exist-short-02-typed.mp4",
+      "publishAt": "2026-10-16T12:30:00-04:00",
+      "text": "Banks don't lend out your savings. They type new money. ⌨️\n\nWhen a bank approves a loan, it makes two entries: you owe the bank, and your account goes up. That money didn't exist a second ago. And when the loan is repaid, the money disappears again.\n\nSource: Bank of England, 2014. Sarah's car loan is an example.\nFull video on YouTube (link in bio). Education, not financial advice.\n\n#money #banking #economics #finance #moneyfacts",
+      "cover": "out/covers/money-in-your-bank-doesnt-exist-cover-02.png",
+      "manual": [
+        "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a bank ledger with \"Bank owns\" and \"Bank owes\" pages; a typewriter types \"Loan to Sarah: $20,000\" and \"Sarah's deposit: $20,000\", then a \"New money\" banner unrolls. Payment slips go into a shredder until the banner reads +$0, then a paper town where new loans pop up and repayments fold away."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "fb-clip-02",
+      "platform": "facebook",
+      "kind": "reel",
+      "file": "out/shorts/money-in-your-bank-doesnt-exist-short-02-typed.mp4",
+      "publishAt": "2026-10-16T13:00:00-04:00",
+      "text": "Banks don't lend out your savings. When they approve a loan, they type brand new money into existence, and when the loan is repaid, that money disappears.\n\nSource: Bank of England, 2014 (the $20,000 car loan is an example).\nFull video in the comments. Education, not financial advice.\n\n#money #banking",
+      "firstComment": "Full video: The Money in Your Bank Account Doesn't Exist 👉 {{youtube:yt-main}}",
+      "status": "draft"
+    },
+    {
+      "id": "yt-short-03",
+      "platform": "youtube",
+      "kind": "short",
+      "file": "out/shorts/money-in-your-bank-doesnt-exist-short-03-never-printed.mp4",
+      "publishAt": "2026-10-20T12:00:00-04:00",
+      "title": "9 in 10 Dollars Were Never Printed #shorts",
+      "text": "US money (M2) is about $23.2 trillion. Physical cash is about $2.5 trillion of it. Roughly 9 in 10 dollars exist only as numbers in bank accounts. In the UK, the Bank of England put it at 97%. Your balance is an IOU from your bank, and since March 2020 US banks have been required to keep 0% in reserve.\nSources: Federal Reserve H.6 (July 2026), Bank of England (2014), Regulation D (2020).\n\nFull explanation: the related video linked above.\nEducation only, not financial advice.\n\n#money #banking #economics",
+      "manual": [
+        "Set Related video to the main video (YouTube Studio > Short > Related video)"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ig-reel-03",
+      "platform": "instagram",
+      "kind": "reel",
+      "file": "out/shorts/money-in-your-bank-doesnt-exist-short-03-never-printed.mp4",
+      "publishAt": "2026-10-20T12:30:00-04:00",
+      "text": "9 in 10 dollars have never been printed. 💵\n\nUS money (M2) is about $23.2 trillion. Physical cash is about $2.5 trillion of it. The rest is just numbers in bank accounts: your balance is an IOU from your bank. And since March 2020, US banks are required to keep 0% in reserve.\n\nSources: Federal Reserve H.6 (July 2026), Bank of England (2014), Regulation D (2020).\nFull video on YouTube (link in bio). Education, not financial advice.\n\n#money #economics #banking #finance #moneyfacts",
+      "cover": "out/covers/money-in-your-bank-doesnt-exist-cover-03.png",
+      "manual": [
+        "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a grid of 100 squares; 11 turn into banknotes and the rest turn amber, with the label \"9 in 10 never printed\", then a smaller UK grid labelled 97%. A balance card flips over to read \"IOU\", and an empty box labelled \"Required reserves\" sits next to a big \"0%\"."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "yt-short-04",
+      "platform": "youtube",
+      "kind": "short",
+      "file": "out/shorts/money-in-your-bank-doesnt-exist-short-04-bank-run.mp4",
+      "publishAt": "2026-10-24T12:00:00-04:00",
+      "title": "The $42 Billion Bank Run #shorts",
+      "text": "On March 9, 2023, Silicon Valley Bank's customers asked for $42 billion in a single day, a quarter of its deposits. $100 billion more was waiting the next morning. The bank was shut down that same day. Over 94% of its deposits were above the FDIC's $250,000 limit, and in the end regulators covered everyone.\nSources: Federal Reserve OIG, Material Loss Review of SVB (2023); FDIC; Treasury/Fed/FDIC joint statement (12 March 2023).\n\nFull explanation: the related video linked above.\nEducation only, not financial advice.\n\n#money #banking #svb",
+      "manual": [
+        "Set Related video to the main video (YouTube Studio > Short > Related video)"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ig-reel-04",
+      "platform": "instagram",
+      "kind": "reel",
+      "file": "out/shorts/money-in-your-bank-doesnt-exist-short-04-bank-run.mp4",
+      "publishAt": "2026-10-24T12:30:00-04:00",
+      "text": "$42 billion in ONE day. 🏃‍♂️🏦\n\nOn March 9, 2023, Silicon Valley Bank's customers asked to withdraw a quarter of all its deposits. $100 billion more was waiting the next morning. The bank was shut down that same day. Over 94% of its deposits were above the FDIC's $250,000 limit.\n\nSources: Federal Reserve OIG (2023), FDIC.\nFull video on YouTube (link in bio). Education, not financial advice.\n\n#svb #banking #money #economics #finance",
+      "cover": "out/covers/money-in-your-bank-doesnt-exist-cover-04.png",
+      "manual": [
+        "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: 1930s banks closing, then a bank labelled SVB; a quarter of its deposit strip is torn away by tiny figures, a long queue forms, and a \"CLOSED: March 10, 2023\" sign is stuck on its doors. Then a shield reading \"$250,000 per depositor, per bank\", and a giant second shield covering everything."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "fb-clip-04",
+      "platform": "facebook",
+      "kind": "reel",
+      "file": "out/shorts/money-in-your-bank-doesnt-exist-short-04-bank-run.mp4",
+      "publishAt": "2026-10-24T13:00:00-04:00",
+      "text": "On March 9, 2023, Silicon Valley Bank's customers asked for $42 billion in one day: a quarter of all its deposits. The next day, the bank was shut down. Over 94% of its deposits were above the FDIC's $250,000 limit.\n\nSources: Federal Reserve OIG (2023), FDIC.\nFull video in the comments. Education, not financial advice.\n\n#banking #svb",
+      "firstComment": "Full video: The Money in Your Bank Account Doesn't Exist 👉 {{youtube:yt-main}}",
+      "status": "draft"
+    }
+  ]
+}

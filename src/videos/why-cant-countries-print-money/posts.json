@@ -36,17 +36,18 @@
         "Post and pin the comment: Quick check of the numbers: US M2 went from $15.5 trillion (Feb 2020) to $21.8 trillion (Mar 2022), up 40.6%. That's the money supply, not prices: prices peaked at 9.1% a year in June 2022. Zimbabwe peaked at 79.6 billion percent a MONTH. /  / Next we start \"How They Take Your Money\". Episode 1: sportsbooks. What should episode 2 be? 👇",
         "Video 02: replace 'coming soon' in its description and end screen with this video"
       ],
-      "status": "scheduled",
+      "status": "posted",
       "log": [
         "2026-10-13T11:24:54.952Z proposed for approval",
         "2026-10-13T20:53:08.367Z approved",
-        "2026-10-13T20:53:24.834Z scheduled on YouTube: https://youtu.be/hk-QCduHmMQ"
+        "2026-10-13T20:53:24.834Z scheduled on YouTube: https://youtu.be/hk-QCduHmMQ",
+        "2026-10-13T21:08:10.000Z already public since 2026-10-09 (posted by hand): links now point to HMvfMdlIICg; the scheduler's upload hk-QCduHmMQ is a duplicate"
       ],
       "approvedHash": "327d50c28bf45dd4",
       "approvedAt": "2026-10-13T20:53:08.367Z",
       "remote": {
-        "id": "hk-QCduHmMQ",
-        "url": "https://youtu.be/hk-QCduHmMQ"
+        "id": "HMvfMdlIICg",
+        "url": "https://youtu.be/HMvfMdlIICg"
       }
     },
     {

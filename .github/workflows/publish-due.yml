@@ -21,6 +21,9 @@ jobs:
     timeout-minutes: 45
     env:
       GH_TOKEN: ${{ github.token }}
+      GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
       META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
       META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
       META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
@@ -31,14 +34,26 @@ jobs:
         id: check
         run: |
           # Queued Instagram posts, or scheduled posts still waiting to go live (and get their first comment).
-          if grep -lqE '"status": "(queued|scheduled)"' src/videos/*/posts.json 2>/dev/null; then
+          if grep -lqE '"status": "(queued|scheduled|approved)"' src/videos/*/posts.json 2>/dev/null; then
             echo "work=yes" >> "$GITHUB_OUTPUT"
+          fi
+          # Approved but not yet scheduled (e.g. YouTube's daily quota ran out): retry them too.
+          if grep -lqE '"status": "approved"' src/videos/*/posts.json 2>/dev/null; then
+            echo "retry=yes" >> "$GITHUB_OUTPUT"
           fi
 
       - uses: actions/setup-node@v4
         if: steps.check.outputs.work == 'yes'
         with:
           node-version: 22
+
+      - name: ffmpeg (video lengths)
+        if: steps.check.outputs.retry == 'yes'
+        run: command -v ffprobe || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
+
+      - name: Retry approved posts that are not scheduled yet
+        if: steps.check.outputs.retry == 'yes'
+        run: npx --yes tsx@4.23.15 scripts/publish/cli.ts schedule-all
 
       - name: Publish what is due
         if: steps.check.outputs.work == 'yes'
