@@ -81,7 +81,7 @@
       "platform": "youtube",
       "kind": "short",
       "file": "out/shorts/why-cant-countries-print-money-short-02-note.mp4",
-      "publishAt": "2026-10-23T12:00:00-04:00",
+      "publishAt": "2026-10-13T19:00:00-04:00",
       "title": "This $100 Trillion Note Was Worth $30 #shorts",
       "text": "Zimbabwe issued a 100 trillion dollar note in January 2009. On its first day it was worth about 30 US dollars. At the peak, prices rose 79.6 billion percent a month and doubled every 24.7 hours. Who decides how much money gets printed, and why is it kept away from politicians?\nSources: BBC News (2009); Hanke and Kwok, Cato Journal (2009).\n\nFull explanation: the related video linked above.\nEducation only, not financial advice.\n\n#money #zimbabwe #economics",
       "manual": [
@@ -91,7 +91,8 @@
       "log": [
         "2026-10-13T11:24:54.954Z proposed for approval",
         "2026-10-13T20:53:10.735Z approved",
-        "2026-10-13T20:53:26.490Z scheduled on YouTube: https://youtu.be/wSLTyfBD8Rs"
+        "2026-10-13T20:53:26.490Z scheduled on YouTube: https://youtu.be/wSLTyfBD8Rs",
+        "2026-10-13T21:18:48.139Z moved from 2026-10-23T12:00:00-04:00 to 2026-10-13T19:00:00-04:00"
       ],
       "approvedHash": "ff3ed59efd6b7614",
       "approvedAt": "2026-10-13T20:53:10.735Z",
@@ -105,7 +106,7 @@
       "platform": "instagram",
       "kind": "reel",
       "file": "out/shorts/why-cant-countries-print-money-short-02-note.mp4",
-      "publishAt": "2026-10-23T12:30:00-04:00",
+      "publishAt": "2026-10-13T19:15:00-04:00",
       "text": "This note says 100 TRILLION dollars. On its first day it was worth about $30. 💸\n\nZimbabwe, January 2009. At the peak, prices rose 79.6 billion percent a month and doubled every 24.7 hours. Get paid in the morning, and by the evening your money buys a fraction of what it did.\n\nSources: BBC News (2009); Hanke and Kwok, Cato Journal (2009).\nFull video on YouTube (link in bio). Education, not financial advice.\n\n#zimbabwe #money #inflation #economics #history",
       "cover": "out/covers/why-cant-countries-print-money-cover-02.png",
       "manual": [
@@ -115,7 +116,8 @@
       "log": [
         "2026-10-13T11:24:54.954Z proposed for approval",
         "2026-10-13T20:53:11.626Z approved",
-        "2026-10-13T20:53:55.277Z queued: the runner publishes it at its time"
+        "2026-10-13T20:53:55.277Z queued: the runner publishes it at its time",
+        "2026-10-13T21:18:48.158Z moved from 2026-10-23T12:30:00-04:00 to 2026-10-13T19:15:00-04:00"
       ],
       "approvedHash": "0295b814df4d4e83",
       "approvedAt": "2026-10-13T20:53:11.626Z"
@@ -125,14 +127,15 @@
       "platform": "facebook",
       "kind": "video",
       "file": "out/shorts/why-cant-countries-print-money-short-02-note.mp4",
-      "publishAt": "2026-10-23T13:00:00-04:00",
+      "publishAt": "2026-10-13T19:30:00-04:00",
       "text": "Zimbabwe's 100 trillion dollar note (January 2009) was worth about $30 on its first day. At the peak, prices doubled every 24.7 hours.\n\nSources: BBC News (2009); Hanke and Kwok, Cato Journal (2009).\nFull video in the comments. Education, not financial advice.\n\n#money #zimbabwe",
       "firstComment": "Full video: Why Can't Countries Just Print More Money? 👉 {{youtube:yt-main}}",
       "status": "scheduled",
       "log": [
         "2026-10-13T11:24:54.954Z proposed for approval",
         "2026-10-13T20:53:11.626Z approved",
-        "2026-10-13T20:53:42.706Z scheduled on Facebook: https://www.facebook.com/1392440267288475/videos/1097506002995989"
+        "2026-10-13T20:53:42.706Z scheduled on Facebook: https://www.facebook.com/1392440267288475/videos/1097506002995989",
+        "2026-10-13T21:18:50.503Z moved from 2026-10-23T13:00:00-04:00 to 2026-10-13T19:30:00-04:00"
       ],
       "approvedHash": "35afe040184c83e0",
       "approvedAt": "2026-10-13T20:53:11.626Z",
