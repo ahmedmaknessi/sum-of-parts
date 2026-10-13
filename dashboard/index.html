@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sum of Parts · Publishing</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Brand tokens (src/brand/tokens.ts): navy board, cream text, amber for the one thing that matters. */
+    :root {
+      --navy: #10162B; --cream: #F3EBDD; --amber: #F2A93B; --teal: #3FB8A0; --blue: #6C8CFF; --coral: #E9684B;
+      --muted: #26314F; --muted-strong: #3A4870;
+      --card: #172040; --line: #26314F;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--navy); color: var(--cream); font-family: Outfit, system-ui, sans-serif; font-weight: 500; line-height: 1.45; }
+    a { color: inherit; }
+    main { max-width: 1080px; margin: 0 auto; padding: 28px 16px 64px; }
+    header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; margin-bottom: 24px; }
+    h1 { font-weight: 700; font-size: 28px; margin: 0; letter-spacing: -0.01em; }
+    h1 span { color: var(--amber); }
+    h2 { font-weight: 700; font-size: 18px; margin: 32px 0 12px; }
+    .muted { opacity: .62; }
+    .small { font-size: 14px; }
+    .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+    .tile { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+    .tile .n { font-weight: 700; font-size: 30px; line-height: 1.1; }
+    .tile .l { font-size: 14px; opacity: .7; }
+    .tile.alert .n { color: var(--coral); }
+    .tile.key .n { color: var(--amber); }
+    .panel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px; }
+    .row { display: grid; grid-template-columns: 112px 1fr auto; gap: 6px 14px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line); }
+    .row:first-child { border-top: 0; }
+    .when { font-size: 14px; }
+    .when b { display: block; font-size: 15px; }
+    .what { min-width: 0; }
+    .what .t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .what .sub { font-size: 13px; opacity: .62; }
+    .right { display: flex; align-items: center; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
+    .chip { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+    .p-youtube { color: var(--coral); } .p-instagram { color: var(--blue); } .p-facebook { color: var(--teal); }
+    .s { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+    .s-live { background: var(--teal); color: var(--navy); }
+    .s-scheduled, .s-queued { background: var(--muted-strong); color: var(--cream); }
+    .s-approved, .s-proposed, .s-draft { background: var(--muted); color: var(--cream); }
+    .s-failed { background: var(--coral); color: var(--navy); }
+    .stats { font-size: 13px; opacity: .8; white-space: nowrap; }
+    .need { padding: 12px 0; border-top: 1px solid var(--line); }
+    .need:first-child { border-top: 0; }
+    .need b { color: var(--amber); }
+    .need.bad b { color: var(--coral); }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 12px; }
+    .filters button { font: inherit; font-size: 14px; color: var(--cream); background: transparent; border: 1px solid var(--muted-strong); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+    .filters button[aria-pressed="true"] { background: var(--cream); color: var(--navy); border-color: var(--cream); }
+    details.video { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px; margin-bottom: 12px; }
+    details.video summary { cursor: pointer; padding: 12px 0; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    details.video summary::-webkit-details-marker { display: none; }
+    .empty { padding: 14px 0; opacity: .6; }
+    footer { margin-top: 40px; font-size: 13px; opacity: .5; }
+    @media (max-width: 560px) {
+      .row { grid-template-columns: 1fr; gap: 6px; }
+      .when { display: flex; flex-wrap: wrap; gap: 0 8px; align-items: baseline; }
+      .when b { display: inline; }
+      .what .t { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+      .right { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Sum of <span>Parts</span> · Publishing</h1>
+    <div class="small muted" id="updated">Loading…</div>
+  </header>
+
+  <section class="tiles" id="tiles"></section>
+
+  <h2>Needs you</h2>
+  <div class="panel" id="needs"></div>
+
+  <h2>Coming up</h2>
+  <div class="filters" id="filters"></div>
+  <div class="panel" id="upcoming"></div>
+
+  <h2>Videos</h2>
+  <div id="videos"></div>
+
+  <footer>Read-only. Approvals happen by merging the "Posts for …" pull request on GitHub. Updated every hour by GitHub Actions.</footer>
+</main>
+<script>
+const PL = { youtube: "YouTube", instagram: "Instagram", facebook: "Facebook" };
+const KIND = { video: "video", short: "Short", reel: "Reel" };
+let data, platform = "all";
+
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmt = (iso, tz, opts) => new Date(iso).toLocaleString("en-GB", { timeZone: tz, ...opts });
+const day = (iso, tz) => fmt(iso, tz, { weekday: "short", day: "2-digit", month: "short" });
+const time = (iso, tz) => fmt(iso, tz, { hour: "2-digit", minute: "2-digit" });
+const num = (n) => (n == null ? "–" : n >= 10000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "K" : n.toLocaleString("en-US"));
+const statusLabel = { live: "Live", scheduled: "Scheduled", queued: "Queued", approved: "Approved", proposed: "Awaiting you", draft: "Draft", failed: "Failed" };
+
+const allPosts = () => data.videos.flatMap((v) => v.posts.map((p) => ({ ...p, video: v.title, slug: v.slug })));
+
+function row(p) {
+  const tz = data.timeZone;
+  const stats = p.status === "live" && p.stats && (p.stats.views != null || p.stats.likes != null)
+    ? `<span class="stats">${p.stats.views != null ? num(p.stats.views) + " views · " : ""}${num(p.stats.likes)} likes · ${num(p.stats.comments)} comments</span>` : "";
+  const nyDay = day(p.publishAt, "America/New_York");
+  const title = p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title);
+  return `<div class="row">
+    <div class="when"><b>${esc(day(p.publishAt, tz))}</b><span class="muted">${esc(time(p.publishAt, tz))} your time · ${nyDay !== day(p.publishAt, tz) ? esc(nyDay) + " " : ""}${esc(time(p.publishAt, "America/New_York"))} NY</span></div>
+    <div class="what"><div class="t">${title}</div><div class="sub">${esc(p.video)} · ${esc(KIND[p.kind] || p.kind)}${p.error ? " · " + esc(p.error.split("\n")[0]) : ""}</div></div>
+    <div class="right">${stats}<span class="chip p-${p.platform}">${PL[p.platform]}</span><span class="s s-${p.status}">${statusLabel[p.status] || p.status}</span></div>
+  </div>`;
+}
+
+function render() {
+  const now = Date.now();
+  const posts = allPosts();
+  const live = posts.filter((p) => p.status === "live");
+  const upcoming = posts.filter((p) => p.status !== "live" && Date.parse(p.publishAt) >= now - 3600e3).sort((a, b) => Date.parse(a.publishAt) - Date.parse(b.publishAt));
+  const views = live.reduce((s, p) => s + (p.stats?.views || 0), 0);
+  const next = upcoming[0];
+  const todos = live.filter((p) => p.manual?.length && now - Date.parse(p.publishAt) < 7 * 864e5);
+  const needCount = data.pending.length + data.problems.length + todos.reduce((s, p) => s + p.manual.length, 0);
+
+  document.getElementById("updated").textContent = `Updated ${fmt(data.generatedAt, data.timeZone, { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" })} (your time)`;
+  const until = next ? Math.max(0, Date.parse(next.publishAt) - now) : 0;
+  const h = Math.floor(until / 3600e3), m = Math.round((until % 3600e3) / 60e3);
+  document.getElementById("tiles").innerHTML = [
+    `<div class="tile ${data.problems.length ? "alert" : needCount ? "key" : ""}"><div class="n">${needCount}</div><div class="l">need you</div></div>`,
+    `<div class="tile"><div class="n">${next ? (h ? h + "h " : "") + m + "m" : "–"}</div><div class="l">until the next post${next ? " (" + PL[next.platform] + ")" : ""}</div></div>`,
+    `<div class="tile"><div class="n">${upcoming.length}</div><div class="l">posts coming up</div></div>`,
+    `<div class="tile"><div class="n">${live.length}</div><div class="l">posts live</div></div>`,
+    `<div class="tile"><div class="n">${num(views)}</div><div class="l">YouTube views</div></div>`,
+  ].join("");
+
+  const needs = [
+    ...data.problems.map((x) => `<div class="need bad"><b>Problem:</b> ${esc(x.key)}: ${esc(x.what)}<div class="small muted">${esc(x.fix)}</div></div>`),
+    ...data.pending.map((x) => `<div class="need"><b>Approve:</b> <a href="${esc(x.url)}" target="_blank" rel="noopener">#${x.number} ${esc(x.title)}</a><div class="small muted">Merge it to schedule these posts.</div></div>`),
+    ...todos.flatMap((p) => p.manual.map((m) => `<div class="need"><b>By hand:</b> ${esc(p.video)} · ${PL[p.platform]} ${esc(KIND[p.kind])}: ${esc(m.length > 160 ? m.slice(0, 160) + "…" : m)}${p.edit ? ` · <a href="${esc(p.edit)}" target="_blank" rel="noopener">open</a>` : ""}</div>`)),
+  ];
+  if (data.todoIssue) needs.push(`<div class="need"><b>Checklist:</b> <a href="${esc(data.todoIssue)}" target="_blank" rel="noopener">today's to-do issue on GitHub</a></div>`);
+  document.getElementById("needs").innerHTML = needs.length ? needs.join("") : `<div class="empty">Nothing. Everything is scheduled and on track.</div>`;
+
+  const shown = upcoming.filter((p) => platform === "all" || p.platform === platform);
+  document.getElementById("upcoming").innerHTML = shown.length ? shown.map(row).join("") : `<div class="empty">Nothing scheduled.</div>`;
+
+  document.getElementById("videos").innerHTML = data.videos.map((v) => {
+    const ps = v.posts.filter((p) => platform === "all" || p.platform === platform).map((p) => ({ ...p, video: v.title })).sort((a, b) => Date.parse(a.publishAt) - Date.parse(b.publishAt));
+    const liveN = v.posts.filter((p) => p.status === "live").length;
+    return `<details class="video"><summary><span>${esc(v.title)}</span><span class="small muted">${liveN} of ${v.posts.length} live</span></summary>${ps.map(row).join("") || '<div class="empty">No posts.</div>'}</details>`;
+  }).join("");
+}
+
+function filters() {
+  const opts = [["all", "All"], ["youtube", "YouTube"], ["instagram", "Instagram"], ["facebook", "Facebook"]];
+  const el = document.getElementById("filters");
+  el.innerHTML = opts.map(([k, l]) => `<button data-k="${k}" aria-pressed="${k === platform}">${l}</button>`).join("");
+  el.onclick = (e) => {
+    const k = e.target.closest("button")?.dataset.k;
+    if (!k) return;
+    platform = k;
+    try { localStorage.setItem("sop-platform", k); } catch {}
+    filters();
+    render();
+  };
+}
+
+try { platform = localStorage.getItem("sop-platform") || "all"; } catch {}
+fetch("data.json", { cache: "no-store" })
+  .then((r) => r.json())
+  .then((d) => { data = d; filters(); render(); setInterval(render, 60e3); })
+  .catch(() => { document.getElementById("updated").textContent = "Could not load data.json"; });
+</script>
+</body>
+</html>

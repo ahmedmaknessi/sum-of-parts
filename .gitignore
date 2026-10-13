@@ -21,3 +21,7 @@ public/audio/**/sfx-track.wav
 # Licensed music packs (Envato Elements): kept local, never redistributed
 public/music/
 public/audio/**/music-bed.wav
+
+# Built by the dashboard workflow (npm run publish:dashboard)
+dashboard/data.json
+dashboard/.vercel

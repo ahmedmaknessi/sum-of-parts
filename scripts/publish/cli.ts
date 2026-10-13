@@ -25,6 +25,7 @@ import { readSecret } from "./config";
 import { deleteMedia, ensureLocal, filesOf, mediaTag, uploadMedia } from "./media";
 import * as meta from "./meta";
 import { approve, isApproved, linkTargets, loadQueue, note, queuePath, resolveLinks, saveQueue, validate, type Post, type Queue } from "./queue";
+import * as watch from "./watch";
 import * as youtube from "./youtube";
 
 const root = process.cwd();
@@ -545,6 +546,16 @@ const main = async () => {
       return due();
     case "schedule-all":
       return scheduleAll();
+    case "dashboard": {
+      const data = await watch.dashboardData();
+      mkdirSync(path.join(root, "dashboard"), { recursive: true });
+      writeFileSync(path.join(root, "dashboard", "data.json"), JSON.stringify(data, null, 1));
+      return console.log(`dashboard/data.json: ${data.videos.length} videos, ${data.problems.length} problems, ${data.pending.length} pending`);
+    }
+    case "alerts":
+      return watch.alerts();
+    case "digest":
+      return watch.digest();
     case "retime":
       return retime(slugArg(), args.slice(1));
     case "cancel":

@@ -22,6 +22,12 @@ every day      ──> if the pull request has waited 2+ days, it pings you agai
 - **Statuses:** draft (written, not sent) > proposed (in the pull request) > approved > scheduled / queued > posted, or failed with the reason. They live in `src/videos/<slug>/posts.json`; the bot commits them back after each run.
 - **What stays manual** (no API for it), listed on each post and in the pull request comment: Related video on Shorts, end screens, the pinned comment, Test & compare thumbnails, Instagram alt text.
 
+## Watching it: dashboard, alerts, to-do digest
+
+- **Dashboard** (Vercel, public, read-only): every post across YouTube, Instagram and Facebook, what needs you, the next post, links and live stats. Rebuilt every hour and after each scheduling run by `.github/workflows/publish-dashboard.yml`, which builds `dashboard/data.json` (`npm run publish:dashboard`) and deploys `dashboard/` to Vercel. The platform keys never leave GitHub.
+- **Failure alerts:** after every runner pass, a post that failed, an Instagram post more than an hour late, or an approved post that missed its time opens a GitHub issue labelled `publishing-alert` that mentions you; it closes itself once the post is fine.
+- **To-do digest:** every morning (08:00 UTC) one issue labelled `publishing-todo` lists the steps left by hand for posts that went live in the last 24 hours, with links into YouTube Studio / Instagram / Facebook. Tick the boxes, close it.
+
 ## Limits to know
 
 - **YouTube audit:** until Google audits your API project, YouTube locks API uploads to private and ignores the publish time. Everything else is set; the pull request comment tells you which videos to open in YouTube Studio and set Visibility > Schedule (same time). Request the audit with Google's "YouTube API Services: Audit and Quota Extension" form (free, days to weeks).

@@ -1,0 +1,47 @@
+# Every hour (and after each scheduling run): builds dashboard/data.json from
+# the post queues plus live stats, and deploys the dashboard to Vercel. The
+# platform keys stay here; Vercel only receives the finished static page.
+name: "Publish: dashboard"
+
+on:
+  schedule:
+    - cron: "45 * * * *"
+  workflow_run:
+    workflows: ["Publish: approve and schedule", "Publish: due posts"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+  issues: read
+
+concurrency:
+  group: dashboard
+  cancel-in-progress: true
+
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+      META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the dashboard data
+        run: npx --yes tsx@4.23.15 scripts/publish/cli.ts dashboard
+      - name: Deploy to Vercel
+        if: env.VERCEL_TOKEN != ''
+        run: npx --yes vercel@latest deploy dashboard --prod --yes --token "$VERCEL_TOKEN"

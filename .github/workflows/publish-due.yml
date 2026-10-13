@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: publish
@@ -69,3 +70,7 @@ jobs:
             git commit -m "Publish: due posts"
             for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
           fi
+
+      - name: Alert on failed or late posts
+        if: always() && steps.check.outputs.work == 'yes'
+        run: npx --yes tsx@4.23.15 scripts/publish/cli.ts alerts

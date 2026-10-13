@@ -1,6 +1,6 @@
 # Daily: if a "posts/<slug>" pull request has waited more than two days, it
 # mentions the owner (a GitHub notification on the phone) with the date of
-# the first post.
+# the first post; and opens the day's to-do issue for steps left by hand.
 name: "Publish: reminder"
 
 on:
@@ -11,6 +11,7 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  issues: write
 
 jobs:
   remind:
@@ -24,3 +25,5 @@ jobs:
         with:
           node-version: 22
       - run: npx --yes tsx@4.23.15 scripts/publish/cli.ts remind
+      - name: To-do digest (steps left by hand for posts that went live)
+        run: npx --yes tsx@4.23.15 scripts/publish/cli.ts digest

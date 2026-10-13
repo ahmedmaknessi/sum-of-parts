@@ -175,3 +175,22 @@ export const unschedule = async (videoId: string) => {
   const status = await getStatus(videoId);
   await putStatus(videoId, { ...status, privacyStatus: "private", publishAt: undefined });
 };
+
+export type Stats = { views?: number; likes?: number; comments?: number };
+
+/** Views, likes and comments for up to 50 videos per call (read-only, 1 quota unit). */
+export const videoStats = async (ids: readonly string[]): Promise<Record<string, Stats & { privacy: string }>> => {
+  const out: Record<string, Stats & { privacy: string }> = {};
+  for (let i = 0; i < ids.length; i += 50) {
+    const batch = ids.slice(i, i + 50).join(",");
+    const r = await callJson<{ items: { id: string; statistics: { viewCount?: string; likeCount?: string; commentCount?: string }; status: { privacyStatus: string } }[] }>(
+      `${API}/videos?part=statistics,status&id=${batch}`,
+      { headers: await auth() },
+    );
+    for (const v of r.items) {
+      const n = (x?: string) => (x === undefined ? undefined : Number(x));
+      out[v.id] = { views: n(v.statistics.viewCount), likes: n(v.statistics.likeCount), comments: n(v.statistics.commentCount), privacy: v.status.privacyStatus };
+    }
+  }
+  return out;
+};

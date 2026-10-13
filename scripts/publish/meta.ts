@@ -182,3 +182,25 @@ export const deleteFacebookVideo = async (videoId: string) => {
   const s = secrets();
   await call(`${GRAPH}/${videoId}?access_token=${s.pageToken}`, { method: "DELETE" });
 };
+
+/** Likes and comments on a Facebook Page video (best effort: undefined when Meta doesn't say). */
+export const facebookStats = async (videoId: string) => {
+  const s = secrets();
+  const r = await callJson<{ likes?: { summary?: { total_count: number } }; comments?: { summary?: { total_count: number } }; permalink_url?: string }>(
+    `${GRAPH}/${videoId}?fields=likes.summary(true).limit(0),comments.summary(true).limit(0),permalink_url&access_token=${s.pageToken}`,
+  );
+  return {
+    likes: r.likes?.summary?.total_count,
+    comments: r.comments?.summary?.total_count,
+    url: r.permalink_url ? (r.permalink_url.startsWith("http") ? r.permalink_url : `https://www.facebook.com${r.permalink_url}`) : undefined,
+  };
+};
+
+/** Likes and comments on an Instagram post. */
+export const instagramStats = async (mediaId: string) => {
+  const s = secrets();
+  const r = await callJson<{ like_count?: number; comments_count?: number; permalink?: string }>(
+    `${GRAPH}/${mediaId}?fields=like_count,comments_count,permalink&access_token=${s.pageToken}`,
+  );
+  return { likes: r.like_count, comments: r.comments_count, url: r.permalink };
+};
