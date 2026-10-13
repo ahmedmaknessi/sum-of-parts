@@ -23,7 +23,7 @@
       "platform": "youtube",
       "kind": "short",
       "file": "out/shorts/100-a-month-40-years-short-01-hook.mp4",
-      "publishAt": "2026-10-18T12:00:00-04:00",
+      "publishAt": "2026-10-20T19:00:00-04:00",
       "title": "$100 a Month for 40 Years = ? #shorts",
       "text": "Most people guess around $50,000. The real answer is $262,481.\n$100 a month, invested at 7% a year (the long-run S&P 500 average after inflation), for 40 years.\n\nFull breakdown: the related video linked above.\nEducation only, not financial advice.\n\n#compoundinterest #investing #personalfinance",
       "manual": [
@@ -32,11 +32,34 @@
       "status": "draft"
     },
     {
+      "id": "ig-reel-01",
+      "platform": "instagram",
+      "kind": "reel",
+      "file": "out/shorts/100-a-month-40-years-short-01-hook.mp4",
+      "publishAt": "2026-10-20T19:15:00-04:00",
+      "text": "$100 a month for 40 years. How much do you end up with? 💰\n\nMost people guess around $50,000. The real answer: $262,481. That's $100 a month invested at 7% a year (the long-run S&P 500 average after inflation), from 25 to 65.\n\nFull video on YouTube (link in bio). Education, not financial advice.\n\n#compoundinterest #investing #personalfinance #money #moneyfacts",
+      "thumbOffsetMs": 3000,
+      "manual": [
+        "Add the alt text (post > ... > Edit > Advanced > Alt text): Animation on a dark navy background: \"$100\" appears small while a month counter ticks quickly, then a question mark, then \"$262,481\" lands in large type with an amber underline."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "fb-clip-01",
+      "platform": "facebook",
+      "kind": "reel",
+      "file": "out/shorts/100-a-month-40-years-short-01-hook.mp4",
+      "publishAt": "2026-10-20T19:30:00-04:00",
+      "text": "$100 a month for 40 years. Most people guess about $50,000. The real answer is $262,481, invested at 7% a year from 25 to 65.\n\nFull video in the comments. Education, not financial advice.\n\n#investing #money",
+      "firstComment": "Full video: $100 a Month for 40 Years: The Math, Visualized 👉 {{youtube:yt-main}}",
+      "status": "draft"
+    },
+    {
       "id": "yt-short-02",
       "platform": "youtube",
       "kind": "short",
       "file": "out/shorts/100-a-month-40-years-short-02-year-eleven.mp4",
-      "publishAt": "2026-10-21T12:00:00-04:00",
+      "publishAt": "2026-10-21T19:00:00-04:00",
       "title": "The Year Your Money Out-Earns You #shorts",
       "text": "Invest $100 a month at 7% a year. In year 11, your investments earn $1,290 on their own: more than the $1,200 you put in that year. From then on, the gap only grows.\n\nFull breakdown: the related video linked above.\nEducation only, not financial advice.\n\n#compoundinterest #investing #money",
       "manual": [
@@ -45,16 +68,62 @@
       "status": "draft"
     },
     {
+      "id": "ig-reel-02",
+      "platform": "instagram",
+      "kind": "reel",
+      "file": "out/shorts/100-a-month-40-years-short-02-year-eleven.mp4",
+      "publishAt": "2026-10-21T19:15:00-04:00",
+      "text": "There's a year when your money starts out-earning you. 📈\n\nInvest $100 a month at 7% a year. In year 11, your investments earn $1,290 on their own: more than the $1,200 you put in that year. From then on, the gap only grows.\n\nFull video on YouTube (link in bio). Education, not financial advice.\n\n#compoundinterest #investing #money #personalfinance #finance",
+      "thumbOffsetMs": 3000,
+      "manual": [
+        "Add the alt text (post > ... > Edit > Advanced > Alt text): Animation: two bars per year scroll by, a cream bar for the $1,200 you deposit and an amber bar for the growth earned. At year 11 the amber bar passes the cream one and a label reads \"Year 11: your money out-earns you\"."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "fb-clip-02",
+      "platform": "facebook",
+      "kind": "reel",
+      "file": "out/shorts/100-a-month-40-years-short-02-year-eleven.mp4",
+      "publishAt": "2026-10-21T19:30:00-04:00",
+      "text": "Invest $100 a month at 7% a year. In year 11, your investments earn $1,290 on their own, more than the $1,200 you put in. From then on, your money works harder than you do.\n\nFull video in the comments. Education, not financial advice.\n\n#investing #money",
+      "firstComment": "Full video: $100 a Month for 40 Years: The Math, Visualized 👉 {{youtube:yt-main}}",
+      "status": "draft"
+    },
+    {
       "id": "yt-short-03",
       "platform": "youtube",
       "kind": "short",
       "file": "out/shorts/100-a-month-40-years-short-03-last-decade.mp4",
-      "publishAt": "2026-10-27T12:00:00-04:00",
+      "publishAt": "2026-10-22T19:00:00-04:00",
       "title": "Why the Last 10 Years Matter Most #shorts",
       "text": "$100 a month at 7% for 40 years. Decade by decade the account grows by $17K, $35K, $70K, then $140K. The last 10 years alone add more than the first 30 combined. Same $100 a month the whole time: the only thing that changed was time.\n\nFull breakdown: the related video linked above.\nEducation only, not financial advice.\n\n#compoundinterest #investing #personalfinance",
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
+      "status": "draft"
+    },
+    {
+      "id": "ig-reel-03",
+      "platform": "instagram",
+      "kind": "reel",
+      "file": "out/shorts/100-a-month-40-years-short-03-last-decade.mp4",
+      "publishAt": "2026-10-22T19:15:00-04:00",
+      "text": "Why the last 10 years matter most. ⏳\n\n$100 a month at 7% for 40 years. Decade by decade the account grows by $17K, $35K, $70K, then $140K. The last 10 years alone add more than the first 30 combined. Same $100 a month the whole time: the only thing that changed was time.\n\nFull video on YouTube (link in bio). Education, not financial advice.\n\n#compoundinterest #investing #personalfinance #money #longterminvesting",
+      "thumbOffsetMs": 3000,
+      "manual": [
+        "Add the alt text (post > ... > Edit > Advanced > Alt text): Animation: four vertical bars appear one by one, $17K, $35K, $70K and an amber $140K. The first three bars stack on top of each other next to the fourth and are still shorter. Label: \"Last 10 years > first 30 years\"."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "fb-clip-03",
+      "platform": "facebook",
+      "kind": "reel",
+      "file": "out/shorts/100-a-month-40-years-short-03-last-decade.mp4",
+      "publishAt": "2026-10-22T19:30:00-04:00",
+      "text": "$100 a month at 7% for 40 years: the account grows by $17K, $35K, $70K, then $140K per decade. The last 10 years add more than the first 30 combined.\n\nFull video in the comments. Education, not financial advice.\n\n#investing #money",
+      "firstComment": "Full video: $100 a Month for 40 Years: The Math, Visualized 👉 {{youtube:yt-main}}",
       "status": "draft"
     }
   ]
