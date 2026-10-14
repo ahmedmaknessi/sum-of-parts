@@ -54,14 +54,16 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a bank ledger with \"Bank owns\" and \"Bank owes\" pages; a typewriter types \"Loan to Sarah: $20,000\" and \"Sarah's deposit: $20,000\", then a \"New money\" banner unrolls. Payment slips go into a shredder until the banner reads +$0, then a paper town where new loans pop up and repayments fold away."
       ],
-      "status": "queued",
+      "status": "failed",
       "log": [
         "2026-10-13T21:23:34.726Z proposed for approval",
         "2026-10-13T21:26:21.791Z approved",
-        "2026-10-13T21:26:55.546Z queued: the runner publishes it at its time"
+        "2026-10-13T21:26:55.546Z queued: the runner publishes it at its time",
+        "2026-10-14T23:15:09.674Z failed: POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"Akp-RXRuOJ1QZdLidWUjSzD\"}}"
       ],
       "approvedHash": "16de7a43765957fd",
-      "approvedAt": "2026-10-13T21:26:21.791Z"
+      "approvedAt": "2026-10-13T21:26:21.791Z",
+      "error": "POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"Akp-RXRuOJ1QZdLidWUjSzD\"}}"
     },
     {
       "id": "fb-clip-02",
