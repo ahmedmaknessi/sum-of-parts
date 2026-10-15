@@ -159,16 +159,21 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "approved",
+      "status": "scheduled",
       "log": [
         "2026-10-13T21:24:02.509Z proposed for approval",
         "2026-10-13T21:27:30.460Z approved",
         "2026-10-13T21:27:36.595Z failed: POST https://www.googleapis.com/upload/youtube/v3/videos -> 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"The user has exceeded the number of videos they may upload.\",\n    \"errors\": [\n      {\n        \"message\": \"The user has exceeded the number of videos they may upload.\",\n        \"domain\": \"youtube.video\",\n        \"reason\": \"uploadLimitExceeded\"\n      }\n    ]\n  }\n}\n",
-        "2026-10-13T21:30:59.000Z YouTube channel upload limit reached (approved by merging PR #3): retrying after 2026-10-14T21:30:59.000Z"
+        "2026-10-13T21:30:59.000Z YouTube channel upload limit reached (approved by merging PR #3): retrying after 2026-10-14T21:30:59.000Z",
+        "2026-10-15T09:21:48.147Z scheduled on YouTube: https://youtu.be/ugZKlHcMmLY"
       ],
       "approvedHash": "29bb135c032cc74e",
       "approvedAt": "2026-10-13T21:27:30.460Z",
-      "retryAfter": "2026-10-14T21:30:59.000Z"
+      "retryAfter": "2026-10-14T21:30:59.000Z",
+      "remote": {
+        "id": "ugZKlHcMmLY",
+        "url": "https://youtu.be/ugZKlHcMmLY"
+      }
     },
     {
       "id": "ig-reel-03",
