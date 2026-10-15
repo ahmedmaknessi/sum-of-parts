@@ -196,15 +196,17 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a globe shrinks to a dot and a paper island rises from the sea with a palm tree and a market table. Ten loaves drop onto the table with $1 tags and ten green notes line up above; a small printing press adds ten amber notes, the tags flip to $2, and the notes chase the loaves around the island. Then a balance scale weighs a banknote against bread, a house, a phone and a doctor."
       ],
-      "status": "queued",
+      "status": "failed",
       "log": [
         "2026-10-13T11:24:54.954Z proposed for approval",
         "2026-10-13T20:53:13.459Z approved",
         "2026-10-13T20:53:55.278Z queued: the runner publishes it at its time",
-        "2026-10-13T21:20:09.932Z moved from 2026-10-26T12:30:00-04:00 to 2026-10-15T19:15:00-04:00"
+        "2026-10-13T21:20:09.932Z moved from 2026-10-26T12:30:00-04:00 to 2026-10-15T19:15:00-04:00",
+        "2026-10-15T23:15:34.009Z failed: POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AuwLfZrgPvj7-5dz3dG0swE\"}}"
       ],
       "approvedHash": "76d617f3d2343de9",
-      "approvedAt": "2026-10-13T20:53:13.459Z"
+      "approvedAt": "2026-10-13T20:53:13.459Z",
+      "error": "POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AuwLfZrgPvj7-5dz3dG0swE\"}}"
     },
     {
       "id": "fb-clip-01",
