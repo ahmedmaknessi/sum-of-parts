@@ -1743,7 +1743,8 @@
         "2026-10-16T23:13:22.263Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AFAm4eooxfcbizDUoKa7T3y\"}}",
         "2026-10-16T23:13:58.113Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AwRDOurcRBFfdmKrhQTAoYn\"}}",
         "2026-10-16T23:14:34.178Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AZWGpxg2fD7ur6jiB90Wne9\"}}",
-        "2026-10-16T23:15:10.411Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"Aq4hLRZFhS4T2vopIWBSBV7\"}}"
+        "2026-10-16T23:15:10.411Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"Aq4hLRZFhS4T2vopIWBSBV7\"}}",
+        "2026-10-16T23:15:55.766Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AdAqfFI4iZvl5sH5VPfN73e\"}}"
       ],
       "approvedHash": "04da0b6a5b48af2a",
       "approvedAt": "2026-10-13T21:26:21.791Z",
@@ -1751,7 +1752,7 @@
         "id": "1763809081562100",
         "url": "https://www.facebook.com/reel/1763809081562100"
       },
-      "error": "GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"Aq4hLRZFhS4T2vopIWBSBV7\"}}"
+      "error": "GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AdAqfFI4iZvl5sH5VPfN73e\"}}"
     },
     {
       "id": "yt-short-03",
@@ -1797,8 +1798,7 @@
         "2026-10-16T23:15:17.550Z failed: POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AYM-d_KEvAWdSH5RozeBj-y\"}}"
       ],
       "approvedHash": "10daa5b71777b66f",
-      "approvedAt": "2026-10-13T21:26:23.531Z",
-      "error": "POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AYM-d_KEvAWdSH5RozeBj-y\"}}"
+      "approvedAt": "2026-10-13T21:26:23.531Z"
     },
     {
       "id": "yt-short-04",
