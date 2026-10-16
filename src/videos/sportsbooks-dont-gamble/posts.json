@@ -35,10 +35,13 @@
         "Post and pin the comment: The math in one line: bet $110 on each side of a coin flip, the book holds $220, pays the winner $210, keeps $10 either way. 10 / 220 = 4.5%. Stack five of those into a parlay and the cut becomes about 21%. /  / Episode 2 of \"How They Take Your Money\": free games that make billions. Which company should we break down after that? 👇",
         "Video 03: add this video to its description and end screen as the start of the series"
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.026Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.026Z proposed for approval",
+        "2026-10-16T12:58:32.765Z approved"
+      ],
+      "approvedHash": "384b285acbfb9394",
+      "approvedAt": "2026-10-16T12:58:32.765Z"
     },
     {
       "id": "yt-short-01",
@@ -51,10 +54,13 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:34.160Z approved"
+      ],
+      "approvedHash": "d92546ae7a8a6ffc",
+      "approvedAt": "2026-10-16T12:58:34.160Z"
     },
     {
       "id": "ig-reel-01",
@@ -67,10 +73,13 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a paper hand flips a coin between two faceless paper figures holding $100 notes, then a generic paper building labelled SPORTSBOOK prints a slip reading \"Bet $110, Win $100\" with the $110 in amber. Each figure drops $110 into a box that flips to $220; the winner gets $110 and $100 back and an amber $10 stays in the box, whichever side wins. Then scissors snip a thin amber slice off a dollar, and a bar of both sides' chances fills past 100% to 105%."
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:35.433Z approved"
+      ],
+      "approvedHash": "eff92b69d23a6acc",
+      "approvedAt": "2026-10-16T12:58:35.433Z"
     },
     {
       "id": "fb-clip-01",
@@ -80,10 +89,13 @@
       "publishAt": "2026-10-16T18:30:00-04:00",
       "text": "Bet $110 to win $100. On a coin flip, the sportsbook holds $220, pays the winner $210 and keeps $10, whoever wins. It didn't gamble. You did.\n\n(Simplified example.) Full video in the comments.\nNeed help with gambling? US: call or text 1-800-MY-RESET. Education, not betting advice.\n\n#money #business",
       "firstComment": "Full video: Sportsbooks Don't Gamble. You Do. 👉 {{youtube:yt-main}}",
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:35.433Z approved"
+      ],
+      "approvedHash": "f804cf42503e323f",
+      "approvedAt": "2026-10-16T12:58:35.433Z"
     },
     {
       "id": "fb-teaser",
@@ -99,10 +111,13 @@
         "Pin the first comment",
         "Check the video thumbnail is thumbnail B (out/thumbnails/sportsbooks-dont-gamble-thumbnail-b.png); set it by hand if not"
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:37.057Z approved"
+      ],
+      "approvedHash": "23d16da49b077925",
+      "approvedAt": "2026-10-16T12:58:37.057Z"
     },
     {
       "id": "yt-short-02",
@@ -115,10 +130,13 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:38.191Z approved"
+      ],
+      "approvedHash": "9c0a47a66b85f903",
+      "approvedAt": "2026-10-16T12:58:38.191Z"
     },
     {
       "id": "ig-reel-02",
@@ -131,10 +149,13 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a long receipt unrolls, five paper tickets are stapled into a chain, light up one by one, and the fourth tears so the chain falls. Five coins double a $10 stack to $320, then scissors cut the stack down to $254, the cut piece in amber. Bars for one to five bets grow from 4.5% to an amber 21%, and a paper phone fills with \"Parlay\" buttons. A tall stack labelled $166.94B bet has an amber $16.96B slice cut off its top."
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:39.219Z approved"
+      ],
+      "approvedHash": "15e94d060cf3c82f",
+      "approvedAt": "2026-10-16T12:58:39.218Z"
     },
     {
       "id": "fb-clip-02",
@@ -144,10 +165,13 @@
       "publishAt": "2026-10-23T19:30:00-04:00",
       "text": "Five coin-flip bets in one $10 parlay: a fair price pays $320, the sportsbook pays about $254. The cut grows from 4.5% on one bet to about 21% on five. That's why the apps are full of parlay buttons.\n\nSource: American Gaming Association (2026). Parlay math: simplified example.\nFull video in the comments.\nNeed help with gambling? US: call or text 1-800-MY-RESET. Education, not betting advice.\n\n#money #business",
       "firstComment": "Full video: Sportsbooks Don't Gamble. You Do. 👉 {{youtube:yt-main}}",
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:39.219Z approved"
+      ],
+      "approvedHash": "3393664de903ebef",
+      "approvedAt": "2026-10-16T12:58:39.219Z"
     },
     {
       "id": "yt-short-03",
@@ -160,10 +184,13 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:40.389Z approved"
+      ],
+      "approvedHash": "92c0b911adc7ae71",
+      "approvedAt": "2026-10-16T12:58:40.388Z"
     },
     {
       "id": "ig-reel-03",
@@ -176,10 +203,13 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a faceless paper figure holding a small trophy stands by a sportsbook window while a \"Max bet\" slider slides down from $1,000 to $50. A paper outline of Massachusetts appears next to a 10 by 10 grid of squares where only part of one square is amber, labelled \"0.64% of accounts limited\". Two figures stand side by side: the winner's slider goes down, the other one's goes up, and the window half-closes on the winner."
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:41.359Z approved"
+      ],
+      "approvedHash": "e250358ef5ff9d27",
+      "approvedAt": "2026-10-16T12:58:41.359Z"
     },
     {
       "id": "fb-clip-03",
@@ -189,10 +219,13 @@
       "publishAt": "2026-10-24T19:30:00-04:00",
       "text": "Keep winning and a sportsbook can lower how much you're allowed to bet. In Massachusetts, 0.64% of accounts were limited, and the state confirmed winners tend to get lower limits and losers higher ones.\n\nSource: Massachusetts Gaming Commission data.\nFull video in the comments.\nNeed help with gambling? US: call or text 1-800-MY-RESET. Education, not betting advice.\n\n#money #business",
       "firstComment": "Full video: Sportsbooks Don't Gamble. You Do. 👉 {{youtube:yt-main}}",
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:41.359Z approved"
+      ],
+      "approvedHash": "ce35e8d48ee5c2c0",
+      "approvedAt": "2026-10-16T12:58:41.359Z"
     },
     {
       "id": "yt-short-04",
@@ -205,10 +238,13 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:42.593Z approved"
+      ],
+      "approvedHash": "2e4336b37ef22c68",
+      "approvedAt": "2026-10-16T12:58:42.592Z"
     },
     {
       "id": "ig-reel-04",
@@ -221,10 +257,13 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: a thin amber slice is cut off a paper dollar, then two pie charts at 52% merge into one bar that overflows past 100% to 105%. A seesaw tips under money stacked on \"Team A\" while a board flips to \"Pays less\" and \"Pays more\", then stacks land on \"Team B\" and the seesaw levels with an amber $10 at the pivot. Five paper tickets are stapled into a parlay chain."
       ],
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:43.483Z approved"
+      ],
+      "approvedHash": "0fba05ffe367e776",
+      "approvedAt": "2026-10-16T12:58:43.483Z"
     },
     {
       "id": "fb-clip-04",
@@ -234,10 +273,13 @@
       "publishAt": "2026-10-25T19:30:00-04:00",
       "text": "A sportsbook doesn't need to know who wins. Both sides of an even game add up to about 105%: the extra 5% is its cut. It just keeps both sides busy.\n\n(Simplified example.) Full video in the comments.\nNeed help with gambling? US: call or text 1-800-MY-RESET. Education, not betting advice.\n\n#money #business",
       "firstComment": "Full video: Sportsbooks Don't Gamble. You Do. 👉 {{youtube:yt-main}}",
-      "status": "proposed",
+      "status": "approved",
       "log": [
-        "2026-10-16T09:20:21.027Z proposed for approval"
-      ]
+        "2026-10-16T09:20:21.027Z proposed for approval",
+        "2026-10-16T12:58:43.483Z approved"
+      ],
+      "approvedHash": "bbfe4d659ebbbe56",
+      "approvedAt": "2026-10-16T12:58:43.483Z"
     }
   ]
 }
