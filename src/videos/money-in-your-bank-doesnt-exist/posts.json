@@ -2905,7 +2905,8 @@
         "2026-10-18T23:13:10.008Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"Aj1dorGEiK6oumeGGhWbzAU\"}}",
         "2026-10-18T23:13:45.184Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AKqKjm6xSiVRtvKFAHqUTgE\"}}",
         "2026-10-18T23:14:20.222Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AKUpOxE3DUcuS-Jjp52llby\"}}",
-        "2026-10-18T23:14:55.544Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AI4nvY4lKqdHJQGPmsex9k8\"}}"
+        "2026-10-18T23:14:55.544Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AI4nvY4lKqdHJQGPmsex9k8\"}}",
+        "2026-10-18T23:15:30.941Z failed: GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"Ak8g0yRftyuNzuj9bfnkHio\"}}"
       ],
       "approvedHash": "04da0b6a5b48af2a",
       "approvedAt": "2026-10-13T21:26:21.791Z",
@@ -2913,7 +2914,7 @@
         "id": "1763809081562100",
         "url": "https://www.facebook.com/reel/1763809081562100"
       },
-      "error": "GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AI4nvY4lKqdHJQGPmsex9k8\"}}"
+      "error": "GET https://graph.facebook.com/v25.0/1763809081562100 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"Ak8g0yRftyuNzuj9bfnkHio\"}}"
     },
     {
       "id": "yt-short-03",
@@ -2997,14 +2998,16 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Paper-cut animation: 1930s banks closing, then a bank labelled SVB; a quarter of its deposit strip is torn away by tiny figures, a long queue forms, and a \"CLOSED: March 10, 2023\" sign is stuck on its doors. Then a shield reading \"$250,000 per depositor, per bank\", and a giant second shield covering everything."
       ],
-      "status": "queued",
+      "status": "failed",
       "log": [
         "2026-10-13T21:23:34.726Z proposed for approval",
         "2026-10-13T21:26:25.214Z approved",
-        "2026-10-13T21:26:55.547Z queued: the runner publishes it at its time"
+        "2026-10-13T21:26:55.547Z queued: the runner publishes it at its time",
+        "2026-10-18T23:15:36.924Z failed: POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AxasoZuTlHa1KRgJtOHKPRk\"}}"
       ],
       "approvedHash": "e30247edfa951844",
-      "approvedAt": "2026-10-13T21:26:25.214Z"
+      "approvedAt": "2026-10-13T21:26:25.214Z",
+      "error": "POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AxasoZuTlHa1KRgJtOHKPRk\"}}"
     },
     {
       "id": "fb-clip-04",
