@@ -54,14 +54,16 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Animation on a dark navy background: \"$100\" appears small while a month counter ticks quickly, then a question mark, then \"$262,481\" lands in large type with an amber underline."
       ],
-      "status": "queued",
+      "status": "failed",
       "log": [
         "2026-10-13T21:24:02.509Z proposed for approval",
         "2026-10-13T21:27:28.422Z approved",
-        "2026-10-13T21:28:04.486Z queued: the runner publishes it at its time"
+        "2026-10-13T21:28:04.486Z queued: the runner publishes it at its time",
+        "2026-10-20T23:15:26.780Z failed: POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"A1VkvGhppWaOMUSXOyBzDXT\"}}"
       ],
       "approvedHash": "c34ac018c5a0e161",
-      "approvedAt": "2026-10-13T21:27:28.422Z"
+      "approvedAt": "2026-10-13T21:27:28.422Z",
+      "error": "POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"A1VkvGhppWaOMUSXOyBzDXT\"}}"
     },
     {
       "id": "fb-clip-01",
