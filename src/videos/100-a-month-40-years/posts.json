@@ -29,11 +29,12 @@
       "manual": [
         "Set Related video to the main video (YouTube Studio > Short > Related video)"
       ],
-      "status": "scheduled",
+      "status": "posted",
       "log": [
         "2026-10-13T21:24:02.507Z proposed for approval",
         "2026-10-13T21:27:28.421Z approved",
-        "2026-10-13T21:27:34.914Z scheduled on YouTube: https://youtu.be/b7oAA7AZb84"
+        "2026-10-13T21:27:34.914Z scheduled on YouTube: https://youtu.be/b7oAA7AZb84",
+        "2026-10-20T23:00:25.750Z publish time passed (YouTube published it)"
       ],
       "approvedHash": "5ee96d48675b0543",
       "approvedAt": "2026-10-13T21:27:28.421Z",
