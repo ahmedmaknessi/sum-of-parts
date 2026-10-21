@@ -591,7 +591,8 @@
         "2026-10-21T23:12:51.390Z failed: GET https://graph.facebook.com/v25.0/955391844306221 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"A_3aGtYEhMn9kzCipg8-Mjz\"}}",
         "2026-10-21T23:13:28.415Z failed: GET https://graph.facebook.com/v25.0/955391844306221 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AV01FlEPEi35cgRwSO_F1jE\"}}",
         "2026-10-21T23:14:05.459Z failed: GET https://graph.facebook.com/v25.0/955391844306221 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"ABdFDLiJ9M0CwsGH7dhVgva\"}}",
-        "2026-10-21T23:14:41.807Z failed: GET https://graph.facebook.com/v25.0/955391844306221 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"A7Wb67ZSfeJuRT36qVlpjaB\"}}"
+        "2026-10-21T23:14:41.807Z failed: GET https://graph.facebook.com/v25.0/955391844306221 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"A7Wb67ZSfeJuRT36qVlpjaB\"}}",
+        "2026-10-21T23:15:17.813Z failed: GET https://graph.facebook.com/v25.0/955391844306221 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"A9nl45MmSMT8h-dmetD_-Al\"}}"
       ],
       "approvedHash": "38ade6582dea8b2e",
       "approvedAt": "2026-10-13T21:27:28.422Z",
@@ -599,7 +600,7 @@
         "id": "955391844306221",
         "url": "https://www.facebook.com/reel/955391844306221"
       },
-      "error": "GET https://graph.facebook.com/v25.0/955391844306221 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"A7Wb67ZSfeJuRT36qVlpjaB\"}}"
+      "error": "GET https://graph.facebook.com/v25.0/955391844306221 -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"A9nl45MmSMT8h-dmetD_-Al\"}}"
     },
     {
       "id": "yt-short-02",
@@ -637,14 +638,16 @@
       "manual": [
         "Add the alt text (post > ... > Edit > Advanced > Alt text): Animation: two bars per year scroll by, a cream bar for the $1,200 you deposit and an amber bar for the growth earned. At year 11 the amber bar passes the cream one and a label reads \"Year 11: your money out-earns you\"."
       ],
-      "status": "queued",
+      "status": "failed",
       "log": [
         "2026-10-13T21:24:02.509Z proposed for approval",
         "2026-10-13T21:27:29.498Z approved",
-        "2026-10-13T21:28:04.486Z queued: the runner publishes it at its time"
+        "2026-10-13T21:28:04.486Z queued: the runner publishes it at its time",
+        "2026-10-21T23:15:20.696Z failed: POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AMKMzvIbxA7-8_0Cy4rKy40\"}}"
       ],
       "approvedHash": "eccd89255384c3dc",
-      "approvedAt": "2026-10-13T21:27:29.498Z"
+      "approvedAt": "2026-10-13T21:27:29.498Z",
+      "error": "POST https://graph.facebook.com/v25.0/17841415753641644/media -> 400: {\"error\":{\"message\":\"Any of the pages_read_engagement, pages_manage_metadata,\\n        pages_read_user_content, pages_manage_ads, pages_show_list or\\n        pages_messaging permission(s) must be granted before impersonating a\\n        user's page.\",\"type\":\"OAuthException\",\"code\":190,\"fbtrace_id\":\"AMKMzvIbxA7-8_0Cy4rKy40\"}}"
     },
     {
       "id": "fb-clip-02",
